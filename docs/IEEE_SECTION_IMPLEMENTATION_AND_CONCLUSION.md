@@ -387,7 +387,7 @@ Experimental results were compiled across all verified JSON result files, incorp
 | | **S1-DROP10** | Structure Recovery under 10% Zero-Inflation Dropout | **0.483** | Baseline | — | **+0.203 over Direct FD (0.280)**; distillation advantage emerges under dropout. *(Exploratory)* |
 | | **S1-DROP20** | Structure Recovery under 20% Zero-Inflation Dropout | **0.430 ± 0.130** | Baseline | — | **+0.307 over Direct FD (0.123)**; NODE manifold smoothing resists moderate zero-inflation. *(Exploratory)* |
 | | **S1-DROP40** | Structure Recovery under 40% Zero-Inflation Dropout | **0.212 ± 0.052** | Baseline | — | Tied with Direct FD (**0.246**); distillation advantage collapses at extreme dropout. *(Exploratory)* |
-| | **S1-DROP60** | Structure Recovery under 60% Zero-Inflation Dropout | **0.407 ± 0.189** | Baseline | — | Tied with Direct FD (**0.411**); 3/5 seeds sym > FD, margin −0.004 (not significant). *(Exploratory)* |
+| | **S1-DROP60** | Structure Recovery under 60% Zero-Inflation Dropout | **0.237 ± 0.093** | Baseline | — | Direct FD **0.161 ± 0.096**; both methods collapse to noise baseline at extreme dropout ($F_1 \le 0.25$). *(Exploratory)* |
 | | **S2 (Continuous)**| Parameter Relative Error (continuous $n \in [1, 6]$) | **0.441** | $\le 0.25$ | **Not Met** | Reflects non-convexity and manifold parameter collinearity. |
 | | **S2 (Discrete)**  | Parameter Relative Error (discrete $n \in \{1, 2, 4\}$) | **0.006** | $\le 0.25$ | **Satisfied** | **Cuts parameter error from 44.1% down to 0.6%.** |
 | | **S2-MISSPEC-3** | Misspecification Stress ($n_{\text{true}}=3.0 \notin \{1,2,4\}$) | **0.748 $\pm$ 0.068** | $\ge 0.70$ | **Satisfied** | Marginally exceeds Continuous ($0.695 \pm 0.069$) by +0.053 (~0.8 s.d.); difference not statistically significant. Field cosine **0.917**. |
@@ -446,7 +446,7 @@ Experimental results were compiled across all verified JSON result files, incorp
 ![Fig. 10. Synthetic Network Structure Recovery (F1 Score): Benchmarking Distilled Hill selection against Direct Finite Differences, Weak-SINDy, and free-form gplearn across 15 synthetic benchmark variants.](figures/fig_synth_structure_F1.png)
 
 * **Synthetic Noise and Dropout Robustness (Fig. 11):**
-  Examines performance degradation curves under scaling measurement noise $\sigma \in [0.02, 0.20]$, zero-inflation dropout $p_{\text{drop}} \in [0.10, 0.60]$, and subsampled cell trajectories $N \in [20, 120]$. Under zero-inflation, the distillation advantage over direct identification is most pronounced at moderate dropout (10%: +0.203 margin, 5/5 seeds; 20%: +0.307 margin, 5/5 seeds), but collapses at extreme corruption (40%: tied at −0.034; 60%: tied at −0.004). This establishes a clear operational regime for the distillation pipeline.
+  Examines performance degradation curves under scaling measurement noise $\sigma \in [0.02, 0.20]$, zero-inflation dropout $p_{\text{drop}} \in [0.10, 0.60]$, and subsampled cell trajectories $N \in [20, 120]$. Under zero-inflation, the distillation advantage over direct identification is most pronounced at moderate dropout (10%: +0.203 margin, 5/5 seeds; 20%: +0.307 margin, 5/5 seeds), but collapses at extreme corruption (40%: sym 0.212 vs FD 0.246; 60%: sym 0.237 vs FD 0.161), where both methods fall below 0.25 and hit the sparse topology baseline. This establishes a clear operational regime for the distillation pipeline.
 
 ![Fig. 11. Synthetic Benchmark Robustness Against Noise, Dropout, and Subsampling.](figures/fig_synth_robustness.png)
 
