@@ -1,0 +1,145 @@
+{
+  "phase": "Benchmark synthetique multi-genes avec verite terrain (generateur propre : EDO de type Hill, bruit, dropout, pseudotemps, couverture)",
+  "base": {
+    "d": 5,
+    "n_traj": 60,
+    "n_times": 10,
+    "horizon": 4.0,
+    "sigma_rel": 0.05,
+    "dropout": 0.0,
+    "time_mode": "true",
+    "pseudo_gamma": 1.0,
+    "ic_mode": "full",
+    "n_test": 20,
+    "node": {
+      "hidden": 64,
+      "lr": 0.003,
+      "epochs": 400,
+      "lam_reg": 0.0001,
+      "step_size": 0.1,
+      "val_fraction": 0.2,
+      "adjoint": false
+    },
+    "distillation": {
+      "M": 3000,
+      "n_fine": 40,
+      "jitter_frac": 0.5,
+      "knn": 5,
+      "reject_quantile": 0.95,
+      "val_fraction": 0.2
+    },
+    "library": {
+      "K_grid": [
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        0.7,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "n_grid": [
+        1.0,
+        1.5,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "K_bounds": [
+        0.02,
+        5.0
+      ],
+      "n_bounds": [
+        1.0,
+        6.0
+      ],
+      "k_max": 3,
+      "n_starts": 4,
+      "selection_tolerance": 0.05
+    },
+    "weak": {
+      "window": 5,
+      "stride": 1
+    },
+    "free_form": {
+      "population": 300,
+      "generations": 15,
+      "pysr_iterations": 40,
+      "pysr_maxsize": 15
+    }
+  },
+  "variants": {
+    "base": {},
+    "noise02": {
+      "sigma_rel": 0.02
+    },
+    "noise10": {
+      "sigma_rel": 0.1
+    },
+    "noise20": {
+      "sigma_rel": 0.2
+    },
+    "drop10": {
+      "dropout": 0.1
+    },
+    "drop20": {
+      "dropout": 0.2
+    },
+    "N20": {
+      "n_traj": 20
+    },
+    "N120": {
+      "n_traj": 120
+    },
+    "d3": {
+      "d": 3
+    },
+    "d8": {
+      "d": 8
+    },
+    "pseudo2": {
+      "time_mode": "pseudo",
+      "pseudo_gamma": 2.0
+    },
+    "manifold": {
+      "ic_mode": "manifold"
+    },
+    "counts": {
+      "obs_model": "nb",
+      "count_scale": 20.0,
+      "nb_dispersion": 5.0
+    },
+    "counts_drop10": {
+      "obs_model": "nb",
+      "count_scale": 20.0,
+      "nb_dispersion": 5.0,
+      "dropout": 0.1
+    },
+    "adjoint": {
+      "node": {
+        "adjoint": true
+      }
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "preregistered_thresholds": {
+    "S1_base_structure_F1_min": 0.7,
+    "S2_base_matched_param_median_relerr_max": 0.25,
+    "S3_base_node_vs_truth_cosine_min": 0.9,
+    "S4_prop1_bound_holds_fraction_min": 0.95,
+    "S5_pseudo_direction_cosine_min": 0.9,
+    "S6_manifold_offsupport_cosine_drop_min": 0.1,
+    "descriptif": "variantes de bruit, dropout, N, d : courbes de degradation, sans seuil",
+    "note": "Fixes AVANT toute execution. Criteres de decision, pas des predictions. Le generateur est bien specifie (meme famille que la bibliotheque) : un echec ici est un echec de la methode, pas de la mauvaise specification.",
+    "note_ajout": "Variantes counts, counts_drop10, adjoint et mesures profile/ko/timings ajoutees APRES le pilote : exploratoires, sans seuil ; seuils S1-S6 inchanges (SHA du fichier initial : 711a030b8817bd95).",
+    "S7_pysr_mean_variable_recall_min": 0.8,
+    "note_ajout_pysr": "S7 (PySR, rappel moyen des variables vraies) ajoute avant l'execution complete ; aucun resultat PySR synthetique complet n'avait ete vu."
+  }
+}
