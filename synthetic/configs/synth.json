@@ -120,6 +120,18 @@
       "node": {
         "adjoint": true
       }
+    },
+    "drop40": {
+      "dropout": 0.4,
+      "node": {
+        "epochs": 600
+      }
+    },
+    "drop60": {
+      "dropout": 0.6,
+      "node": {
+        "epochs": 600
+      }
     }
   },
   "seeds": [
