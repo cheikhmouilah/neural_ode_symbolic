@@ -1,0 +1,4 @@
+bruit sur x (CV) = 0.00 -> n_hat median=2.00  IQR=[1.98,2.04]
+bruit sur x (CV) = 0.15 -> n_hat median=1.69  IQR=[1.65,1.72]
+bruit sur x (CV) = 0.30 -> n_hat median=1.32  IQR=[1.29,1.35]
+bruit sur x (CV) = 0.50 -> n_hat median=0.92  IQR=[0.89,0.96]

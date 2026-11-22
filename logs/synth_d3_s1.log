@@ -1,0 +1,1 @@
+d3 seed 1: profilK cov=0.75 KO cos sym=0.62 node=0.58 | NODE traj=0.013 cos=0.885 | distilled F1=0.62 (P 0.50 R 0.80) cos_truth=0.894 | direct F1=0.73 weak F1=0.50 oracle relerr=0.6937989801926429 | prop1=1.0 | 140s

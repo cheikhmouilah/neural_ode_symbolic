@@ -1,0 +1,9 @@
+cellules=3696 genes=['Ghrl', 'Gnas', 'Ins2', 'Nnat', 'Chga', 'Clu', 'Isl1', 'Cpe'] train/val/test=2270/641/785 config=a606d8c808d3a02b
+C:\neural_ode_symbolic\real_data/src\real_node.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')
+  ep=   0 train_vel=35.7744 val_vel=10.1324
+  ep= 100 train_vel=0.9682 val_vel=0.8543
+  ep= 200 train_vel=0.9627 val_vel=0.8480
+seed 2 lam=0.001 ctrl=shuffle: node cos test=0.339 (lin 0.407) | sym~node=0.943 | sym~V=0.347 | direct~V=0.200 | omega=[10, 10, 10, 10, 4, 7, 4, 10] | 98s
+FIN

@@ -1,0 +1,127 @@
+{
+ "seed": 0,
+ "tag": "pysr",
+ "iterations": 2,
+ "maxsize": 20,
+ "ops": "basic",
+ "node": {
+  "best_val": 0.14255908499062359,
+  "history": [
+   [
+    40,
+    0.12139909220588582,
+    0.14255908499062359
+   ]
+  ],
+  "seconds": 2.7196810245513916
+ },
+ "equations": [
+  {
+   "eq": 0,
+   "expression": "0.15814577 - ((x1 * 0.17820472) * x0)",
+   "complexity": 7,
+   "loss": 0.027096078,
+   "used_variables": [
+    0,
+    1
+   ],
+   "uses_other_gene": true,
+   "uses_own_gene": true,
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.10575619,
+     "equation": "-0.112675995"
+    },
+    {
+     "complexity": 3,
+     "loss": 0.095077515,
+     "equation": "x0 * -0.09298377"
+    },
+    {
+     "complexity": 5,
+     "loss": 0.045376625,
+     "equation": "(x1 * -0.12310197) * x0"
+    },
+    {
+     "complexity": 7,
+     "loss": 0.027096078,
+     "equation": "0.15814577 - ((x1 * 0.17820472) * x0)"
+    },
+    {
+     "complexity": 9,
+     "loss": 0.023994762,
+     "equation": "((x0 - -0.049273334) * (x1 * -0.20269853)) + 0.21692722"
+    },
+    {
+     "complexity": 13,
+     "loss": 0.023624048,
+     "equation": "((x0 - (x0 + (x1 * 0.23924346))) * (x0 + 0.114840895)) + 0.30327845"
+    },
+    {
+     "complexity": 17,
+     "loss": 0.02288008,
+     "equation": "((x0 * x1) * (-0.33222526 / (((0.15775378 / (x0 * -0.9799725)) + 1.7873424) * 0.8328456))) - -0.28650206"
+    }
+   ]
+  },
+  {
+   "eq": 1,
+   "expression": "0.407451 - ((x0 * (x1 + 1.3125918)) * 0.083522715)",
+   "complexity": 9,
+   "loss": 0.018717693,
+   "used_variables": [
+    0,
+    1
+   ],
+   "uses_other_gene": true,
+   "uses_own_gene": true,
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.063198395,
+     "equation": "0.14706461"
+    },
+    {
+     "complexity": 3,
+     "loss": 0.05569325,
+     "equation": "0.05979002 / x0"
+    },
+    {
+     "complexity": 5,
+     "loss": 0.036256786,
+     "equation": "(x0 * -0.15852508) + 0.33995146"
+    },
+    {
+     "complexity": 7,
+     "loss": 0.035704598,
+     "equation": "((x0 * x0) * -0.04463866) + 0.27308264"
+    },
+    {
+     "complexity": 9,
+     "loss": 0.018717693,
+     "equation": "0.407451 - ((x0 * (x1 + 1.3125918)) * 0.083522715)"
+    },
+    {
+     "complexity": 17,
+     "loss": 0.018151656,
+     "equation": "(x0 * ((0.7738502 / (x0 * 0.7610553)) - ((x0 * (x1 + 0.6328361)) * 0.12652089))) * 0.26648042"
+    }
+   ]
+  }
+ ],
+ "field_nrmse_vs_truth": 0.062057380031382454,
+ "field_nrmse_node_vs_truth": 0.05222841941823521,
+ "fidelity_r2_vs_node": [
+  0.733278657836075,
+  0.795832271780587
+ ],
+ "traj_nrmse_vs_truth": 0.13748293371642312,
+ "stable_fixed_points": {
+  "n_ref": 2,
+  "n_model": 0,
+  "max_rel_err": null
+ },
+ "seconds": 29.78939652442932,
+ "seconds_pysr": 25.48235034942627
+}

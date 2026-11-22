@@ -1,0 +1,20 @@
+{
+ "observe (SERGIO, gene 9)": {
+  "n_hat_q25": 1.9562643518502587,
+  "n_hat_median": 2.000963995224334,
+  "n_hat_q75": 2.049403769688671,
+  "frac_n_within_0p5": 1.0
+ },
+ "plage elargie x0.3-3h": {
+  "n_hat_q25": 1.9504112671057694,
+  "n_hat_median": 2.0009344407972067,
+  "n_hat_q75": 2.0624763122949803,
+  "frac_n_within_0p5": 1.0
+ },
+ "plage elargie x0.2-6h": {
+  "n_hat_q25": 1.9633415789833826,
+  "n_hat_median": 2.0027248284732,
+  "n_hat_q75": 2.0432000855000556,
+  "frac_n_within_0p5": 1.0
+ }
+}

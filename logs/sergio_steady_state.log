@@ -1,0 +1,28 @@
+{
+ "activation": {
+  "n": 7,
+  "R2_median": 0.87584318860631,
+  "biais_relatif_moyen_par_type": [
+   -0.007,
+   -0.039,
+   -0.001,
+   -0.046,
+   -0.024,
+   0.005
+  ],
+  "biais_relatif_max_abs": 0.07192137720301879
+ },
+ "repression": {
+  "n": 7,
+  "R2_median": 0.8717593675974007,
+  "biais_relatif_moyen_par_type": [
+   0.006,
+   -0.006,
+   -0.021,
+   0.008,
+   0.032,
+   0.045
+  ],
+  "biais_relatif_max_abs": 0.06088881989992696
+ }
+}

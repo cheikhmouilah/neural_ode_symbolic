@@ -1,0 +1,17 @@
+Composant,Version,Rôle,Chaîne(s)
+Python,3.14.2,Environnement d'exécution,Toutes
+PyTorch,≥2.14 (CPU),Apprentissage automatique / Neural ODE,A B C D
+torchdiffeq,≥0.2.2,Intégration ODE différentiable (dopri5 / rk4),A B C D
+NumPy,≥2.4,Calcul numérique,Toutes
+SciPy,≥1.17,Optimisation (NNLS TRF root solve_ivp),Toutes
+pandas,≥3.0,Manipulation tableaux,C
+scikit-learn,≥1.8,k-means KNN normalisation,C D
+matplotlib,≥3.10,Figures,Toutes
+sympy,≥1.14,Affichage symbolique,A D
+scanpy,≥1.11,Prétraitement scRNA-seq (HVG normalisation),C
+anndata,≥0.12,Format h5ad,C
+scvelo,0.3.4,Vélocité ARN (moments vitesse confidence),C
+pysindy,2.1.0,Weak-SINDy (baseline),D
+gplearn,0.4.3,Régression symbolique évolutionnaire (baseline),D
+pysr,≥2.7,Recherche symbolique libre (moteur Julia),A C D
+OS,Windows 11,Système d'exploitation,Toutes

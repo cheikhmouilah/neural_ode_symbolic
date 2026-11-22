@@ -1,0 +1,92 @@
+{
+  "phase": "1 - toggle switch, test de coherence (borne haute, sans bruit)",
+  "true_system": {
+    "a": [
+      4.0,
+      3.6
+    ],
+    "K": [
+      0.8,
+      1.0
+    ],
+    "n": 2.0,
+    "g": [
+      1.0,
+      0.9
+    ],
+    "equations": [
+      "dx1/dt = a1/(1+(x2/K1)^n) - g1*x1",
+      "dx2/dt = a2/(1+(x1/K2)^n) - g2*x2"
+    ],
+    "note": "Forme de Gardner supposee (equation 6 de la partie theorique indisponible). Version initiale a=(3.0,2.6) monostable, corrigee AVANT toute execution du pipeline: a=(4.0,3.6) donne 2 etats stables + 1 selle."
+  },
+  "data": {
+    "n_traj": 60,
+    "split": [
+      40,
+      10,
+      10
+    ],
+    "T": 8.0,
+    "n_times": 41,
+    "ic_low": 0.0,
+    "ic_high": 4.5,
+    "noise": 0.0
+  },
+  "node": {
+    "hidden": 64,
+    "solver": "dopri5",
+    "rtol": 1e-06,
+    "atol": 1e-08,
+    "lr": 0.003,
+    "lr_decay": 0.997,
+    "curriculum_points": [
+      8,
+      16,
+      28,
+      41
+    ],
+    "iters_per_stage": [
+      150,
+      150,
+      150,
+      250
+    ],
+    "velocity_weight": 0.0
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "library": {
+    "K_grid": [
+      0.25,
+      0.35,
+      0.5,
+      0.7,
+      1.0,
+      1.4,
+      2.0,
+      2.8,
+      4.0
+    ],
+    "n_grid": [
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0
+    ]
+  },
+  "preregistered_thresholds": {
+    "P1_node_field_nrmse_vs_truth_test": 0.05,
+    "P2_structure_exact_all_seeds": "regulateur, signe (repression) et degradation propre corrects pour les 2 equations, 3 graines sur 3",
+    "P3_param_rel_error_median": 0.05,
+    "P3_param_rel_error_max": 0.1,
+    "P4_symbolic_trajectory_nrmse_test": 0.05,
+    "P5_stable_fixed_points_rel_error": 0.05,
+    "H1_passes_if": "P1 a P5 tous satisfaits ; sinon defaut d'implementation a investiguer"
+  },
+  "note_seuils": "Fixes avant execution. Criteres de decision, pas des predictions."
+}

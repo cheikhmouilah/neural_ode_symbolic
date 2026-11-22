@@ -1,0 +1,37 @@
+Paramètre,Valeur (données réelles),Valeur (synthétique),Description
+Architecture NODE — couches cachées,2 × 64 (Tanh),2 × 64 (Tanh),MLP autonome f_θ(z)
+NODE — taux d'apprentissage,0.003,0.003,Adam
+NODE — époques max,600,400,Early stopping
+NODE — patience,80,25 (éval tous les 5),Critère d'arrêt anticipé
+NODE — λ_reg,0.001,0.0001,Pénalité de magnitude
+NODE — type régularisation,magnitude,magnitude,‖f_θ(z)‖²
+NODE — sous-échantillonnage train,0.8 (aléatoire par graine),—,Réduction variabilité entraînement
+NODE — solveur (données réelles),dopri5 (torchdiffeq),rk4 pas fixe 0.1,Intégration ODE
+NODE — rtol / atol,1e-6 / 1e-8,—,Tolérance solveur
+Distillation — M points,4000,3000,Pseudo-trajectoires générées
+Distillation — jitter_frac,0.5,0.5,Fraction de bruit par rapport au kNN
+Distillation — reject_quantile,0.95,0.95,Seuil de rejet des points hors support
+Distillation — kNN,5,5,Voisins pour évaluation densité
+Distillation — val_fraction,0.2,0.2,Fraction validation lors de distillation
+Bibliothèque Hill — K_grid,"[0.05, 0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 1.5]","[0.1, 0.2, 0.3, 0.5, 0.7, 1.0, 1.5, 2.0]",Grille initiale des constantes de demi-saturation
+Bibliothèque Hill — n_grid,"[1.0, 1.5, 2.0, 3.0, 4.0]","[1.0, 1.5, 2.0, 3.0, 4.0]",Grille initiale des coefficients de Hill
+Bibliothèque Hill — K_bounds,"[0.02, 5.0]","[0.02, 5.0]",Bornes pour raffinement TRF
+Bibliothèque Hill — n_bounds,"[1.0, 6.0]","[1.0, 6.0]",Bornes pour raffinement TRF
+Bibliothèque Hill — k_max,3,3,Nombre maximal de termes par équation
+Bibliothèque Hill — n_starts,6,4,Départs multi-starts TRF
+Bibliothèque Hill — selection_tol,0.05,0.05,Tolérance front de Pareto (5 %)
+Découpage données réelles — blocs,60 blocs k-means,—,Découpage par voisinage PCA (10 composantes)
+Découpage données réelles — fractions,"0.6 / 0.2 / 0.2",—,Train / Validation / Test
+Données synthétiques — horizon T,—,4.0,Durée de simulation
+Données synthétiques — σ_rel (base),—,0.05,Bruit relatif gaussien (5 %)
+Données synthétiques — n_traj (base),—,60,Trajectoires d'entraînement
+Données synthétiques — n_times,—,10,Points temporels par trajectoire
+Données synthétiques — n_test,—,20,Trajectoires de test
+PySR — population,300,300,Taille de la population
+PySR — générations pilote,40 iters (pysr_iterations),40,Itérations PySR
+PySR — taille maximale,15 (pysr_maxsize),15,Complexité maximale
+gplearn — population,300,300,Taille de la population
+gplearn — générations,15,15,Générations évolutionnaires
+Équilibres — départs,120,—,Multi-départs pour recherche d'équilibres
+Graines — données réelles,"0, 1, 2, 3, 4",—,Stabilité des résultats (5 graines)
+Graines — synthétique,—,"0, 1, 2, 3, 4",5 graines par variante (15 variantes)

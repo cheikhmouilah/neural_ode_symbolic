@@ -1,0 +1,425 @@
+{
+ "summary": {
+  "label": "clean",
+  "n_cibles": 14,
+  "type_correct": 1.0,
+  "courbe_retrouvee_nrmse_lt_10pct_famille": 0.5,
+  "courbe_retrouvee_nrmse_lt_10pct_gp": 0.21428571428571427,
+  "n_hat_median": 1.8447109261605665,
+  "n_hat_iqr": [
+   1.2168570519664048,
+   1.8708248845874533
+  ],
+  "median_nrmse_nn": 0.10334264509230628,
+  "median_nrmse_famille": 0.09986198953934564,
+  "median_nrmse_gp": 0.13104234372007273
+ },
+ "rows": [
+  {
+   "target": 15,
+   "reg": 9,
+   "true_type": "hill_act",
+   "K_true": 1.7686991785595243,
+   "n_true": 2.0,
+   "h_true": 1.3007073328350283,
+   "x_range": [
+    0.07924704322285332,
+    4.619634999610475
+   ],
+   "nn_fit_nrmse_vs_truth": 0.11073489433950802,
+   "gp_expr": "add(mul(X0, 0.306), 0.306)",
+   "gp_nrmse_vs_truth": 0.13982914756906276,
+   "family_selected": "hill_act",
+   "family_params": [
+    2.7171155489982315,
+    3.4117736732027186,
+    1.0726113264813226
+   ],
+   "family_nrmse_vs_truth": 0.11044583889638641,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    2.337756457740743,
+    2.4509022666010716,
+    1.2123812457971543
+   ]
+  },
+  {
+   "target": 28,
+   "reg": 9,
+   "true_type": "hill_act",
+   "K_true": 1.6753598328804502,
+   "n_true": 2.0,
+   "h_true": 1.3007073328350283,
+   "x_range": [
+    0.07924704322285332,
+    4.619634999610475
+   ],
+   "nn_fit_nrmse_vs_truth": 0.09710113891395333,
+   "gp_expr": "add(mul(X0, 0.306), 0.306)",
+   "gp_nrmse_vs_truth": 0.12199738830450187,
+   "family_selected": "hill_act",
+   "family_params": [
+    2.4403073628156253,
+    2.9645880865070553,
+    1.1396290561415205
+   ],
+   "family_nrmse_vs_truth": 0.09684110417689874,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    2.19895172810062,
+    2.3903773901260865,
+    1.2358985937452538
+   ]
+  },
+  {
+   "target": 61,
+   "reg": 9,
+   "true_type": "hill_act",
+   "K_true": 3.723509142846672,
+   "n_true": 2.0,
+   "h_true": 1.3007073328350283,
+   "x_range": [
+    0.07924704322285332,
+    4.619634999610475
+   ],
+   "nn_fit_nrmse_vs_truth": 0.08041815937160501,
+   "gp_expr": "add(mul(0.848, X0), div(-0.045, -0.265))",
+   "gp_nrmse_vs_truth": 0.13845707937031998,
+   "family_selected": "hill_act",
+   "family_params": [
+    5.085114992381692,
+    2.523195241122512,
+    1.2052290736917668
+   ],
+   "family_nrmse_vs_truth": 0.08020342940529236,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    4.662406134132784,
+    2.2237066269386454,
+    1.2709061785429059
+   ]
+  },
+  {
+   "target": 54,
+   "reg": 9,
+   "true_type": "hill_act",
+   "K_true": 2.8661819765224195,
+   "n_true": 2.0,
+   "h_true": 1.3007073328350283,
+   "x_range": [
+    0.07924704322285332,
+    4.619634999610475
+   ],
+   "nn_fit_nrmse_vs_truth": 0.11453625363771432,
+   "gp_expr": "mul(sub(-0.467, X0), mul(-0.672, 0.881))",
+   "gp_nrmse_vs_truth": 0.132231852628369,
+   "family_selected": "hill_act",
+   "family_params": [
+    6.927571873041416,
+    7.575778695365081,
+    0.9366696480380642
+   ],
+   "family_nrmse_vs_truth": 0.11412946464711658,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    4.124512981902296,
+    2.8221066360954317,
+    1.163879965576468
+   ]
+  },
+  {
+   "target": 80,
+   "reg": 79,
+   "true_type": "hill_rep",
+   "K_true": 4.02074418473515,
+   "n_true": 2.0,
+   "h_true": 1.0528607629421665,
+   "x_range": [
+    0.002737212808195343,
+    4.995298508020387
+   ],
+   "nn_fit_nrmse_vs_truth": 0.0882268447659538,
+   "gp_expr": "div(div(add(0.924, add(0.924, X0)), X0), sub(mul(X0, 0.716), div(-0.487, X0)))",
+   "gp_nrmse_vs_truth": 0.06288325785763148,
+   "family_selected": "hill_rep",
+   "family_params": [
+    3.8140233777888097,
+    1.4327358376351835,
+    1.8533669834064836
+   ],
+   "family_nrmse_vs_truth": 0.0863329674859211,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    3.989668914002324,
+    1.2873680174236848,
+    1.5915595764569703
+   ]
+  },
+  {
+   "target": 86,
+   "reg": 79,
+   "true_type": "hill_rep",
+   "K_true": 3.9184321246823925,
+   "n_true": 2.0,
+   "h_true": 1.0528607629421665,
+   "x_range": [
+    0.002737212808195343,
+    4.995298508020387
+   ],
+   "nn_fit_nrmse_vs_truth": 0.12489072418060816,
+   "gp_expr": "div(add(div(add(X0, X0), add(0.278, X0)), add(0.701, 0.583)), add(0.278, add(0.082, X0)))",
+   "gp_nrmse_vs_truth": 0.10534816213889786,
+   "family_selected": "hill_rep",
+   "family_params": [
+    3.5773284223103983,
+    1.656233926044851,
+    1.8639364840833177
+   ],
+   "family_nrmse_vs_truth": 0.11956673090325737,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    3.860847973776313,
+    1.299689422916043,
+    1.5742311600390269
+   ]
+  },
+  {
+   "target": 94,
+   "reg": 79,
+   "true_type": "hill_rep",
+   "K_true": 1.9564840370173937,
+   "n_true": 2.0,
+   "h_true": 1.0528607629421665,
+   "x_range": [
+    0.002737212808195343,
+    4.995298508020387
+   ],
+   "nn_fit_nrmse_vs_truth": 0.09862335842663181,
+   "gp_expr": "div(div(add(0.924, X0), X0), sub(add(0.278, X0), div(-0.487, X0)))",
+   "gp_nrmse_vs_truth": 0.0713203151484589,
+   "family_selected": "hill_rep",
+   "family_params": [
+    1.7802085989578007,
+    1.5535279192304992,
+    1.949430368514512
+   ],
+   "family_nrmse_vs_truth": 0.0958393012974645,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    1.9054230239951957,
+    1.355214925224093,
+    1.6130860345072633
+   ]
+  },
+  {
+   "target": 46,
+   "reg": 18,
+   "true_type": "hill_act",
+   "K_true": 4.239981877724656,
+   "n_true": 2.0,
+   "h_true": 3.1584846324768443,
+   "x_range": [
+    0.4895861497839948,
+    5.424334812658731
+   ],
+   "nn_fit_nrmse_vs_truth": 0.15532743460149495,
+   "gp_expr": "sub(sub(X0, 0.907), div(sub(X0, 0.907), X0))",
+   "gp_nrmse_vs_truth": 0.15522048545643327,
+   "family_selected": "hill_act",
+   "family_params": [
+    3.164685799972102,
+    3.071522680711339,
+    5.230404922330959
+   ],
+   "family_nrmse_vs_truth": 0.16429340697216557,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    4.2811892486891905,
+    3.4343283924799466,
+    2.1272118857955675
+   ]
+  },
+  {
+   "target": 89,
+   "reg": 79,
+   "true_type": "hill_rep",
+   "K_true": 3.505958534749697,
+   "n_true": 2.0,
+   "h_true": 1.0528607629421665,
+   "x_range": [
+    0.002737212808195343,
+    4.995298508020387
+   ],
+   "nn_fit_nrmse_vs_truth": 0.11583334657712763,
+   "gp_expr": "div(sub(sub(div(add(X0, X0), add(0.278, X0)), -0.446), -0.446), add(0.278, X0))",
+   "gp_nrmse_vs_truth": 0.10645847295027142,
+   "family_selected": "hill_rep",
+   "family_params": [
+    3.190720095315949,
+    1.6128583041488056,
+    1.8731210180888318
+   ],
+   "family_nrmse_vs_truth": 0.11031129948501409,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    3.4655717060126467,
+    1.291980589223121,
+    1.5666013855938148
+   ]
+  },
+  {
+   "target": 95,
+   "reg": 79,
+   "true_type": "hill_rep",
+   "K_true": 2.626258038048121,
+   "n_true": 2.0,
+   "h_true": 1.0528607629421665,
+   "x_range": [
+    0.002737212808195343,
+    4.995298508020387
+   ],
+   "nn_fit_nrmse_vs_truth": 0.1049426393652148,
+   "gp_expr": "div(div(add(add(0.924, X0), X0), X0), sub(add(0.278, X0), div(-0.487, X0)))",
+   "gp_nrmse_vs_truth": 0.13792340247952498,
+   "family_selected": "hill_rep",
+   "family_params": [
+    2.4421903076718507,
+    1.5500750373050678,
+    1.9124152439436826
+   ],
+   "family_nrmse_vs_truth": 0.10227363754519773,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    2.5976319563138457,
+    1.3360024713786214,
+    1.6343031287345764
+   ]
+  },
+  {
+   "target": 92,
+   "reg": 79,
+   "true_type": "hill_rep",
+   "K_true": 2.924394079896459,
+   "n_true": 2.0,
+   "h_true": 1.0528607629421665,
+   "x_range": [
+    0.002737212808195343,
+    4.995298508020387
+   ],
+   "nn_fit_nrmse_vs_truth": 0.10174265081939776,
+   "gp_expr": "div(div(add(add(add(0.701, 0.583), X0), add(0.082, X0)), X0), sub(add(0.278, X0), div(-0.487, X0)))",
+   "gp_nrmse_vs_truth": 0.12985283481177648,
+   "family_selected": "hill_rep",
+   "family_params": [
+    2.7010661838476246,
+    1.517727538303489,
+    1.84015450641039
+   ],
+   "family_nrmse_vs_truth": 0.09745034153349352,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    2.8983264067746393,
+    1.2717419261724128,
+    1.5774567235872385
+   ]
+  },
+  {
+   "target": 62,
+   "reg": 9,
+   "true_type": "hill_rep",
+   "K_true": 1.9857257338175773,
+   "n_true": 2.0,
+   "h_true": 1.3007073328350283,
+   "x_range": [
+    0.07924704322285332,
+    4.619634999610475
+   ],
+   "nn_fit_nrmse_vs_truth": 0.09849692339502295,
+   "gp_expr": "div(div(add(0.859, X0), X0), sub(X0, div(-0.487, X0)))",
+   "gp_nrmse_vs_truth": 0.04378886509171727,
+   "family_selected": "hill_rep",
+   "family_params": [
+    1.8176223157654412,
+    1.805232877218907,
+    1.8492673459107432
+   ],
+   "family_nrmse_vs_truth": 0.09532599462391066,
+   "type_correct": true,
+   "oracle_selected": "hill_rep",
+   "oracle_params": [
+    1.882986266411473,
+    1.5961281735086887,
+    1.758317541509459
+   ]
+  },
+  {
+   "target": 27,
+   "reg": 5,
+   "true_type": "hill_act",
+   "K_true": 1.3222584918714557,
+   "n_true": 2.0,
+   "h_true": 1.2440419013339634,
+   "x_range": [
+    0.1491102796724964,
+    5.354160330656406
+   ],
+   "nn_fit_nrmse_vs_truth": 0.12217773483813861,
+   "gp_expr": "sub(mul(0.228, X0), sub(0.724, 0.920))",
+   "gp_nrmse_vs_truth": 0.15654390765564297,
+   "family_selected": "hill_act",
+   "family_params": [
+    1.6407173394653551,
+    2.3843660620600473,
+    1.251740986790319
+   ],
+   "family_nrmse_vs_truth": 0.12216708642753364,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    1.4465325119010286,
+    1.8223834866010409,
+    1.4713471727094527
+   ]
+  },
+  {
+   "target": 49,
+   "reg": 9,
+   "true_type": "hill_act",
+   "K_true": 3.8499834917612357,
+   "n_true": 2.0,
+   "h_true": 1.3007073328350283,
+   "x_range": [
+    0.07924704322285332,
+    4.619634999610475
+   ],
+   "nn_fit_nrmse_vs_truth": 0.08938758823796181,
+   "gp_expr": "add(mul(0.848, mul(0.909, X0)), 0.393)",
+   "gp_nrmse_vs_truth": 0.137804442126759,
+   "family_selected": "hill_act",
+   "family_params": [
+    4.871407979499134,
+    2.2789014520894724,
+    1.2674885340783264
+   ],
+   "family_nrmse_vs_truth": 0.089276290337511,
+   "type_correct": true,
+   "oracle_selected": "hill_act",
+   "oracle_params": [
+    4.8950362496856314,
+    2.2885438751412055,
+    1.2596224831347504
+   ]
+  }
+ ]
+}

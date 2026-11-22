@@ -1,0 +1,33 @@
+Critère,Code,Valeur,Seuil,Verdict,Description
+NODE cosinus test,R1a,0.520,≥ 0.5,✓,Cosinus moyen entre champ NODE et vélocité mesurée (ensemble test ; 5 graines pancréas)
+Marge sur contrôle mélangé,R1b,0.155,≥ 0.3,✗,Différence NODE (0.520) − contrôle aléatoire (0.365)
+Cosinus symbolique/NODE,R2,0.880,≥ 0.9,✗,Cosinus entre champ distillé et champ NODE (ensemble test)
+Jaccard structure inter-graines,R3,N/A (descriptif),≥ 0.6,—,Non calculé dans les résultats principaux
+Jaccard structure inter-λ_reg,R4,N/A (descriptif),≥ 0.6,—,Non calculé dans les résultats principaux
+Équilibres/clusters,R5,descriptif,sans seuil,—,Correspondance équilibres stables aux clusters annotés
+Distillé vs direct,R6,0.519 / 0.575,sans seuil,—,Cosinus distillé vs identification directe (réelles)
+Rapport cos sym/NODE,R7,0.998,≥ 0.8,✓,cos(sym,V)/cos(NODE,V) — fidélité symbolique relative
+F1 de structure (distillé base),S1,0.778,≥ 0.7,✓,F1 récupération des arêtes régulatrices (5 graines base)
+Erreur relative paramètres,S2,0.441,≤ 0.25,✗,Erreur relative médiane sur K et n des termes Hill correctement identifiés
+Cosinus NODE / vérité,S3,0.939,≥ 0.9,✓,Cosinus champ NODE vs champ vrai (5 graines base)
+Borne Grönwall (Prop. 1),S4,1.000,≥ 0.95,✓,Fraction de trajectoires où E ≤ B (70 runs — 14 variantes × 5 graines)
+Pseudotemps cosinus direction,S5,0.712,≥ 0.9,✗,Cosinus champ NODE vs champ vrai sous pseudotemps γ=2 (5 graines)
+Variété — chute cosinus hors support,S6,0.014,≥ 0.1,✗,Différence de cosinus in-support − off-support (variante manifold ; 5 graines)
+PySR toggle — R² vs NODE,PT1,0.936,≥ 0.95,✗,R² entre prédiction PySR et champ NODE sur toggle 2D (3 graines)
+PySR toggle — NRMSE vs vérité,PT2,0.0214,≤ 0.05,✓,NRMSE normalisé du champ PySR vs champ vrai toggle
+PySR toggle — points fixes stables,PT3,1/3 graines,toutes,✗,Fraction des graines conservant 2 attracteurs stables dans l'expression PySR
+PySR toggle — régulateur présent,PT4,1.00,≥ 1.0,✓,Fraction des graines où le gène régulateur apparaît dans l'équation
+PySR réelles — cosinus PySR/NODE,RP1,0.764,≥ 0.9,✗,Cosinus champ PySR vs champ NODE (3 graines pancréas)
+PySR réelles — ratio cosinus,RP2,0.852,≥ 0.8,✓,cos(PySR,V)/cos(NODE,V) données réelles
+PySR synthétique — rappel variables,S7,0.920,≥ 0.8,✓,Rappel moyen des variables vraies dans les expressions PySR (5 runs)
+Référence linéaire (réelles),BASE-L,0.588,—,—,Cosinus champ linéaire vs vélocité mesurée (pancréas)
+Identification directe FD (réelles),BASE-FD,0.575,—,—,Cosinus identification directe (différences finies + Hill) vs vélocité
+Distillation (réelles),BASE-DIST,0.519,—,—,Cosinus distillation vs vélocité mesurée
+F1 direct FD (synthétique),COMP-FD,0.887,—,—,F1 identification directe sur données synthétiques (5 graines base)
+F1 Weak-SINDy (synthétique),COMP-WS,0.864,—,—,F1 Weak-SINDy sur données synthétiques (5 graines base)
+F1 distillé (synthétique),COMP-DIST,0.778,—,—,F1 distillation Neural ODE sur données synthétiques (5 graines base)
+CellRank cosinus (réelles),BASE-CR,0.4748,—,—,Cosinus CellRank vs vélocité mesurée (pancréas)
+dynamo cosinus (réelles),BASE-DYN,-0.9317,—,—,Cosinus dynamo vs vélocité (Ins2 Mu>>Ms : phase de dégradation pré-stationnaire)
+BoolODE cosinus (réelles),BASE-BOOL,0.0200,—,—,Cosinus BoolODE vs vélocité mesurée (pancréas)
+KO in silico — cosinus symbolique,KO-SYM,0.628,—,—,Cosinus décalages KO symbolique vs vérité (synthétique)
+KO in silico — cosinus NODE,KO-NODE,0.605,—,—,Cosinus décalages KO NODE vs vérité (synthétique)

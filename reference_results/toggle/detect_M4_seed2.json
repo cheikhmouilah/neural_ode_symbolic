@@ -1,0 +1,49 @@
+{
+ "system": "M4",
+ "kind": "selfact",
+ "seed": 2,
+ "node_field_nrmse": 0.013622379426440746,
+ "node_traj_nrmse": 0.012115583302452756,
+ "node_ok": true,
+ "reg_sign_ok": true,
+ "hill_only": {
+  "nrmse_sym_to_node": 0.011764084770119844,
+  "nrmse_sym_to_truth": 0.009394290283991347,
+  "traj_nrmse": 0.03137376073987533,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.05068907374660058
+  }
+ },
+ "rule_T_flag": false,
+ "rule_F_flag": false,
+ "rule_G_choice": [
+  "hill",
+  "hill"
+ ],
+ "rule_B_choice": [
+  "hill",
+  "hill"
+ ],
+ "rss_gain_ratios": [
+  {
+   "leaky": 1.0000000000002882,
+   "gauss": 0.7923505480721195
+  },
+  {
+   "leaky": 1.0000000000009106,
+   "gauss": 0.7203351862946941
+  }
+ ],
+ "after_G": {
+  "nrmse_sym_to_truth": 0.009394290283991347,
+  "traj_nrmse": 0.03137376073987533,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.05068907374660058
+  }
+ },
+ "seconds": 55.434755086898804
+}

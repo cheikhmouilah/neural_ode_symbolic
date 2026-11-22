@@ -1,0 +1,851 @@
+{
+ "seed": 4,
+ "lam_reg": 0.001,
+ "control": "none",
+ "config_sha": "cfd09f80c77b07a5",
+ "genes": [
+  "Tmsb10",
+  "Snca",
+  "Slc1a2",
+  "Hba-a1",
+  "Mt1",
+  "Hexb",
+  "Ppp3ca",
+  "Itm2b"
+ ],
+ "space": "gene",
+ "node": {
+  "best_val": 0.5074251294136047,
+  "best_epoch": 39,
+  "seconds": 0.3578789234161377,
+  "n_train": 1560,
+  "lam_reg": 0.001,
+  "norm": 0.002000433160992099
+ },
+ "node_cos_test": 0.5510595756651295,
+ "node_cos_val": 0.6715043157440226,
+ "node_cos_train": 0.581239767946297,
+ "node_nrmse_test": 0.05721723613231058,
+ "linear_baseline_cos_test": 0.6340480761466761,
+ "Df": {
+  "n_obs": 2000,
+  "n_jitter": 2000,
+  "reject_thr": 0.1443429015511995,
+  "rejected": 24
+ },
+ "sym_cos_vs_node_test": 0.9646149109536564,
+ "sym_nrmse_vs_node_test": 0.02669483523879016,
+ "sym_cos_vs_measured_test": 0.5642811678289378,
+ "R7_ratio": 1.0239930358670382,
+ "equations": [
+  "dTmsb10/dt = 0.00383*H-(Slc1a2;K=0.0642,n=2.1) + 0.0084*H+(Ppp3ca;K=1.16,n=6) - 0.00109*Tmsb10",
+  "dSnca/dt = 0.0234*H+(Ppp3ca;K=0.351,n=2.9) + 0.209*H+(Snca;K=1.31,n=1.6) + 0.0225*H+(Tmsb10;K=0.726,n=2.1) - 0.103*Snca",
+  "dSlc1a2/dt = 0.00322*H-(Snca;K=0.239,n=6) + 0.0256*H+(Mt1;K=0.742,n=2) + 0.00125*H-(Hexb;K=0.104,n=6) - 0.0189*Slc1a2",
+  "dHba-a1/dt = 0 - 0.0088*Hba-a1",
+  "dMt1/dt = 0.01*H+(Itm2b;K=0.154,n=6) + 0.226*H+(Mt1;K=1.44,n=1.5) + 0.00451*H-(Snca;K=0.252,n=6) - 0.0887*Mt1",
+  "dHexb/dt = 0.0268*H+(Ppp3ca;K=1.22,n=2.3) + 0.0401*H+(Snca;K=2.49,n=1.9) + 0.00275*H+(Tmsb10;K=0.308,n=2.9) - 4.22e-41*Hexb",
+  "dPpp3ca/dt = 0.0345*H-(Itm2b;K=0.19,n=2.6) + 0.171*H+(Snca;K=1.59,n=1.6) + 0.0169*H-(Mt1;K=0.526,n=6) - 0.068*Ppp3ca",
+  "dItm2b/dt = 0.0341*H+(Ppp3ca;K=2.16,n=1.3) + 0.0371*H+(Hexb;K=1.38,n=1.2) + 0.014*H+(Tmsb10;K=1.36,n=1.1) - 0.0206*Itm2b"
+ ],
+ "models": [
+  {
+   "i": 0,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "rep",
+     "a": 0.003830441588312975,
+     "K": 0.06418928461810851,
+     "n": 2.1460279148879
+    },
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "act",
+     "a": 0.008398738280582099,
+     "K": 1.1572509049569653,
+     "n": 5.999999999999999
+    }
+   ],
+   "g": 0.001093067612185733
+  },
+  {
+   "i": 1,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "act",
+     "a": 0.023390646722161415,
+     "K": 0.350776236607543,
+     "n": 2.9146581102219176
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.20922516541310324,
+     "K": 1.305851360481823,
+     "n": 1.6496468591869538
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "a": 0.022513224924057065,
+     "K": 0.7255564188630796,
+     "n": 2.1186329343296233
+    }
+   ],
+   "g": 0.10257724797323128
+  },
+  {
+   "i": 2,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "a": 0.003218405028416918,
+     "K": 0.23931397783640276,
+     "n": 5.999999999999999
+    },
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "a": 0.025642220515906915,
+     "K": 0.7418664235763439,
+     "n": 1.987594869708435
+    },
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "rep",
+     "a": 0.0012473717971779265,
+     "K": 0.10433217792299034,
+     "n": 5.999999999999999
+    }
+   ],
+   "g": 0.018935967004075765
+  },
+  {
+   "i": 3,
+   "terms": [],
+   "g": 0.008798528716046935
+  },
+  {
+   "i": 4,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "a": 0.010037907441249761,
+     "K": 0.15401565946153928,
+     "n": 5.999999999927889
+    },
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "a": 0.22633918629718777,
+     "K": 1.4432583289922405,
+     "n": 1.4526042234908003
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "a": 0.004507713529380251,
+     "K": 0.25188525451358534,
+     "n": 5.999999999999974
+    }
+   ],
+   "g": 0.08873486034493633
+  },
+  {
+   "i": 5,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "act",
+     "a": 0.02675421704121187,
+     "K": 1.2172490516046488,
+     "n": 2.3409879550965784
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.04007957547692799,
+     "K": 2.4929859643134127,
+     "n": 1.9056095011941883
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "a": 0.002746118689081313,
+     "K": 0.3079199292127821,
+     "n": 2.9234457230026343
+    }
+   ],
+   "g": 4.2226609874152184e-41
+  },
+  {
+   "i": 6,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "rep",
+     "a": 0.034468415728598094,
+     "K": 0.19016876516043252,
+     "n": 2.570762948697783
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.17088542725717068,
+     "K": 1.588818454911275,
+     "n": 1.6493657572496339
+    },
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "rep",
+     "a": 0.016930057209620993,
+     "K": 0.5259506834949802,
+     "n": 5.999999999999217
+    }
+   ],
+   "g": 0.06802331761831847
+  },
+  {
+   "i": 7,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "act",
+     "a": 0.03412080080530518,
+     "K": 2.159816032552014,
+     "n": 1.296274908797725
+    },
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "act",
+     "a": 0.037135447700908014,
+     "K": 1.3831960460476547,
+     "n": 1.210291163607762
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "a": 0.013998576155944348,
+     "K": 1.3635705542434549,
+     "n": 1.1064256193679862
+    }
+   ],
+   "g": 0.020646609785869185
+  }
+ ],
+ "structure": [
+  [
+   "(2, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(1, 'act')",
+   "(6, 'act')"
+  ],
+  [
+   "(1, 'rep')",
+   "(4, 'act')",
+   "(5, 'rep')"
+  ],
+  [],
+  [
+   "(1, 'rep')",
+   "(4, 'act')",
+   "(7, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(1, 'act')",
+   "(6, 'act')"
+  ],
+  [
+   "(1, 'act')",
+   "(4, 'rep')",
+   "(7, 'rep')"
+  ],
+  [
+   "(0, 'act')",
+   "(5, 'act')",
+   "(6, 'act')"
+  ]
+ ],
+ "omega": [
+  7,
+  10,
+  10,
+  1,
+  10,
+  10,
+  10,
+  10
+ ],
+ "pareto": [
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 2.3259288133192224e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.0115456312264647e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 9.76175783124069e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 9.579132271235934e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 3.3756267671063916e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.7648022853804943e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 1.6396156389763238e-05
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 1.4722121098692449e-05
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 6.088920184395448e-06
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 3.0396390616184304e-06
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 2.2640599946611117e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 1.8494930754307724e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 1.3481275918267203e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 3.234644977485342e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 3.287844653209339e-05
+   },
+   {
+    "k": 3,
+    "omega": 8,
+    "mse_val": 3.288107075903406e-05
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 3.6287465584189515e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.2513102131390402e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 8.454627416726482e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 7.662687674388112e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 5.4937720896700014e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 6.924548697715732e-06
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 5.5757284198888905e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 5.273927123301142e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 0.0009517341512801681
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 0.0001110072586569889
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 2.9863303595519857e-05
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 1.6843832098114778e-05
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 2.7626553194081363e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 3.3307508829784483e-06
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 1.4667409807767771e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 5.653161163764599e-07
+   }
+  ]
+ ],
+ "refine_spread": [
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     0.34611986259012617,
+     0.4530955914747422,
+     0.0028534705797663255,
+     4.982114148427478e-06
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     4.395450568793972e-05,
+     0.00026335652114430785,
+     4.951302047984657e-05,
+     4.28673884399979e-05,
+     0.00029463535240352765,
+     9.845290343297509e-05
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     2.9073535570279837e-06,
+     0.0,
+     4.587971635278818e-05,
+     3.772307872529959e-05,
+     1.418267517984236e-05,
+     8.263474629613168e-12
+    ]
+   }
+  ],
+  [
+   null
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     1.1264039713081123e-06,
+     4.203322631422931e-12,
+     2.150009693262068e-06,
+     6.949996956735965e-07,
+     1.2085752849484448e-05,
+     2.0367156476973252e-12
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     7.306209519597992e-05,
+     8.267835696337871e-05,
+     0.003787537779122142,
+     0.0006019082402642901,
+     0.0012774923301870475,
+     0.0011266144412361752
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     2.8598337243362896e-07,
+     1.0331712744015917e-05,
+     1.0339682432087233e-05,
+     3.245125102297826e-06,
+     3.180847020893083e-06,
+     5.4140250118667236e-11
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     0.00025955977411155424,
+     4.957333480438125e-05,
+     4.122597213648534e-06,
+     3.863517238438478e-06,
+     0.00013334216707859895,
+     3.1481090034535205e-05
+    ]
+   }
+  ]
+ ],
+ "direct_cos_vs_measured_test": 0.6156157668926898,
+ "direct_equations": [
+  "dTmsb10/dt = 0.0346*H+(Tmsb10;K=0.395,n=5.4) + 0.00752*H+(Itm2b;K=0.123,n=6) + 0.0233*H+(Hba-a1;K=0.133,n=6) - 0.0537*Tmsb10",
+  "dSnca/dt = 0.0369*H+(Snca;K=0.364,n=1.4) + 0.00173*H-(Tmsb10;K=0.0554,n=6) + 0.00285*H+(Tmsb10;K=0.399,n=6) - 0.0418*Snca",
+  "dSlc1a2/dt = 0.0304*H+(Slc1a2;K=0.187,n=3.5) + 0.00146*H+(Tmsb10;K=0.0346,n=1.3) - 0.0343*Slc1a2",
+  "dHba-a1/dt = 0.0206*H+(Hba-a1;K=1.06,n=6) - 0.00979*Hba-a1",
+  "dMt1/dt = 0.0364*H+(Slc1a2;K=0.137,n=4.5) + 0.00403*H+(Mt1;K=0.0534,n=2.3) - 0.0502*Mt1",
+  "dHexb/dt = 0.0092*H+(Hexb;K=0.134,n=1) + 0.00047*H+(Tmsb10;K=0.177,n=6) - 0.00786*Hexb",
+  "dPpp3ca/dt = 0.148*H+(Ppp3ca;K=0.23,n=3) + 0.0402*H-(Tmsb10;K=0.476,n=6) - 0.229*Ppp3ca",
+  "dItm2b/dt = 0.0664*H+(Hexb;K=1.2,n=6) + 0.00621*H+(Slc1a2;K=0.532,n=6) + 0.00194*H+(Itm2b;K=0.059,n=1) - 0.0235*Itm2b"
+ ],
+ "direct_structure": [
+  [
+   "(0, 'act')",
+   "(3, 'act')",
+   "(7, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(0, 'rep')",
+   "(1, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(2, 'act')"
+  ],
+  [
+   "(3, 'act')"
+  ],
+  [
+   "(2, 'act')",
+   "(4, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(5, 'act')"
+  ],
+  [
+   "(0, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(2, 'act')",
+   "(5, 'act')",
+   "(7, 'act')"
+  ]
+ ],
+ "distilled_vs_direct_jaccard": 0.15,
+ "stlsq_baseline": [
+  {
+   "threshold": 0.01,
+   "mean_terms": 84.875,
+   "cos_vs_node_test": 0.9995066095353878
+  },
+  {
+   "threshold": 0.05,
+   "mean_terms": 5.375,
+   "cos_vs_node_test": 0.9571706652126305
+  },
+  {
+   "threshold": 0.1,
+   "mean_terms": 0.625,
+   "cos_vs_node_test": 0.8818673748517648
+  },
+  {
+   "threshold": 0.2,
+   "mean_terms": 0.125,
+   "cos_vs_node_test": 0.8702745603782793
+  },
+  {
+   "threshold": 0.5,
+   "mean_terms": 0.0,
+   "cos_vs_node_test": 0.0
+  }
+ ],
+ "eq_node": {
+  "n": 0,
+  "n_stable": 0,
+  "points": [],
+  "clusters": [
+   {
+    "cluster": "Astrocytes",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.5079222546981286
+   },
+   {
+    "cluster": "Cajal Retzius",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.13006416468838933
+   },
+   {
+    "cluster": "Cck-Tox",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.15538606324849483
+   },
+   {
+    "cluster": "Endothelial",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.7479909181712712
+   },
+   {
+    "cluster": "GABA",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.3537951622123507
+   },
+   {
+    "cluster": "Granule immature",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.2898440904601992
+   },
+   {
+    "cluster": "Granule mature",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.2039506626320937
+   },
+   {
+    "cluster": "Microglia",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.42434505693060387
+   },
+   {
+    "cluster": "Mossy",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.20884070635438284
+   },
+   {
+    "cluster": "Neuroblast",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.32427249086340487
+   },
+   {
+    "cluster": "OL",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.06781534773601107
+   },
+   {
+    "cluster": "OPC",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.0702666481250753
+   },
+   {
+    "cluster": "Radial Glia-like",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.20633196976363574
+   },
+   {
+    "cluster": "nIPC",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.0987943026421159
+   }
+  ]
+ },
+ "eq_symbolic": {
+  "n": 0,
+  "n_stable": 0,
+  "points": [],
+  "clusters": [
+   {
+    "cluster": "Astrocytes",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.5079222546981286
+   },
+   {
+    "cluster": "Cajal Retzius",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.13006416468838933
+   },
+   {
+    "cluster": "Cck-Tox",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.15538606324849483
+   },
+   {
+    "cluster": "Endothelial",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.7479909181712712
+   },
+   {
+    "cluster": "GABA",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.3537951622123507
+   },
+   {
+    "cluster": "Granule immature",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.2898440904601992
+   },
+   {
+    "cluster": "Granule mature",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.2039506626320937
+   },
+   {
+    "cluster": "Microglia",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.42434505693060387
+   },
+   {
+    "cluster": "Mossy",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.20884070635438284
+   },
+   {
+    "cluster": "Neuroblast",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.32427249086340487
+   },
+   {
+    "cluster": "OL",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.06781534773601107
+   },
+   {
+    "cluster": "OPC",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.0702666481250753
+   },
+   {
+    "cluster": "Radial Glia-like",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.20633196976363574
+   },
+   {
+    "cluster": "nIPC",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.0987943026421159
+   }
+  ]
+ },
+ "endpoints_node": {
+  "T": 135.14234750459863,
+  "distribution": {
+   "Astrocytes": 1,
+   "Microglia": 50
+  },
+  "median_final_speed": 0.047959734523541825
+ },
+ "endpoints_symbolic": {
+  "T": 135.14234750459863,
+  "distribution": {
+   "Astrocytes": 51
+  },
+  "median_final_speed": 0.005901029926951739
+ },
+ "seconds_total": 65.20794343948364
+}

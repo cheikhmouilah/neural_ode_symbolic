@@ -1,0 +1,67 @@
+[
+ {
+  "check": "bruit -> cosinus NODE",
+  "status": "ECHEC",
+  "detail": "cosinus NODE/verite : valeurs [0.506, 0.706, 0.806, 0.906] ; amelioration maximale avec la degradation = +0.199 (tolerance 0.03)"
+ },
+ {
+  "check": "bruit -> F1 distille",
+  "status": "OK",
+  "detail": "F1 de structure : valeurs [0.851, 0.833, 0.865, 0.855] ; amelioration maximale avec la degradation = +0.032 (tolerance 0.15)"
+ },
+ {
+  "check": "dropout -> cosinus NODE",
+  "status": "NON EVALUE",
+  "detail": "moins de 2 niveaux avec >= 3 graines"
+ },
+ {
+  "check": "dropout -> F1 distille",
+  "status": "NON EVALUE",
+  "detail": "moins de 2 niveaux avec >= 3 graines"
+ },
+ {
+  "check": "quantite de donnees -> cosinus NODE",
+  "status": "NON EVALUE",
+  "detail": "N20 et N120 requis avec >= 3 graines"
+ },
+ {
+  "check": "invariance : cosinus NODE",
+  "status": "OK",
+  "detail": "12 valeurs, etendue 4.05e-01"
+ },
+ {
+  "check": "invariance : traj NODE",
+  "status": "OK",
+  "detail": "12 valeurs, etendue 8.67e-03"
+ },
+ {
+  "check": "invariance : F1 distille",
+  "status": "OK",
+  "detail": "12 valeurs, etendue 8.55e-02"
+ },
+ {
+  "check": "invariance : cosinus distille",
+  "status": "OK",
+  "detail": "12 valeurs, etendue 6.20e-03"
+ },
+ {
+  "check": "invariance : F1 direct",
+  "status": "OK",
+  "detail": "12 valeurs, etendue 9.12e-02"
+ },
+ {
+  "check": "invariance : F1 forme faible",
+  "status": "OK",
+  "detail": "12 valeurs, etendue 9.69e-02"
+ },
+ {
+  "check": "invariance reelle (graines)",
+  "status": "NON EVALUE",
+  "detail": "0 graine(s) < 3"
+ },
+ {
+  "check": "toggle : bruit -> erreur de champ",
+  "status": "NON EVALUE",
+  "detail": "resultats traj, n05, n10 (>= 3 graines) requis"
+ }
+]

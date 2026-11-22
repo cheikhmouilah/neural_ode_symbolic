@@ -1,0 +1,23 @@
+{
+  "phase": "6 - grille bruit / quantite de donnees sur le toggle (H2, H3, comparaison distillation vs identification directe)",
+  "written_before_execution": true,
+  "conditions": [
+    {"tag": "n05", "noise_sigma": 0.05, "n_train": 40, "note": "bruit gaussien additif absolu sur les observations d'entrainement/validation (~1,2 % de l'etendue des etats)"},
+    {"tag": "n10", "noise_sigma": 0.10, "n_train": 40, "note": "~2,4 % de l'etendue"},
+    {"tag": "N15", "noise_sigma": 0.0,  "n_train": 15, "note": "donnees reduites, sans bruit"}
+  ],
+  "reference": "phase 1, protocole trajectoire seule (sigma=0, n_train=40)",
+  "seeds": [0, 1, 2],
+  "evaluation": "test non bruite (conditions initiales exactes, vraies trajectoires)",
+  "preregistered_criteria": {
+    "R1_structure": "structure exacte (regulateur, signe repression) dans au moins 2 graines sur 3",
+    "R2_parametres": "mediane sur les graines de l'erreur relative mediane des parametres < 0.10",
+    "R3_trajectoire": "NRMSE de trajectoire symbolique (test) < 0.05 dans au moins 2 graines sur 3",
+    "condition_reussie_si": "R1, R2 et R3 tous satisfaits"
+  },
+  "comparisons_reported_without_threshold": [
+    "distillation (champ NODE aux etats observes) vs identification directe sur derivees estimees par differences finies centrees (dt=0.2) : nombre de graines ou l'erreur max de la distillation est la plus faible",
+    "evolution de l'erreur par parametre (a, K, n, g) avec le bruit et N (H2, H3)"
+  ],
+  "expectation_policy": "Aucune valeur attendue n'est postulee ; H2 (degradation avec bruit/dropout/N faible) et H5 (differences finies sensibles au bruit) sont testees, pas presumees."
+}

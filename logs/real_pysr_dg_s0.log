@@ -1,0 +1,15 @@
+C:\neural_ode_symbolic\.venv\Lib\site-packages\juliacall\__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+=== PySR reel (real_dentategyrus.json), graine 0, equations [0, 1, 2, 3, 4, 5, 6, 7] ===
+C:\neural_ode_symbolic\real_data/src\real_node.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')
+   eq0 Tmsb10 (complexite 9) : (x7 * ((x7 - 1.3590821) * -0.03982405)) + -0.005103827
+   eq1 Snca (complexite 7) : (-0.017426878 * (x1 + -0.5431131)) * x1
+   eq2 Slc1a2 (complexite 7) : (x2 * (1.0 - x2)) * 0.021772234
+   eq3 Hba-a1 (complexite 11) : (((x5 + (x7 * -1.4695246)) + 0.519255) * 0.004096713) / 1.4495316
+   eq4 Mt1 (complexite 9) : (x4 + (x2 * (x4 - 2.0146396))) * -0.017279938
+   eq5 Hexb (complexite 9) : 0.0019089177 - ((x4 * -0.003993747) * (x4 + -1.273484))
+   eq6 Ppp3ca (complexite 11) : (((x1 * -0.6164729) + (x6 * x6)) + -0.38931337) * -0.06233123
+   eq7 Itm2b (complexite 7) : ((0.13718644 - x7) + x5) * 0.02454331
+graine 0 : cosinus PySR~NODE 0.919 ; PySR~vitesse 0.629 ; NODE~vitesse (memes genes) 0.639 ; 86 s

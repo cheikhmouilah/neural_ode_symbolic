@@ -1,0 +1,16 @@
+# Versions testees (Python 3.12). Torch CPU suffit ; aucun GPU requis.
+numpy>=2.4
+scipy>=1.17
+pandas>=3.0
+scikit-learn>=1.8
+matplotlib>=3.10
+sympy>=1.14
+torch>=2.14
+torchdiffeq>=0.2.2
+pysindy==2.1.0
+gplearn==0.4.3
+# Chaine C (donnees reelles) :
+scanpy>=1.11
+anndata>=0.12
+scvelo==0.3.4   # >=0.3 : plus d'option n_top_genes (HVG par scanpy) ; mode 'stochastic' en echec avec numpy 2.x -> 'deterministic'
+pysr>=2.7        # recherche symbolique libre ; le moteur est en Julia (installe automatiquement au premier import ; voir GUIDE_PYSR.md)

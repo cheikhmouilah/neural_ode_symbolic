@@ -1,0 +1,1 @@
+counts_drop10 seed 0: profilK cov=0.33 KO cos sym=0.23 node=0.42 | NODE traj=0.067 cos=0.514 | distilled F1=0.29 (P 0.25 R 0.33) cos_truth=0.569 | direct F1=0.00 weak F1=0.00 oracle relerr=0.7382731425984026 | prop1=1.0 | 136s

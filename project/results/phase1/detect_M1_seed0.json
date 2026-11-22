@@ -1,0 +1,49 @@
+{
+ "system": "M1",
+ "kind": "leaky",
+ "seed": 0,
+ "node_field_nrmse": 0.024989425608633424,
+ "node_traj_nrmse": 0.030388054659793908,
+ "node_ok": true,
+ "reg_sign_ok": true,
+ "hill_only": {
+  "nrmse_sym_to_node": 0.03542292219392763,
+  "nrmse_sym_to_truth": 0.03983576150434575,
+  "traj_nrmse": 0.09795134454393609,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.2853952038889047
+  }
+ },
+ "rule_T_flag": false,
+ "rule_F_flag": true,
+ "rule_G_choice": [
+  "leaky",
+  "leaky"
+ ],
+ "rule_B_choice": [
+  "leaky",
+  "leaky"
+ ],
+ "rss_gain_ratios": [
+  {
+   "leaky": 3.66492884201236,
+   "gauss": 1.0476780820381988
+  },
+  {
+   "leaky": 2.2691285367658542,
+   "gauss": 0.8131386089089871
+  }
+ ],
+ "after_G": {
+  "nrmse_sym_to_truth": 0.019535494370400548,
+  "traj_nrmse": 0.03436958329502261,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.034216654226972655
+  }
+ },
+ "seconds": 257.9979672431946
+}

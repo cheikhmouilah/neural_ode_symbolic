@@ -1,0 +1,1 @@
+pseudo2 seed 1: profilK cov=0.29 KO cos sym=None node=None | NODE traj=0.048 cos=0.748 | distilled F1=0.70 (P 0.64 R 0.78) cos_truth=0.832 | direct F1=0.76 weak F1=0.40 oracle relerr=0.6995992801485974 | prop1=None | 403s

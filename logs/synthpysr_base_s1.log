@@ -1,0 +1,3 @@
+C:\neural_ode_symbolic\.venv\Lib\site-packages\juliacall\__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+base seed 1: profilK cov=0.78 KO cos sym=0.7 node=0.77 | NODE traj=0.018 cos=0.965 | distilled F1=0.78 (P 0.64 R 1.00) cos_truth=0.982 | direct F1=1.00 weak F1=0.84 oracle relerr=0.27013421426410966 | prop1=1.0 | 151s

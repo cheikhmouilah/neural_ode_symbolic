@@ -1,0 +1,3 @@
+observe (SERGIO, gene 9)     n_hat median=2.00 IQR=[1.96,2.05]  |n_hat-2|<0.5 : 100%
+plage elargie x0.3-3h        n_hat median=2.00 IQR=[1.95,2.06]  |n_hat-2|<0.5 : 100%
+plage elargie x0.2-6h        n_hat median=2.00 IQR=[1.96,2.04]  |n_hat-2|<0.5 : 100%

@@ -1,0 +1,806 @@
+{
+ "seed": 0,
+ "lam_reg": 0.001,
+ "control": "none",
+ "config_sha": "166ec4ab83624e8e",
+ "genes": [
+  "mod0[Ins2,Nnat,Dlk1]",
+  "mod1[2810417H13Rik,Ldha]",
+  "mod2[Chga,Hmgn3,Rap1b]",
+  "mod3[Ghrl,Isl1,Maged2]",
+  "mod4[Btbd17,Hn1,H2afv]",
+  "mod5[Clu,Krt18,Mt1]",
+  "mod6[Krt7,Hspa8,Map1b]",
+  "mod7[Gnas,Cpe,Tmem27]"
+ ],
+ "space": "module",
+ "node": {
+  "best_val": 1.0166527032852173,
+  "best_epoch": 71,
+  "seconds": 1.4275364875793457,
+  "n_train": 1816,
+  "lam_reg": 0.001,
+  "norm": 0.0010352932159544358
+ },
+ "node_cos_test": 0.6251582653811383,
+ "node_cos_val": 0.605969312918593,
+ "node_cos_train": 0.737354897914204,
+ "node_nrmse_test": 0.058008644339831585,
+ "linear_baseline_cos_test": 0.7020579585092489,
+ "Df": {
+  "n_obs": 2000,
+  "n_jitter": 2000,
+  "reject_thr": 0.09601456610585307,
+  "rejected": 14
+ },
+ "sym_cos_vs_node_test": 0.9735805165925111,
+ "sym_nrmse_vs_node_test": 0.029583066433329662,
+ "sym_cos_vs_measured_test": 0.6198233367069527,
+ "R7_ratio": 0.9914662750704686,
+ "equations": [
+  "dmod0[Ins2,Nnat,Dlk1]/dt = 0.449*H+(mod0[Ins2,Nnat,Dlk1];K=1.91,n=1.2) + 0.0158*H+(mod2[Chga,Hmgn3,Rap1b];K=0.434,n=2.6) - 0.104*mod0[Ins2,Nnat,Dlk1]",
+  "dmod1[2810417H13Rik,Ldha]/dt = 0.0331*H+(mod6[Krt7,Hspa8,Map1b];K=1.55,n=6) + 0.000692*H-(mod2[Chga,Hmgn3,Rap1b];K=0.0855,n=6) + 0.0331*H+(mod1[2810417H13Rik,Ldha];K=1.68,n=1.3) - 0.0141*mod1[2810417H13Rik,Ldha]",
+  "dmod2[Chga,Hmgn3,Rap1b]/dt = 0.212*H+(mod6[Krt7,Hspa8,Map1b];K=5,n=1.1) + 0.011*H-(mod5[Clu,Krt18,Mt1];K=0.0911,n=4.3) + 0.00413*H+(mod1[2810417H13Rik,Ldha];K=0.63,n=6) - 0.0367*mod2[Chga,Hmgn3,Rap1b]",
+  "dmod3[Ghrl,Isl1,Maged2]/dt = 0.0568*H+(mod3[Ghrl,Isl1,Maged2];K=0.772,n=1.6) + 0.00107*H+(mod0[Ins2,Nnat,Dlk1];K=0.122,n=4.6) - 0.0412*mod3[Ghrl,Isl1,Maged2]",
+  "dmod4[Btbd17,Hn1,H2afv]/dt = 0.103*H+(mod4[Btbd17,Hn1,H2afv];K=0.797,n=1.8) + 0.00468*H+(mod1[2810417H13Rik,Ldha];K=0.562,n=3.8) + 0.0033*H+(mod7[Gnas,Cpe,Tmem27];K=0.763,n=6) - 0.0764*mod4[Btbd17,Hn1,H2afv]",
+  "dmod5[Clu,Krt18,Mt1]/dt = 0.0132*H+(mod1[2810417H13Rik,Ldha];K=0.432,n=1.2) + 0.00192*H-(mod1[2810417H13Rik,Ldha];K=0.0825,n=2.5) + 0.00169*H+(mod5[Clu,Krt18,Mt1];K=0.212,n=6) - 0.0235*mod5[Clu,Krt18,Mt1]",
+  "dmod6[Krt7,Hspa8,Map1b]/dt = 0.0377*H+(mod4[Btbd17,Hn1,H2afv];K=0.831,n=1.9) + 0.0116*H-(mod5[Clu,Krt18,Mt1];K=0.556,n=5) + 0.016*H-(mod2[Chga,Hmgn3,Rap1b];K=0.385,n=3.1) - 0.0515*mod6[Krt7,Hspa8,Map1b]",
+  "dmod7[Gnas,Cpe,Tmem27]/dt = 0.0147*H-(mod0[Ins2,Nnat,Dlk1];K=0.323,n=3.9) + 0.234*H+(mod7[Gnas,Cpe,Tmem27];K=1.47,n=1.6) + 0.00755*H+(mod1[2810417H13Rik,Ldha];K=0.596,n=6) - 0.0889*mod7[Gnas,Cpe,Tmem27]"
+ ],
+ "models": [
+  {
+   "i": 0,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "a": 0.4489638756377785,
+     "K": 1.9070623625516392,
+     "n": 1.2333684609833053
+    },
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "a": 0.015835430860597008,
+     "K": 0.43436535531856735,
+     "n": 2.618550485288425
+    }
+   ],
+   "g": 0.10404085556136887
+  },
+  {
+   "i": 1,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "act",
+     "a": 0.03306419657302856,
+     "K": 1.5477868895758777,
+     "n": 5.999999999999999
+    },
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "rep",
+     "a": 0.0006923566641333143,
+     "K": 0.08545598652520789,
+     "n": 5.999999999999999
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.03306419657302842,
+     "K": 1.6774969883950492,
+     "n": 1.3461704014272926
+    }
+   ],
+   "g": 0.014130417480372508
+  },
+  {
+   "i": 2,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "act",
+     "a": 0.21200213972085194,
+     "K": 4.999999999999999,
+     "n": 1.0778473238893092
+    },
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "rep",
+     "a": 0.011038021038020682,
+     "K": 0.09113197052883328,
+     "n": 4.296335416299082
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.0041346482998783135,
+     "K": 0.6297967913945872,
+     "n": 5.999999999999999
+    }
+   ],
+   "g": 0.036666185987338104
+  },
+  {
+   "i": 3,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 3,
+     "typ": "act",
+     "a": 0.05677540855157596,
+     "K": 0.7723254937872032,
+     "n": 1.6083872400900086
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "a": 0.0010652176853163536,
+     "K": 0.12190761247081305,
+     "n": 4.586942958155027
+    }
+   ],
+   "g": 0.04124448748780943
+  },
+  {
+   "i": 4,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "a": 0.10324542479349134,
+     "K": 0.7968973310076317,
+     "n": 1.8378103715864325
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.004677645381497336,
+     "K": 0.5617329448188226,
+     "n": 3.841941484448847
+    },
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "a": 0.0032962724365521038,
+     "K": 0.7634211111603536,
+     "n": 5.999999999999999
+    }
+   ],
+   "g": 0.07642483430180033
+  },
+  {
+   "i": 5,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.013156324021692381,
+     "K": 0.43160203836405286,
+     "n": 1.2477102827590243
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "a": 0.0019164345233245398,
+     "K": 0.08253612881144909,
+     "n": 2.5224290899924697
+    },
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "act",
+     "a": 0.0016929681838008255,
+     "K": 0.2122614719761523,
+     "n": 5.9999999999999885
+    }
+   ],
+   "g": 0.023515399873096886
+  },
+  {
+   "i": 6,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "a": 0.03770300302203135,
+     "K": 0.8305166276016926,
+     "n": 1.8771511407178942
+    },
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "rep",
+     "a": 0.011610512615940935,
+     "K": 0.5561267050239483,
+     "n": 5.02311339950613
+    },
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "rep",
+     "a": 0.016010306358252725,
+     "K": 0.385234346049918,
+     "n": 3.1257965781795076
+    }
+   ],
+   "g": 0.05153972790671057
+  },
+  {
+   "i": 7,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "rep",
+     "a": 0.014686553469886954,
+     "K": 0.3229682544742167,
+     "n": 3.89616558908433
+    },
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "a": 0.23377166198326108,
+     "K": 1.4714911584744215,
+     "n": 1.5631915009205888
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "a": 0.007553878670765484,
+     "K": 0.5956303187284901,
+     "n": 5.999999999999999
+    }
+   ],
+   "g": 0.08894331698944737
+  }
+ ],
+ "structure": [
+  [
+   "(0, 'act')",
+   "(2, 'act')"
+  ],
+  [
+   "(1, 'act')",
+   "(2, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(1, 'act')",
+   "(5, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(3, 'act')"
+  ],
+  [
+   "(1, 'act')",
+   "(4, 'act')",
+   "(7, 'act')"
+  ],
+  [
+   "(1, 'act')",
+   "(1, 'rep')",
+   "(5, 'act')"
+  ],
+  [
+   "(2, 'rep')",
+   "(4, 'act')",
+   "(5, 'rep')"
+  ],
+  [
+   "(0, 'rep')",
+   "(1, 'act')",
+   "(7, 'act')"
+  ]
+ ],
+ "omega": [
+  7,
+  10,
+  10,
+  7,
+  10,
+  10,
+  10,
+  10
+ ],
+ "pareto": [
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 0.00012368104323981624
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.548539023532119e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 4.5301669595113635e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 4.32257756875684e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 3.0031621496157166e-07
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 2.5858426803324017e-07
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 2.3057397984066468e-07
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 2.1098463974575358e-07
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 0.00013391351415363928
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.0491822069625353e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 4.296261115963325e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 3.6918841934998866e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 1.1714760236763584e-06
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 6.859547535784796e-07
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 5.989874216300576e-07
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 5.810288671315248e-07
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 1.2473847147809903e-05
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.8117187536423003e-06
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 1.0480011207850289e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 9.60365903417981e-07
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 5.0627418734758635e-06
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 8.038921175487374e-07
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 3.075057617119196e-07
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 2.607068870510614e-07
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 0.00022008740832517567
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.7173015733148196e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 7.657141718963275e-06
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 1.850942592265247e-06
+   }
+  ],
+  [
+   {
+    "k": 0,
+    "omega": 1,
+    "mse_val": 0.00013094554098738774
+   },
+   {
+    "k": 1,
+    "omega": 4,
+    "mse_val": 1.4620818534716133e-05
+   },
+   {
+    "k": 2,
+    "omega": 7,
+    "mse_val": 1.2603818515071769e-05
+   },
+   {
+    "k": 3,
+    "omega": 10,
+    "mse_val": 9.993653471911732e-06
+   }
+  ]
+ ],
+ "refine_spread": [
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     1.1546567667270106e-05,
+     1.680176143224406e-06,
+     3.9613563023095514e-05,
+     6.339035459923363e-05
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     1.4361637300709778e-07,
+     0.0,
+     1.7156374796020076e-05,
+     0.0,
+     5.374963958386611e-06,
+     2.527237019974476e-06
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     5.58558783096454e-13,
+     9.805823611570081e-08,
+     1.4929343646011838e-06,
+     7.680324350588554e-06,
+     2.3793835046030404e-06,
+     1.2823292956022472e-09
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     6.812585633445306e-06,
+     4.431397205639453e-06,
+     6.819754177966013e-05,
+     0.00012304388513076573
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     1.4214368313891855e-06,
+     4.5212126486528453e-07,
+     1.6104406500351718e-05,
+     1.687820085908142e-05,
+     3.813011122757123e-05,
+     1.6330350828483737e-09
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     3.872825980365714e-05,
+     4.043855906867402e-05,
+     8.741703143810815e-05,
+     0.00011801580775610116,
+     7.0354067830171585e-06,
+     1.9324823355638823e-13
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     8.273201359358946e-05,
+     4.6168339602055735e-05,
+     7.419712885155196e-06,
+     5.8927060563150544e-05,
+     1.4195715623601354e-05,
+     1.9321472120879416e-05
+    ]
+   }
+  ],
+  [
+   {
+    "n_near": 6,
+    "rel_std": [
+     3.4269892894339724e-05,
+     7.742036364800875e-05,
+     6.177393134837835e-05,
+     3.5357337987296417e-06,
+     3.9366478882820965e-06,
+     1.926846903765192e-07
+    ]
+   }
+  ]
+ ],
+ "direct_cos_vs_measured_test": 0.6808497094065541,
+ "direct_equations": [
+  "dmod0[Ins2,Nnat,Dlk1]/dt = 1.02*H+(mod0[Ins2,Nnat,Dlk1];K=0.833,n=1.4) + 0.0144*H+(mod6[Krt7,Hspa8,Map1b];K=0.0795,n=1) - 0.588*mod0[Ins2,Nnat,Dlk1]",
+  "dmod1[2810417H13Rik,Ldha]/dt = 0 - 0.00316*mod1[2810417H13Rik,Ldha]",
+  "dmod2[Chga,Hmgn3,Rap1b]/dt = 0.0215*H-(mod5[Clu,Krt18,Mt1];K=0.136,n=2.1) + 0.0272*H+(mod6[Krt7,Hspa8,Map1b];K=0.752,n=6) - 0.0391*mod2[Chga,Hmgn3,Rap1b]",
+  "dmod3[Ghrl,Isl1,Maged2]/dt = 0.000577*H-(mod6[Krt7,Hspa8,Map1b];K=0.249,n=6) + 0.0877*H+(mod3[Ghrl,Isl1,Maged2];K=2.64,n=1.6) + 0.00128*H+(mod0[Ins2,Nnat,Dlk1];K=0.0594,n=2.8) - 0.0159*mod3[Ghrl,Isl1,Maged2]",
+  "dmod4[Btbd17,Hn1,H2afv]/dt = 0.0651*H+(mod1[2810417H13Rik,Ldha];K=5,n=1) + 0.0646*H+(mod4[Btbd17,Hn1,H2afv];K=0.673,n=2.2) + 0.00585*H+(mod6[Krt7,Hspa8,Map1b];K=0.17,n=6) - 0.0616*mod4[Btbd17,Hn1,H2afv]",
+  "dmod5[Clu,Krt18,Mt1]/dt = 0.00587*H+(mod1[2810417H13Rik,Ldha];K=0.217,n=6) + 0.00846*H-(mod2[Chga,Hmgn3,Rap1b];K=0.0378,n=6) + 0.297*H+(mod5[Clu,Krt18,Mt1];K=1.59,n=6) - 0.0274*mod5[Clu,Krt18,Mt1]",
+  "dmod6[Krt7,Hspa8,Map1b]/dt = 0.016*H+(mod4[Btbd17,Hn1,H2afv];K=0.551,n=2.4) + 0.0186*H+(mod6[Krt7,Hspa8,Map1b];K=0.216,n=6) + 0.0361*H-(mod2[Chga,Hmgn3,Rap1b];K=0.0653,n=1) - 0.0586*mod6[Krt7,Hspa8,Map1b]",
+  "dmod7[Gnas,Cpe,Tmem27]/dt = 0.0136*H-(mod0[Ins2,Nnat,Dlk1];K=0.184,n=6) + 0.611*H+(mod7[Gnas,Cpe,Tmem27];K=1.65,n=1.4) - 0.222*mod7[Gnas,Cpe,Tmem27]"
+ ],
+ "direct_structure": [
+  [
+   "(0, 'act')",
+   "(6, 'act')"
+  ],
+  [],
+  [
+   "(5, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(0, 'act')",
+   "(3, 'act')",
+   "(6, 'rep')"
+  ],
+  [
+   "(1, 'act')",
+   "(4, 'act')",
+   "(6, 'act')"
+  ],
+  [
+   "(1, 'act')",
+   "(2, 'rep')",
+   "(5, 'act')"
+  ],
+  [
+   "(2, 'rep')",
+   "(4, 'act')",
+   "(6, 'act')"
+  ],
+  [
+   "(0, 'rep')",
+   "(7, 'act')"
+  ]
+ ],
+ "distilled_vs_direct_jaccard": 0.47916666666666663,
+ "stlsq_baseline": [
+  {
+   "threshold": 0.01,
+   "mean_terms": 66.125,
+   "cos_vs_node_test": 0.9996299393757092
+  },
+  {
+   "threshold": 0.05,
+   "mean_terms": 1.25,
+   "cos_vs_node_test": 0.6771289940034318
+  },
+  {
+   "threshold": 0.1,
+   "mean_terms": 0.0,
+   "cos_vs_node_test": 0.0
+  },
+  {
+   "threshold": 0.2,
+   "mean_terms": 0.0,
+   "cos_vs_node_test": 0.0
+  },
+  {
+   "threshold": 0.5,
+   "mean_terms": 0.0,
+   "cos_vs_node_test": 0.0
+  }
+ ],
+ "eq_node": {
+  "n": 0,
+  "n_stable": 0,
+  "points": [],
+  "clusters": [
+   {
+    "cluster": "Alpha",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.21055958642391273
+   },
+   {
+    "cluster": "Beta",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.35159406266617454
+   },
+   {
+    "cluster": "Delta",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.13938916494255263
+   },
+   {
+    "cluster": "Ductal",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.28282615312043385
+   },
+   {
+    "cluster": "Epsilon",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.34769079475852005
+   },
+   {
+    "cluster": "Ngn3 high EP",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.31326878007967424
+   },
+   {
+    "cluster": "Ngn3 low EP",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.2616601708640055
+   },
+   {
+    "cluster": "Pre-endocrine",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.31270109984871075
+   }
+  ]
+ },
+ "eq_symbolic": {
+  "n": 0,
+  "n_stable": 0,
+  "points": [],
+  "clusters": [
+   {
+    "cluster": "Alpha",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.21055958642391273
+   },
+   {
+    "cluster": "Beta",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.35159406266617454
+   },
+   {
+    "cluster": "Delta",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.13938916494255263
+   },
+   {
+    "cluster": "Ductal",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.28282615312043385
+   },
+   {
+    "cluster": "Epsilon",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.34769079475852005
+   },
+   {
+    "cluster": "Ngn3 high EP",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.31326878007967424
+   },
+   {
+    "cluster": "Ngn3 low EP",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.2616601708640055
+   },
+   {
+    "cluster": "Pre-endocrine",
+    "nearest_stable_dist": null,
+    "dist_over_radius": null,
+    "radius": 0.31270109984871075
+   }
+  ]
+ },
+ "endpoints_node": {
+  "T": 175.023422719654,
+  "distribution": {
+   "Epsilon": 3,
+   "Ngn3 high EP": 57
+  },
+  "median_final_speed": 0.25567768203131247
+ },
+ "endpoints_symbolic": {
+  "T": 175.023422719654,
+  "distribution": {
+   "Beta": 60
+  },
+  "median_final_speed": 0.0022319816978910467
+ },
+ "seconds_total": 157.89771676063538
+}

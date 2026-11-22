@@ -1,0 +1,388 @@
+{
+ "variant": "d8",
+ "seed": 2,
+ "config_sha": "d6ea80f87fa1c22a",
+ "cfg": {
+  "d": 8,
+  "n_traj": 60,
+  "n_times": 10,
+  "horizon": 4.0,
+  "sigma_rel": 0.05,
+  "dropout": 0.0,
+  "time_mode": "true",
+  "pseudo_gamma": 1.0,
+  "ic_mode": "full",
+  "n_test": 20,
+  "node": {
+   "hidden": 64,
+   "lr": 0.003,
+   "epochs": 400,
+   "lam_reg": 0.0001,
+   "step_size": 0.1,
+   "val_fraction": 0.2,
+   "adjoint": false
+  },
+  "distillation": {
+   "M": 3000,
+   "n_fine": 40,
+   "jitter_frac": 0.5,
+   "knn": 5,
+   "reject_quantile": 0.95,
+   "val_fraction": 0.2
+  },
+  "library": {
+   "K_grid": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "n_grid": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "K_bounds": [
+    0.02,
+    5.0
+   ],
+   "n_bounds": [
+    1.0,
+    6.0
+   ],
+   "k_max": 3,
+   "n_starts": 4,
+   "selection_tolerance": 0.05
+  },
+  "weak": {
+   "window": 5,
+   "stride": 1
+  },
+  "free_form": {
+   "population": 300,
+   "generations": 15,
+   "pysr_iterations": 40,
+   "pysr_maxsize": 15
+  }
+ },
+ "truth": [
+  {
+   "i": 0,
+   "g": 1.2134153136984023,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 0.40893103716399853,
+     "n": 1.5,
+     "a": 2.774083571809796
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "K": 0.7705718054766661,
+     "n": 1.5,
+     "a": 2.570511160486693
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "g": 1.1791558758953817,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 1.3614633557511029,
+     "n": 3.0,
+     "a": 2.0387480879760354
+    },
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "K": 0.7134230636456387,
+     "n": 1.5,
+     "a": 1.4940830461116017
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "g": 1.0920290131722925,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "rep",
+     "K": 1.4873297324739672,
+     "n": 2.0,
+     "a": 2.002840141540032
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "g": 1.3473519596815744,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 0.5343667990372103,
+     "n": 1.5,
+     "a": 1.6811924643184848
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "K": 1.288876170050592,
+     "n": 2.0,
+     "a": 1.3081898981821176
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "g": 0.8568093077658783,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "rep",
+     "K": 1.0800731651357696,
+     "n": 2.0,
+     "a": 1.34024697467711
+    },
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "rep",
+     "K": 0.40634060627045265,
+     "n": 1.5,
+     "a": 1.5705636611872271
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "g": 0.9914262498935239,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "rep",
+     "K": 0.6891003129902572,
+     "n": 3.0,
+     "a": 1.9770891755264581
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "K": 1.334316402589728,
+     "n": 2.0,
+     "a": 2.648645659838618
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "g": 0.9728804302332326,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "rep",
+     "K": 1.189523286603756,
+     "n": 3.0,
+     "a": 1.8787349789357572
+    },
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 1.410585715026413,
+     "n": 3.0,
+     "a": 2.8277672135297194
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "g": 0.9483976852748105,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "act",
+     "K": 0.9720144951662154,
+     "n": 1.5,
+     "a": 2.6836043183078786
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "K": 0.4501066313977738,
+     "n": 2.0,
+     "a": 2.3539441068041835
+    }
+   ]
+  }
+ ],
+ "node": {
+  "best_val": 0.0316048189997673,
+  "epochs_run": 400,
+  "loss": "gaussian",
+  "adjoint": false
+ },
+ "thresholds_note": "voir configs/synth.json",
+ "node_metrics": {
+  "traj_nrmse_vs_truth": 0.021803900950586222,
+  "cos_vs_truth_support": 0.9484159738146993,
+  "cos_vs_truth_offsupport": 0.9600187088883282,
+  "speed_ratio_median": 1.024791684227238
+ },
+ "distilled": {
+  "equations": [
+   "dz0/dt = 4.16*H+(z2;K=1.31,n=1.3) + 1.74*H-(z2;K=1.17,n=2.4) + 1.14*H+(z0;K=1.07,n=3.6) - 1.04*z0",
+   "dz1/dt = 4.34*H+(z2;K=2.33,n=1.4) + 0.521*H-(z2;K=1.26,n=6) + 1.19*H+(z7;K=5,n=2) - 1.05*z1",
+   "dz2/dt = 1.25*H-(z6;K=1.86,n=3.9) + 0.202*H-(z7;K=0.542,n=6) - 0.951*z2",
+   "dz3/dt = 1.61*H+(z2;K=1.59,n=1) + 1.71*H-(z1;K=1.46,n=1.3) + 0.916*H-(z6;K=0.414,n=1.7) - 1.22*z3",
+   "dz4/dt = 0.615*H-(z5;K=1.35,n=4.9) + 0.431*H-(z7;K=0.812,n=3) + 0.239*H-(z4;K=1,n=6) - 0.71*z4",
+   "dz5/dt = 4.61*H+(z1;K=3.97,n=1.1) + 0.486*H-(z6;K=1.77,n=4.9) + 1.09*H-(z1;K=0.361,n=3.5) - 0.906*z5",
+   "dz6/dt = 3.33*H+(z2;K=1.93,n=2.1) + 1.55*H-(z5;K=1.12,n=2.5) - 0.897*z6",
+   "dz7/dt = 2.51*H+(z0;K=1.82,n=2.4) + 1.51*H-(z0;K=1.44,n=3.6) + 0.669*H-(z1;K=1.1,n=2) - 0.89*z7"
+  ],
+  "structure": {
+   "precision": 0.6818181818181818,
+   "recall": 1.0,
+   "F1": 0.8108108108108109,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 0.125,
+   "n_terms_est": 22,
+   "n_terms_true": 15,
+   "n_matched": 15,
+   "param_relerr_median": {
+    "a": 0.5007860190498069,
+    "K": 0.8762647162990749,
+    "n": 0.4733279340571199
+   },
+   "param_relerr_all_median": 0.5287508668743539
+  },
+  "cos_vs_node_support": 0.9433521993192651,
+  "cos_vs_truth_support": 0.9552548105200684,
+  "cos_vs_truth_offsupport": 0.9842819566212447,
+  "nrmse_vs_truth_support": 0.015322596217583065,
+  "speed_ratio_median": 0.9403600772526488,
+  "traj_nrmse_vs_truth": 0.012397764419551083
+ },
+ "prop1": {
+  "n": 20,
+  "holds_fraction": 1.0,
+  "median_B_over_E": 5895.211741749637,
+  "median_E": 0.25081674241365426,
+  "median_eps": 0.8702525663790328,
+  "median_L": 1.99505367942145
+ },
+ "direct_fd": {
+  "structure": {
+   "precision": 0.7894736842105263,
+   "recall": 1.0,
+   "F1": 0.8823529411764706,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 0.5,
+   "n_terms_est": 19,
+   "n_terms_true": 15,
+   "n_matched": 15,
+   "param_relerr_median": {
+    "a": 0.3459395246590431,
+    "K": 0.2797452461367927,
+    "n": 0.23480760056712757
+   },
+   "param_relerr_all_median": 0.24167184462522068
+  },
+  "cos_vs_truth_support": 0.9782866998342666,
+  "cos_vs_truth_offsupport": 0.9927968540614495
+ },
+ "weak_sindy": {
+  "structure": {
+   "precision": 0.8571428571428571,
+   "recall": 0.8,
+   "F1": 0.8275862068965518,
+   "edge_recall_ignoring_type": 0.8,
+   "exact_equation_rate": 0.5,
+   "n_terms_est": 14,
+   "n_terms_true": 15,
+   "n_matched": 12,
+   "param_relerr_median": {
+    "a": 0.33847017737339663,
+    "K": 0.207178578496576,
+    "n": 0.3333333333333333
+   },
+   "param_relerr_all_median": 0.32147751356557386
+  },
+  "cos_vs_truth_support": 0.9698535395849432,
+  "cos_vs_truth_offsupport": 0.9794906748342641
+ },
+ "oracle_structure": {
+  "structure": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "F1": 1.0,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 1.0,
+   "n_terms_est": 15,
+   "n_terms_true": 15,
+   "n_matched": 15,
+   "param_relerr_median": {
+    "a": 0.17980183837103303,
+    "K": 1.1035591514040117,
+    "n": 0.3333333333333332
+   },
+   "param_relerr_all_median": 0.3333333333333332
+  },
+  "cos_vs_truth_support": 0.9567198377771772,
+  "cos_vs_node_support": 0.9371931994756415,
+  "cos_vs_truth_offsupport": 0.9894847474439276
+ },
+ "profile": {
+  "n": {
+   "n": 15,
+   "coverage": 0.9333333333333333,
+   "frac_at_bound": 0.9333333333333333,
+   "median_width": 5.0
+  },
+  "K": {
+   "n": 15,
+   "coverage": 0.8,
+   "frac_at_bound": 0.7333333333333333,
+   "median_width": 1.1989700043360187
+  }
+ },
+ "ko": {
+  "cos_sym": 0.5703299679791392,
+  "cos_node": 0.6368151909640797,
+  "sign_agree_sym": 0.8897306397306398,
+  "sign_agree_node": 0.8812292358803986
+ },
+ "seconds": 231.98964166641235,
+ "timings": {
+  "node_train": 91.41284680366516,
+  "distill_sample_select": 19.052143573760986,
+  "baselines_direct_weak": 9.422171831130981,
+  "profile_likelihood": 88.78493404388428,
+  "ko_eval": 5.156195878982544
+ }
+}

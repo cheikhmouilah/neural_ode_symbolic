@@ -1,0 +1,1 @@
+adjoint seed 1: profilK cov=0.78 KO cos sym=0.7 node=0.77 | NODE traj=0.018 cos=0.966 | distilled F1=0.78 (P 0.64 R 1.00) cos_truth=0.982 | direct F1=1.00 weak F1=0.84 oracle relerr=0.26913262340384997 | prop1=1.0 | 279s

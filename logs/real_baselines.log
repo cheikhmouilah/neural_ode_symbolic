@@ -1,0 +1,51 @@
+chargement : C:\neural_ode_symbolic\real_data/results/real\prepared.npz
+cellules=3696 gènes=['Ghrl', 'Gnas', 'Ins2', 'Nnat', 'Chga', 'Clu', 'Isl1', 'Cpe'] test=785
+
+--- dynamo (analyse RNA velocity cinétique) ---
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\anndata.py:1101: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\views.py:327: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\anndata.py:1101: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\views.py:327: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+Filtered out 20801 genes that are detected 20 counts (shared).
+Normalized count data: X, spliced, unspliced.
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\anndata.py:1101: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\views.py:327: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\anndata.py:1101: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\.venv\Lib\site-packages\anndata\_core\views.py:327: Pandas4Warning: The 'mode.chained_assignment' option is deprecated. It has had no effect since pandas 3.0, which removed the SettingWithCopyWarning it controlled. Chained assignment now emits a ChainedAssignmentError warning instead; use warnings.filterwarnings with category=ChainedAssignmentError to silence or escalate it. This option will be removed in pandas 4.0.
+  with pd.option_context("mode.chained_assignment", None):
+C:\neural_ode_symbolic\real_data/src\baseline_dynamo.py:115: DeprecationWarning: Automatic neighbor calculation is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors first with Scanpy.
+  scv.pp.moments(a, n_pcs=cfg['data']['n_pcs'], n_neighbors=cfg['data']['n_neighbors'])
+C:\neural_ode_symbolic\.venv\Lib\site-packages\scvelo\preprocessing\moments.py:71: DeprecationWarning: `neighbors` is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors with Scanpy.
+  neighbors(
+computing neighbors
+    finished (0:00:04) --> added 
+    'distances' and 'connectivities', weighted adjacency matrices (adata.obsp)
+computing moments based on connectivities
+    finished (0:00:00) --> added 
+    'Ms' and 'Mu', moments of un/spliced abundances (adata.layers)
+  cos test = -0.9317 | nrmse = 0.0954 | source = h5ad_Ms_Mu_OLS (11.4s)
+
+--- CellRank (Markov, probabilités d'absorption) ---
+  cos test = 0.4748 | nrmse = 0.0845 | source = computed_from_Z_V (2.2s)
+  états terminaux : ['Alpha', 'Beta', 'Delta'] | pureté cluster test = 0.264
+
+--- BoolODE (EDO booléenne continue avec Hill) ---
+  cos test = 0.0200 | nrmse = 0.0487 | source réseau = granger_regression (0.0s)
+  BoolODE strict (β=γ=1) : cos = 0.0338
+  réseau inféré (d° entrant) : Ghrl←3, Gnas←3, Ins2←3, Nnat←3, Chga←3, Clu←3, Isl1←3, Cpe←3
+
+=== Tableau comparatif (cosinus test vs vitesse scVelo mesurée) ===
+méthode                     cos_test   nrmse_test
+--------------------------------------------------
+  dynamo                     -0.9317       0.0954
+  cellrank                    0.4748       0.0845
+  boolode                     0.0200       0.0487
+
+[ok] résultats → C:\neural_ode_symbolic\real_data/results/real\baselines_real.json

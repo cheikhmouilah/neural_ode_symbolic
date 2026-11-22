@@ -1,0 +1,29 @@
+[clean] t= 15 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.111 nrmse(Hill)=0.110 nrmse(GP)=0.140  params=[2.717, 3.412, 1.073]
+[clean] t= 28 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.097 nrmse(Hill)=0.097 nrmse(GP)=0.122  params=[2.44, 2.965, 1.14]
+[clean] t= 61 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.080 nrmse(Hill)=0.080 nrmse(GP)=0.138  params=[5.085, 2.523, 1.205]
+[clean] t= 54 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.115 nrmse(Hill)=0.114 nrmse(GP)=0.132  params=[6.928, 7.576, 0.937]
+[clean] t= 80 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.088 nrmse(Hill)=0.086 nrmse(GP)=0.063  params=[3.814, 1.433, 1.853]
+[clean] t= 86 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.125 nrmse(Hill)=0.120 nrmse(GP)=0.105  params=[3.577, 1.656, 1.864]
+[clean] t= 94 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.099 nrmse(Hill)=0.096 nrmse(GP)=0.071  params=[1.78, 1.554, 1.949]
+[clean] t= 46 r= 18 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.155 nrmse(Hill)=0.164 nrmse(GP)=0.155  params=[3.165, 3.072, 5.23]
+[clean] t= 89 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.116 nrmse(Hill)=0.110 nrmse(GP)=0.106  params=[3.191, 1.613, 1.873]
+[clean] t= 95 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.105 nrmse(Hill)=0.102 nrmse(GP)=0.138  params=[2.442, 1.55, 1.912]
+[clean] t= 92 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.102 nrmse(Hill)=0.097 nrmse(GP)=0.130  params=[2.701, 1.518, 1.84]
+[clean] t= 62 r=  9 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.098 nrmse(Hill)=0.095 nrmse(GP)=0.044  params=[1.818, 1.805, 1.849]
+[clean] t= 27 r=  5 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.122 nrmse(Hill)=0.122 nrmse(GP)=0.157  params=[1.641, 2.384, 1.252]
+[clean] t= 49 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.089 nrmse(Hill)=0.089 nrmse(GP)=0.138  params=[4.871, 2.279, 1.267]
+{
+  "label": "clean",
+  "n_cibles": 14,
+  "type_correct": 1.0,
+  "courbe_retrouvee_nrmse_lt_10pct_famille": 0.5,
+  "courbe_retrouvee_nrmse_lt_10pct_gp": 0.21428571428571427,
+  "n_hat_median": 1.8447109261605665,
+  "n_hat_iqr": [
+    1.2168570519664048,
+    1.8708248845874533
+  ],
+  "median_nrmse_nn": 0.10334264509230628,
+  "median_nrmse_famille": 0.09986198953934564,
+  "median_nrmse_gp": 0.13104234372007273
+}

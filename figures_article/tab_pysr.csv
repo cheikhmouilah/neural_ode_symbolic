@@ -1,0 +1,12 @@
+chaine,graine,mesure1,mesure2,mesure3,mesure4,mesure5
+"toggle","0","NRMSE champ/verite 0.0279 (NODE 0.0124)","R2 vs NODE [0.874, 0.928]","complexites [11, 19]","autre gene utilise : [True, True]","points fixes stables 2/2"
+"toggle","1","NRMSE champ/verite 0.0222 (NODE 0.0141)","R2 vs NODE [0.918, 0.953]","complexites [17, 15]","autre gene utilise : [True, True]","points fixes stables 1/2"
+"toggle","2","NRMSE champ/verite 0.0142 (NODE 0.0102)","R2 vs NODE [0.96, 0.982]","complexites [11, 13]","autre gene utilise : [True, True]","points fixes stables 1/2"
+"synthetique","0","rappel des variables 0.87","precision 1.00","longueur moyenne 9.4","R2 vs NODE 0.87",""
+"synthetique","1","rappel des variables 0.87","precision 1.00","longueur moyenne 10.2","R2 vs NODE 0.88",""
+"synthetique","2","rappel des variables 1.00","precision 1.00","longueur moyenne 11.4","R2 vs NODE 0.94",""
+"synthetique","3","rappel des variables 0.87","precision 1.00","longueur moyenne 7.4","R2 vs NODE 0.87",""
+"synthetique","4","rappel des variables 1.00","precision 1.00","longueur moyenne 8.2","R2 vs NODE 0.96",""
+"reel","0","cos PySR~NODE 0.779","cos PySR~vitesse 0.436","cos NODE~vitesse (memes genes) 0.481","8 equations","complexites [5, 7, 7, 11, 7, 5, 9, 7]"
+"reel","1","cos PySR~NODE 0.816","cos PySR~vitesse 0.417","cos NODE~vitesse (memes genes) 0.531","8 equations","complexites [5, 11, 7, 7, 9, 5, 5, 7]"
+"reel","2","cos PySR~NODE 0.698","cos PySR~vitesse 0.426","cos NODE~vitesse (memes genes) 0.492","8 equations","complexites [7, 7, 7, 11, 7, 9, 13, 9]"

@@ -1,0 +1,19 @@
+{
+  "phase": "6b - test de mauvaise specification (toggle, non-linearite de repression differente)",
+  "written_before_execution": true,
+  "systems": {
+    "hill":  {"role": "controle (bien specifie)", "a": [4.0, 3.6], "K": [0.8, 1.0], "n": 2.0, "g": [1.0, 0.9], "ic_high": 4.5},
+    "leaky": {"role": "Hill + production basale eps*a, eps=0.15", "a": [5.0, 4.5], "K": [0.8, 1.0], "n": 4.0, "g": [1.0, 0.9], "eps": 0.15, "ic_high": 5.0,
+              "note": "n=4 car eps=0.15 detruit la bistabilite a n=2 (verifie : monostable pour a=(4,3.6),(5,4.5),(8,7.2) a n=2 ; bistable pour a=(5,4.5), n=4)"},
+    "gauss": {"role": "extinction exp(-(x/K)^n), n=2", "a": [4.0, 3.6], "K": [0.8, 1.0], "n": 2.0, "g": [1.0, 0.9], "ic_high": 4.5}
+  },
+  "families": ["hill", "leaky", "gauss"], "selection": "BIC = N*ln(RSS/N + 1e-8) + k*ln(N), par equation, sur le champ distille du Neural ODE",
+  "validation_prealable": "code des familles valide sur derivees exactes : bonne famille et parametres exacts pour les 3 systemes (avant tout entrainement NODE)",
+  "seeds": [0, 1, 2],
+  "preregistered_criteria": {
+    "D1_detection": "mauvaise specification signalee si NRMSE(symbolique Hill -> champ NODE, test) > 0.03 ; attendu en bien specifie : < 0.03 (observe 0.011-0.015 en Phase 1). Reussi si controle non signale (3/3 graines) ET leaky et gauss signales dans >= 2/3 graines chacun",
+    "S1_selection": "bonne famille choisie pour les DEUX equations dans >= 2/3 graines, pour chaque systeme (controle inclus)",
+    "S2_recuperation": "erreur relative mediane des parametres de la famille correcte < 0.10 (mediane sur graines, par systeme)",
+    "report_sans_seuil": ["NRMSE de trajectoire et ecart des points fixes du modele Hill seul (masquage silencieux de l'erreur de forme)", "regulateur et signe retrouves malgre la mauvaise forme"]
+  }
+}

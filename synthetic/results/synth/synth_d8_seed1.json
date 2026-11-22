@@ -1,0 +1,380 @@
+{
+ "variant": "d8",
+ "seed": 1,
+ "config_sha": "d6ea80f87fa1c22a",
+ "cfg": {
+  "d": 8,
+  "n_traj": 60,
+  "n_times": 10,
+  "horizon": 4.0,
+  "sigma_rel": 0.05,
+  "dropout": 0.0,
+  "time_mode": "true",
+  "pseudo_gamma": 1.0,
+  "ic_mode": "full",
+  "n_test": 20,
+  "node": {
+   "hidden": 64,
+   "lr": 0.003,
+   "epochs": 400,
+   "lam_reg": 0.0001,
+   "step_size": 0.1,
+   "val_fraction": 0.2,
+   "adjoint": false
+  },
+  "distillation": {
+   "M": 3000,
+   "n_fine": 40,
+   "jitter_frac": 0.5,
+   "knn": 5,
+   "reject_quantile": 0.95,
+   "val_fraction": 0.2
+  },
+  "library": {
+   "K_grid": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "n_grid": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "K_bounds": [
+    0.02,
+    5.0
+   ],
+   "n_bounds": [
+    1.0,
+    6.0
+   ],
+   "k_max": 3,
+   "n_starts": 4,
+   "selection_tolerance": 0.05
+  },
+  "weak": {
+   "window": 5,
+   "stride": 1
+  },
+  "free_form": {
+   "population": 300,
+   "generations": 15,
+   "pysr_iterations": 40,
+   "pysr_maxsize": 15
+  }
+ },
+ "truth": [
+  {
+   "i": 0,
+   "g": 1.2711750041947265,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "rep",
+     "K": 0.7999990305337574,
+     "n": 1.5,
+     "a": 1.5502143528737093
+    },
+    {
+     "kind": "hill",
+     "j": 5,
+     "typ": "rep",
+     "K": 0.4312903300856311,
+     "n": 3.0,
+     "a": 2.3080186860446705
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "g": 1.0314318469548422,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "K": 1.1992471564788931,
+     "n": 3.0,
+     "a": 2.061732178919433
+    },
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "rep",
+     "K": 0.4075386602799612,
+     "n": 1.5,
+     "a": 1.8014642569428154
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "g": 0.8789642424689328,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "K": 1.1159119249688243,
+     "n": 1.5,
+     "a": 1.4647855141137263
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "g": 1.04992553467781,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 6,
+     "typ": "rep",
+     "K": 0.5217648774974097,
+     "n": 2.0,
+     "a": 1.0986354829955391
+    },
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "rep",
+     "K": 1.4612098374367397,
+     "n": 1.5,
+     "a": 2.6249209361619465
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "g": 0.8139184115063993,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "K": 0.9127198852304034,
+     "n": 1.5,
+     "a": 2.5288568761548196
+    },
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "act",
+     "K": 1.4776015427586247,
+     "n": 1.5,
+     "a": 1.08939278650266
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "g": 1.2018244477063398,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 7,
+     "typ": "rep",
+     "K": 1.3717065203714531,
+     "n": 2.0,
+     "a": 2.5233744616250755
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "g": 0.9940874319851782,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "rep",
+     "K": 0.8748872599488192,
+     "n": 2.0,
+     "a": 1.2760001724036834
+    },
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "K": 1.0461874148356287,
+     "n": 2.0,
+     "a": 1.8337037140228405
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "g": 1.045450117435189,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "K": 1.0616511044989183,
+     "n": 2.0,
+     "a": 2.038173016290855
+    },
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "K": 1.440944639589167,
+     "n": 1.5,
+     "a": 1.0419904654455368
+    }
+   ]
+  }
+ ],
+ "node": {
+  "best_val": 0.052525728940963745,
+  "epochs_run": 400,
+  "loss": "gaussian",
+  "adjoint": false
+ },
+ "thresholds_note": "voir configs/synth.json",
+ "node_metrics": {
+  "traj_nrmse_vs_truth": 0.03570329280026787,
+  "cos_vs_truth_support": 0.9268662833520241,
+  "cos_vs_truth_offsupport": 0.9699043708667102,
+  "speed_ratio_median": 1.083650305004404
+ },
+ "distilled": {
+  "equations": [
+   "dz0/dt = 1.05*H-(z5;K=0.999,n=2.4) + 0.54*H-(z0;K=1.02,n=6) + 1.05*H-(z3;K=0.086,n=1.4) - 1.18*z0",
+   "dz1/dt = 2.86*H+(z7;K=1.93,n=1.3) + 0.563*H-(z6;K=0.826,n=2.3) + 0.0826*H-(z5;K=1.08,n=6) - 0.916*z1",
+   "dz2/dt = 0.841*H+(z7;K=1.99,n=2.4) + 0.211*H-(z2;K=1.48,n=6) + 0.245*H+(z1;K=0.608,n=4) - 0.718*z2",
+   "dz3/dt = 2.16*H-(z2;K=1.69,n=1.8) + 0.406*H-(z6;K=1.31,n=3) - 0.986*z3",
+   "dz4/dt = 2.74*H+(z1;K=2.37,n=1.2) + 0.956*H+(z7;K=1.29,n=2) + 0.789*H+(z4;K=0.609,n=1.7) - 0.834*z4",
+   "dz5/dt = 2.4*H-(z7;K=1.49,n=2.1) + 1.55*H+(z5;K=3.69,n=6) - 1.25*z5",
+   "dz6/dt = 1.55*H+(z4;K=2.4,n=1.3) + 1.15*H-(z0;K=1.36,n=2) + 0.348*H+(z1;K=0.457,n=6) - 0.893*z6",
+   "dz7/dt = 2.54*H+(z1;K=0.993,n=1.3) + 0.567*H+(z4;K=2.32,n=2.6) + 1.72*H+(z0;K=5,n=6) - 0.972*z7"
+  ],
+  "structure": {
+   "precision": 0.6363636363636364,
+   "recall": 1.0,
+   "F1": 0.7777777777777778,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 0.125,
+   "n_terms_est": 22,
+   "n_terms_true": 14,
+   "n_matched": 14,
+   "param_relerr_median": {
+    "a": 0.31674759258402096,
+    "K": 0.6095379390371851,
+    "n": 0.35314363593358544
+   },
+   "param_relerr_all_median": 0.4063834217615869
+  },
+  "cos_vs_node_support": 0.977196825010102,
+  "cos_vs_truth_support": 0.9287714172263459,
+  "cos_vs_truth_offsupport": 0.9879253698898407,
+  "nrmse_vs_truth_support": 0.014993893758307737,
+  "speed_ratio_median": 0.9790291662532896,
+  "traj_nrmse_vs_truth": 0.02004572701329897
+ },
+ "prop1": {
+  "n": 20,
+  "holds_fraction": 1.0,
+  "median_B_over_E": 13702.153474724808,
+  "median_E": 0.2095475217800763,
+  "median_eps": 0.9019880741094892,
+  "median_L": 2.2447752943158132
+ },
+ "direct_fd": {
+  "structure": {
+   "precision": 0.875,
+   "recall": 1.0,
+   "F1": 0.9333333333333333,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 0.75,
+   "n_terms_est": 16,
+   "n_terms_true": 14,
+   "n_matched": 14,
+   "param_relerr_median": {
+    "a": 0.2114710772862016,
+    "K": 0.1185704753258098,
+    "n": 0.2741547184528096
+   },
+   "param_relerr_all_median": 0.1773702538048217
+  },
+  "cos_vs_truth_support": 0.9797028294260773,
+  "cos_vs_truth_offsupport": 0.9956708513170162
+ },
+ "weak_sindy": {
+  "structure": {
+   "precision": 0.65,
+   "recall": 0.9285714285714286,
+   "F1": 0.7647058823529412,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 0.375,
+   "n_terms_est": 20,
+   "n_terms_true": 14,
+   "n_matched": 13,
+   "param_relerr_median": {
+    "a": 0.35363323789829026,
+    "K": 0.33090382270562857,
+    "n": 0.3333333333333333
+   },
+   "param_relerr_all_median": 0.3333333333333333
+  },
+  "cos_vs_truth_support": 0.9893517239865705,
+  "cos_vs_truth_offsupport": 0.9919720804050743
+ },
+ "oracle_structure": {
+  "structure": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "F1": 1.0,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 1.0,
+   "n_terms_est": 14,
+   "n_terms_true": 14,
+   "n_matched": 14,
+   "param_relerr_median": {
+    "a": 0.2623558893515813,
+    "K": 0.5343211371710932,
+    "n": 0.3333333333333332
+   },
+   "param_relerr_all_median": 0.3435826013421466
+  },
+  "cos_vs_truth_support": 0.9355428057005051,
+  "cos_vs_node_support": 0.9695375456028327,
+  "cos_vs_truth_offsupport": 0.9919472860495739
+ },
+ "profile": {
+  "n": {
+   "n": 14,
+   "coverage": 0.9285714285714286,
+   "frac_at_bound": 0.8571428571428571,
+   "median_width": 5.0
+  },
+  "K": {
+   "n": 14,
+   "coverage": 0.9285714285714286,
+   "frac_at_bound": 0.5,
+   "median_width": 0.6851257167634396
+  }
+ },
+ "ko": {
+  "cos_sym": 0.8545880960686452,
+  "cos_node": 0.7119180874992317,
+  "sign_agree_sym": 0.9920634920634921,
+  "sign_agree_node": 0.8931527536790694
+ },
+ "seconds": 213.59940195083618,
+ "timings": {
+  "node_train": 88.93250107765198,
+  "distill_sample_select": 15.334846496582031,
+  "baselines_direct_weak": 11.38439130783081,
+  "profile_likelihood": 77.22320008277893,
+  "ko_eval": 4.620857238769531
+ }
+}

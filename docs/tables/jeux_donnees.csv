@@ -1,0 +1,20 @@
+Jeu de données,Type,Espèce,Référence,Cellules,Gènes sélectionnés,SHA-256 (préfixe),Source,Chaîne
+Pancréas E15.5,scRNA-seq réel,Mus musculus,Bastidas-Ponce 2019,3696,8 (Ghrl Gnas Ins2 Nnat Chga Clu Isl1 Cpe),9e3e459eca00ba06,scVelo GitHub,C
+Gyrus dentelé,scRNA-seq réel,Mus musculus,Hochgerner 2018,~3400,8 (sélection automatique),6fbf1ec64e0fba6d,scVelo GitHub,C
+Toggle 2D,Synthétique (EDO bistable),—,Ce travail,trajectoires continues,2,—,Générateur propre,A
+SERGIO,Simulateur biophysique,—,Dibaeinia & Sinha 2020,configurable,configurable,—,GitHub SERGIO,B
+Synthétique multi-gènes (base),EDO Hill + bruit,—,Ce travail,60 traj × 10 temps,5,—,synth_system.py,D
+Synthétique (noise02),Bruit σ=2 %,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (noise10),Bruit σ=10 %,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (noise20),Bruit σ=20 %,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (drop10),Dropout 10 %,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (drop20),Dropout 20 %,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (N20),N réduit = 20 traj,—,Ce travail,20×10,5,—,synth_system.py,D
+Synthétique (N120),N augmenté = 120 traj,—,Ce travail,120×10,5,—,synth_system.py,D
+Synthétique (d3),Dimension d=3,—,Ce travail,60×10,3,—,synth_system.py,D
+Synthétique (d8),Dimension d=8,—,Ce travail,60×10,8,—,synth_system.py,D
+Synthétique (pseudo2),Pseudotemps γ=2,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (manifold),CI sur variété 1D,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (counts),Modèle NB κ=20 r=5,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (counts_drop10),NB + dropout 10 %,—,Ce travail,60×10,5,—,synth_system.py,D
+Synthétique (adjoint),Rétropropagation adjointe,—,Ce travail,60×10,5,—,synth_system.py,D

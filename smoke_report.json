@@ -1,0 +1,98 @@
+[
+ {
+  "test": "garde-fou de bistabilite : accepte le toggle, refuse un systeme monostable",
+  "ok": true,
+  "seconds": 1.7,
+  "detail": "refus attendu"
+ },
+ {
+  "test": "verify_results : detecte fichier vide, cle _from_log, NaN",
+  "ok": true,
+  "seconds": 0.2,
+  "detail": "EC] ..\\Users\\ISSERT~1\\AppData\\Local\\Temp\\smoke_7r039mgt\\bad\\nan.json : 1 valeur(s) NaN/Inf (ex. /x)\n3 fichier(s) examines : 0 OK, 0 avertissement(s), 3 echec(s)"
+ },
+ {
+  "test": "consistency : detecte un resultat qui s ameliore avec le bruit",
+  "ok": true,
+  "seconds": 0.5,
+  "detail": "N EVALUE ] invariance reelle (graines) : 0 graine(s) < 3\n[ NON EVALUE ] toggle : bruit -> erreur de champ : resultats traj, n05, n10 (>= 3 graines) requis\n\n13 controle(s) : 1 echec(s), 5 non evalue(s)"
+ },
+ {
+  "test": "preenregistrement : verify renvoie un code valide (0 conforme, 2 pas de gel)",
+  "ok": true,
+  "seconds": 0.2,
+  "detail": "absent du gel) : real_data/configs/real_pancreas2222.json\n  configurations conformes au gel (fichiers nouveaux signales)"
+ },
+ {
+  "test": "compare_reference : la reference du toggle est identique a elle-meme",
+  "ok": true,
+  "seconds": 0.8,
+  "detail": "bilan : {'identique': 48, 'numerique': 0, 'ecart': 0, 'structure': 0, 'illisible': 0, 'absent': 0}"
+ },
+ {
+  "test": "chaine A (toggle) : run_all.py toggle --quick + verification automatique de la reference",
+  "ok": true,
+  "seconds": 0.2,
+  "detail": "tenu 0.01241 ; reference 0.01241 ; ecart relatif 1.40e-16\n  erreur max des parametres : obtenu 0.09034 ; reference 0.09034 ; ecart relatif 3.49e-10\n\nVERIFICATION AUTOMATIQUE (tolerance relative 5e-3) : OK, identique a la reference a la tolerance pres"
+ },
+ {
+  "test": "chaine D (synthetique) : base, graine 0, --quick",
+  "ok": true,
+  "seconds": 17.4,
+  "detail": "ilK cov=0.5 KO cos sym=-0.05 node=-0.23 | NODE traj=0.075 cos=0.791 | distilled F1=0.27 (P 0.25 R 0.29) cos_truth=0.776 | direct F1=0.73 weak F1=0.73 oracle relerr=0.9207365166441308 | prop1=1.0 | 11s"
+ },
+ {
+  "test": "chaine C (donnees reelles, pancreas) : graine 0, --quick (verifie le SHA-256 du jeu)",
+  "ok": true,
+  "seconds": 43.7,
+  "detail": "C:\\neural_ode_symbolic\\.venv\\Lib\\site-packages\\scvelo\\preprocessing\\moments.py:71: DeprecationWarning: `neighbors` is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors with Scanpy.\n  neighbors("
+ },
+ {
+  "test": "chaine C (donnees reelles, gyrus denele) : graine 0, --quick (verifie le SHA-256 du jeu)",
+  "ok": true,
+  "seconds": 29.8,
+  "detail": " DeprecationWarning: Automatic computation of PCA is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute PCA with Scanpy first.\n  _set_pca(adata=adata, n_pcs=n_pcs, use_highly_variable=use_highly_variable)"
+ },
+ {
+  "test": "chaine C (baselines VII-D) : dynamo, CellRank, BoolODE --quick",
+  "ok": true,
+  "seconds": 19.8,
+  "detail": "C:\\neural_ode_symbolic\\.venv\\Lib\\site-packages\\scvelo\\preprocessing\\moments.py:71: DeprecationWarning: `neighbors` is deprecated since scvelo==0.4.0 and will be removed in a future version of scVelo. Please compute neighbors with Scanpy.\n  neighbors("
+ },
+ {
+  "test": "chaine B (SERGIO) : depot present et importable (la simulation complete dure ~5 min : non lancee ici)",
+  "ok": true,
+  "seconds": 2.1,
+  "detail": "SERGIO importable"
+ },
+ {
+  "test": "PySR : import et mini-recherche (Julia installe)",
+  "ok": true,
+  "seconds": 38.6,
+  "detail": "ok x0 * (((x0 * (x0 * ((((((x1 * x1) + x0) + x0) * -3.424336e-5) * x0) * 5.4071064e-5))) + x0) + -5.0842604e-13)"
+ },
+ {
+  "test": "PySR chaine A (toggle) : --quick",
+  "ok": true,
+  "seconds": 41.2,
+  "detail": "tions-runner\\_work\\pytorch\\pytorch\\torch\\csrc\\autograd\\generated\\python_variable_methods.cpp:821.)\n  hist.append((it, float(loss), vl)); log(f\"  it={it:4d} stage={si} npts={npts:2d} train={float(loss):.3e} val(full)={vl:.3e} t={time.time()-t0:.0f}s\")"
+ },
+ {
+  "test": "PySR chaine D (synthetique) : --quick",
+  "ok": true,
+  "seconds": 31.4,
+  "detail": "packages\\juliacall\\__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.\n  warnings.warn("
+ },
+ {
+  "test": "PySR chaine C (donnees reelles) : --quick, 2 equations",
+  "ok": true,
+  "seconds": 30.6,
+  "detail": "sider using tensor.detach() first. (Triggered internally at C:\\actions-runner\\_work\\pytorch\\pytorch\\torch\\csrc\\autograd\\generated\\python_variable_methods.cpp:821.)\n  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')"
+ },
+ {
+  "test": "figures et tableaux : make_figures.py sur les resultats quick",
+  "ok": true,
+  "seconds": 2.5,
+  "detail": "al_endpoints\nfigure fig_synth_structure_F1\nfigure fig_synth_robustness\ntable tab_synth_summary\ntermine : C:\\Users\\ISSERT~1\\AppData\\Local\\Temp\\smoke_7r039mgt\\fig"
+ }
+]

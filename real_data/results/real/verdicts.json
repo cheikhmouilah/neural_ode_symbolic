@@ -1,0 +1,12 @@
+{
+ "R1": false,
+ "R2": false,
+ "R3": false,
+ "R4": false,
+ "R7": true,
+ "baselines": {
+  "dynamo": -0.9316800442248773,
+  "cellrank": 0.4747503570508093,
+  "boolode": 0.02003848764051247
+ }
+}

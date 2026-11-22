@@ -1,0 +1,18 @@
+{
+  "phase": "Recherche libre PySR sur donnees reelles (chaine C)",
+  "iterations": 40,
+  "maxsize": 15,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "configs": [
+    "real_pancreas.json"
+  ],
+  "preregistered_thresholds": {
+    "RP1_pysr_vs_node_cos_min": 0.9,
+    "RP2_pysr_vs_measured_over_node_vs_measured_min": 0.8,
+    "note": "Memes seuils que R2 (0,90) et R7 (0,80) de la chaine C, pour comparer PySR a la recherche structuree. DIVULGATION : un essai de 2 equations de la graine 0 a ete vu (cosinus PySR~NODE 0,65 : sous le seuil) avant de fixer ces seuils."
+  }
+}

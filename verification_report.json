@@ -1,0 +1,847 @@
+{
+ "n": 168,
+ "failures": 0,
+ "warnings": 0,
+ "files": [
+  {
+   "file": "project\\results\\phase1\\detect_C1_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C1_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C1_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C2_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C2_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C2_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C3_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C3_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_C3_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M1_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M1_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M1_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M2_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M2_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M2_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M3_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M3_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M3_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M4_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M4_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\detect_M4_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_gauss_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_gauss_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_gauss_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_hill_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_hill_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_hill_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_leaky_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_leaky_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\misspec_leaky_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_N15_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_N15_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_N15_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_n05_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_n05_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_n05_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_n10_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_n10_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_n10_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_quick_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_traj_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_traj_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_traj_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_vel_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_vel_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\phase1_vel_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\pysr_toggle_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\pysr_toggle_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "project\\results\\phase1\\pysr_toggle_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_clean.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_control.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_eiv.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_eiv_sergio.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_identifiability.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_noisy_mild.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_noisy_severe.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "sergio_validation\\result_steady_state_diag.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\baselines_real.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_dg_none_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_dg_none_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_dg_none_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_dg_none_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_dg_none_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_latent_none_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_latent_none_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_latent_none_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_module_none_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_module_none_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_module_none_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_none_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_none_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_none_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_none_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_none_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_pysr_dg_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_pysr_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_pysr_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_pysr_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_shuffle_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_shuffle_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_shuffle_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_shuffle_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_shuffle_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_sweep_lam0.0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_sweep_lam0.001.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_sweep_lam0.01.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_sweep_lam0.1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_sweep_lam1.0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N120_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N120_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N120_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N120_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N120_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N20_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N20_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N20_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N20_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_N20_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_adjoint_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_adjoint_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_adjoint_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_adjoint_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_adjoint_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_base_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_base_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_base_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_base_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_base_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_drop10_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_drop10_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_drop10_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_drop10_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_drop10_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_counts_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d3_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d3_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d3_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d3_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d3_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d8_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d8_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d8_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d8_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_d8_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop10_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop10_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop10_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop10_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop10_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop20_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop20_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop20_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop20_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop20_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_manifold_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_manifold_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_manifold_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_manifold_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_manifold_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise02_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise02_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise02_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise02_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise02_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise10_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise10_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise10_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise10_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise10_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise20_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise20_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise20_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise20_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_noise20_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_pseudo2_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_pseudo2_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_pseudo2_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_pseudo2_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_pseudo2_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synthpysr_base_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synthpysr_base_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synthpysr_base_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synthpysr_base_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synthpysr_base_seed4.json",
+   "status": "OK",
+   "messages": []
+  }
+ ]
+}

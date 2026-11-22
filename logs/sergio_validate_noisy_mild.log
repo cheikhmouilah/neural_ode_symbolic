@@ -1,0 +1,30 @@
+[noisy_mild] zeros U = 0.42, moyenne U = 2.23
+[noisy_mild] t= 15 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.108 nrmse(Hill)=0.123 nrmse(GP)=0.145  params=[7.32, 24.579, 0.528]
+[noisy_mild] t= 28 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.182 nrmse(Hill)=0.184 nrmse(GP)=0.249  params=[127539.278, 1792619047.711, 0.549]
+[noisy_mild] t= 61 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.114 nrmse(Hill)=0.105 nrmse(GP)=0.188  params=[4.267, 5.223, 0.5]
+[noisy_mild] t= 54 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.162 nrmse(Hill)=0.157 nrmse(GP)=0.246  params=[48.832, 1942.381, 0.5]
+[noisy_mild] t= 80 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.237 nrmse(Hill)=0.251 nrmse(GP)=0.861  params=[1.14, 2.443, 2.186]
+[noisy_mild] t= 86 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.280 nrmse(Hill)=0.285 nrmse(GP)=0.861  params=[1.219, 2.697, 2.05]
+[noisy_mild] t= 94 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.286 nrmse(Hill)=0.289 nrmse(GP)=0.861  params=[1.236, 2.726, 1.885]
+[noisy_mild] t= 46 r= 18 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.115 nrmse(Hill)=0.110 nrmse(GP)=0.163  params=[8.495, 42.889, 0.5]
+[noisy_mild] t= 89 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.314 nrmse(Hill)=0.327 nrmse(GP)=0.861  params=[1.204, 3.009, 2.736]
+[noisy_mild] t= 95 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.356 nrmse(Hill)=0.372 nrmse(GP)=0.861  params=[1.145, 3.412, 2.467]
+[noisy_mild] t= 92 r= 79 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.266 nrmse(Hill)=0.282 nrmse(GP)=0.861  params=[1.195, 2.667, 2.547]
+[noisy_mild] t= 62 r=  9 vrai=hill_rep -> choisi=hill_rep  nrmse(NN)=0.450 nrmse(Hill)=0.443 nrmse(GP)=0.839  params=[1.193, 3.91, 1.956]
+[noisy_mild] t= 27 r=  5 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.147 nrmse(Hill)=0.138 nrmse(GP)=0.164  params=[3.394, 1.867, 1.677]
+[noisy_mild] t= 49 r=  9 vrai=hill_act -> choisi=hill_act  nrmse(NN)=0.198 nrmse(Hill)=0.210 nrmse(GP)=0.239  params=[10.416, 18.941, 0.794]
+{
+  "label": "noisy_mild",
+  "n_cibles": 14,
+  "type_correct": 1.0,
+  "courbe_retrouvee_nrmse_lt_10pct_famille": 0.0,
+  "courbe_retrouvee_nrmse_lt_10pct_gp": 0.0,
+  "n_hat_median": 1.780886348221778,
+  "n_hat_iqr": [
+    0.5335822305650295,
+    2.152318778015388
+  ],
+  "median_nrmse_nn": 0.21772367336201603,
+  "median_nrmse_famille": 0.23055918318731142,
+  "median_nrmse_gp": 0.5443105750705997
+}

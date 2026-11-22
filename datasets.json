@@ -1,0 +1,4 @@
+{
+  "pancreas": {"url": "https://github.com/theislab/scvelo_notebooks/raw/master/data/Pancreas/endocrinogenesis_day15.h5ad", "file": "real_data/data/endocrinogenesis_day15.h5ad", "sha256": "9e3e459eca00ba06b496ec80def32941b5b2889918720e3e7aa6ffb811fbe7c6", "bytes": 52477898},
+  "dentategyrus": {"url": "https://github.com/theislab/scvelo_notebooks/raw/master/data/DentateGyrus/10X43_1.h5ad", "file": "real_data/data/dentategyrus_10X43_1.h5ad", "sha256": "6fbf1ec64e0fba6d18d14bc342b3ba2aab8133972c1e50cb2cb717d4cc336871", "bytes": 24878752}
+}

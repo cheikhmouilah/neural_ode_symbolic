@@ -1,0 +1,49 @@
+{
+ "system": "C2",
+ "kind": "hill",
+ "seed": 1,
+ "node_field_nrmse": 0.018536307251853037,
+ "node_traj_nrmse": 0.013807093765109652,
+ "node_ok": true,
+ "reg_sign_ok": true,
+ "hill_only": {
+  "nrmse_sym_to_node": 0.017188329109474675,
+  "nrmse_sym_to_truth": 0.012731425786983901,
+  "traj_nrmse": 0.04173809232564102,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.028623675896434293
+  }
+ },
+ "rule_T_flag": false,
+ "rule_F_flag": false,
+ "rule_G_choice": [
+  "hill",
+  "gauss"
+ ],
+ "rule_B_choice": [
+  "gauss",
+  "gauss"
+ ],
+ "rss_gain_ratios": [
+  {
+   "leaky": 1.000029965499326,
+   "gauss": 1.0241424589586114
+  },
+  {
+   "leaky": 1.0000000000245164,
+   "gauss": 1.6103977933340592
+  }
+ ],
+ "after_G": {
+  "nrmse_sym_to_truth": 0.014647159324921307,
+  "traj_nrmse": 0.016374774878179038,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.048889767036464624
+  }
+ },
+ "seconds": 258.8533720970154
+}

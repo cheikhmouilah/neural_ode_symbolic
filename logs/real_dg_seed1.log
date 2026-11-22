@@ -1,0 +1,54 @@
+cellules=2930 genes=['Tmsb10', 'Snca', 'Slc1a2', 'Hba-a1', 'Mt1', 'Hexb', 'Ppp3ca', 'Itm2b'] train/val/test=1950/275/705 config=cfd09f80c77b07a5
+C:\neural_ode_symbolic\real_data/src\real_node.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')
+  ep=   0 train_vel=59.6171 val_vel=20.2348
+  ep= 100 train_vel=0.4824 val_vel=0.5727
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.05) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.1) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.2) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\pysindy\optimizers\stlsq.py:224: UserWarning: Sparsity parameter is too big (0.5) and eliminated all coefficients
+  warnings.warn(
+C:\neural_ode_symbolic\.venv\Lib\site-packages\numpy\_core\fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+C:\neural_ode_symbolic\.venv\Lib\site-packages\numpy\_core\_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+seed 1 lam=0.001 ctrl=none: node cos test=0.630 (lin 0.634) | sym~node=0.983 | sym~V=0.617 | direct~V=0.671 | omega=[10, 10, 10, 10, 10, 10, 10, 10] | 143s
+FIN

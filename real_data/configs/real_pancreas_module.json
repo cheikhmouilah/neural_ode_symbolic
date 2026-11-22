@@ -1,0 +1,114 @@
+{
+  "phase": "7b - espace module (pool de 40 genes a vitesse valide, d=8) ; memes seuils que l espace des genes",
+  "data": {
+    "url": "https://github.com/theislab/scvelo_notebooks/raw/master/data/Pancreas/endocrinogenesis_day15.h5ad",
+    "file": "endocrinogenesis_day15.h5ad",
+    "min_shared_counts": 20,
+    "n_top_genes": 2000,
+    "n_pcs": 30,
+    "n_neighbors": 30,
+    "velocity_mode": "deterministic",
+    "sha256": "9e3e459eca00ba06b496ec80def32941b5b2889918720e3e7aa6ffb811fbe7c6"
+  },
+  "state": {
+    "space": "module",
+    "d": 8,
+    "genes": null,
+    "selection_rule": "pool : 40 genes de velocity_genes a plus grande variance de Ms ; modules = k-means des genes, moyenne par module",
+    "scaling": "z = Ms / quantile99(Ms) ; v = velocity / meme facteur (unites relatives, section VI-A remarque 2)",
+    "velocity_weights": "velocity_confidence (scVelo), normalisee a moyenne 1",
+    "n_pool": 40
+  },
+  "split": {
+    "n_blocks": 60,
+    "fractions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "seed": 0,
+    "note": "decoupage par blocs de voisinage (k-means sur PCA) pour limiter la fuite par lissage kNN des moments"
+  },
+  "node": {
+    "hidden": 64,
+    "lr": 0.003,
+    "epochs": 600,
+    "patience": 80,
+    "lam_reg": 0.001,
+    "reg_type": "magnitude",
+    "train_subsample": 0.8,
+    "solver": "dopri5",
+    "rtol": 1e-06,
+    "atol": 1e-08
+  },
+  "distillation": {
+    "M": 4000,
+    "jitter_frac": 0.5,
+    "reject_quantile": 0.95,
+    "knn": 5,
+    "val_fraction": 0.2
+  },
+  "library": {
+    "K_grid": [
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      1.0,
+      1.5
+    ],
+    "n_grid": [
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "K_bounds": [
+      0.02,
+      5.0
+    ],
+    "n_bounds": [
+      1.0,
+      6.0
+    ],
+    "k_max": 3,
+    "n_starts": 6,
+    "selection_tolerance": 0.05,
+    "selection_rule": "plus petite complexite Omega dont l'erreur de validation symbolique est <= (1+tol) x la meilleure (fixee avant evaluation, section IV-B)"
+  },
+  "stability": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "lam_sweep": [
+      0.0,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ]
+  },
+  "dynamics": {
+    "n_equilibria_starts": 120,
+    "progenitor_cluster": "Ngn3 low EP",
+    "T_multiplier": 5.0,
+    "box_margin": 0.1
+  },
+  "preregistered_thresholds": {
+    "R1_node_test_cosine_min": 0.5,
+    "R1_margin_over_shuffled_control": 0.3,
+    "R2_symbolic_vs_node_test_cosine_min": 0.9,
+    "R3_support_jaccard_across_seeds_min": 0.6,
+    "R4_support_jaccard_across_lam_reg_min": 0.6,
+    "R7_symbolic_vs_measured_cosine_ratio_min": 0.8,
+    "R5_R6": "equilibres/clusters et distille/direct : descriptifs, sans seuil de reussite",
+    "note": "Fixes AVANT toute execution. Criteres de decision, pas des predictions. Aucune verite terrain : ces criteres ne mesurent ni la recuperation d'equations ni la causalite (niveaux 4 a 7 du tableau III)."
+  }
+}

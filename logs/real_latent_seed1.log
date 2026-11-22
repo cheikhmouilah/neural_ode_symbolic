@@ -1,0 +1,18 @@
+cellules=3696 genes=['PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8'] train/val/test=2270/641/785 config=c9413bc50f4ad6ad
+C:\neural_ode_symbolic\real_data/src\real_node.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')
+  ep=   0 train_vel=27.8394 val_vel=12.8644
+  ep= 100 train_vel=0.3863 val_vel=0.6899
+  ep= 200 train_vel=0.3317 val_vel=0.6814
+  ep= 300 train_vel=0.2937 val_vel=0.6150
+  ep= 400 train_vel=0.2457 val_vel=0.5476
+  ep= 500 train_vel=0.2381 val_vel=0.5289
+C:\neural_ode_symbolic\real_data/src\real_identify.py:30: RuntimeWarning: overflow encountered in multiply
+  if t['kind'] == 'poly': out = out + t['a'] * (np.ones(len(Z)) if t['j'] is None else Z[:, t['j']] * (1.0 if t['k'] is None else Z[:, t['k']]))
+C:\neural_ode_symbolic\real_data/src\real_identify.py:28: RuntimeWarning: invalid value encountered in multiply
+  out = -model['g'] * Z[:, model['i']]
+C:\neural_ode_symbolic\real_data/src\real_identify.py:30: RuntimeWarning: invalid value encountered in add
+  if t['kind'] == 'poly': out = out + t['a'] * (np.ones(len(Z)) if t['j'] is None else Z[:, t['j']] * (1.0 if t['k'] is None else Z[:, t['k']]))
+seed 1 lam=0.001 ctrl=none: node cos test=0.766 (lin 0.647) | sym~node=0.677 | sym~V=0.623 | direct~V=0.608 | omega=[4, 4, 4, 4, 4, 4, 4, 4] | 327s
+FIN

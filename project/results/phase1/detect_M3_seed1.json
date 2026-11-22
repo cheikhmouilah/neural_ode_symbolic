@@ -1,0 +1,49 @@
+{
+ "system": "M3",
+ "kind": "fermi",
+ "seed": 1,
+ "node_field_nrmse": 0.015158235816584029,
+ "node_traj_nrmse": 0.011049706106917443,
+ "node_ok": true,
+ "reg_sign_ok": true,
+ "hill_only": {
+  "nrmse_sym_to_node": 0.01824540075290459,
+  "nrmse_sym_to_truth": 0.010044919917578984,
+  "traj_nrmse": 0.03574037783322465,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.007062239845161613
+  }
+ },
+ "rule_T_flag": false,
+ "rule_F_flag": false,
+ "rule_G_choice": [
+  "gauss",
+  "gauss"
+ ],
+ "rule_B_choice": [
+  "gauss",
+  "gauss"
+ ],
+ "rss_gain_ratios": [
+  {
+   "leaky": 0.9999999997305696,
+   "gauss": 2.2080106013779286
+  },
+  {
+   "leaky": 1.0000000001607112,
+   "gauss": 1.921625736434939
+  }
+ ],
+ "after_G": {
+  "nrmse_sym_to_truth": 0.01039717995369409,
+  "traj_nrmse": 0.014747032086091289,
+  "fixed_points": {
+   "n_ref": 2,
+   "n_model": 2,
+   "max_rel_err": 0.0028505535214513986
+  }
+ },
+ "seconds": 247.63697266578674
+}

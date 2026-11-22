@@ -1,0 +1,295 @@
+{
+ "variant": "manifold",
+ "seed": 4,
+ "config_sha": "d6ea80f87fa1c22a",
+ "cfg": {
+  "d": 5,
+  "n_traj": 60,
+  "n_times": 10,
+  "horizon": 4.0,
+  "sigma_rel": 0.05,
+  "dropout": 0.0,
+  "time_mode": "true",
+  "pseudo_gamma": 1.0,
+  "ic_mode": "manifold",
+  "n_test": 20,
+  "node": {
+   "hidden": 64,
+   "lr": 0.003,
+   "epochs": 400,
+   "lam_reg": 0.0001,
+   "step_size": 0.1,
+   "val_fraction": 0.2,
+   "adjoint": false
+  },
+  "distillation": {
+   "M": 3000,
+   "n_fine": 40,
+   "jitter_frac": 0.5,
+   "knn": 5,
+   "reject_quantile": 0.95,
+   "val_fraction": 0.2
+  },
+  "library": {
+   "K_grid": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "n_grid": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "K_bounds": [
+    0.02,
+    5.0
+   ],
+   "n_bounds": [
+    1.0,
+    6.0
+   ],
+   "k_max": 3,
+   "n_starts": 4,
+   "selection_tolerance": 0.05
+  },
+  "weak": {
+   "window": 5,
+   "stride": 1
+  },
+  "free_form": {
+   "population": 300,
+   "generations": 15,
+   "pysr_iterations": 40,
+   "pysr_maxsize": 15
+  }
+ },
+ "truth": [
+  {
+   "i": 0,
+   "g": 1.2760686299005024,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "K": 0.7995060655044994,
+     "n": 3.0,
+     "a": 1.4777246957775905
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "rep",
+     "K": 0.7996783495240314,
+     "n": 3.0,
+     "a": 1.9599707281413965
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "g": 0.8628044207561547,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 1.1335271777970475,
+     "n": 2.0,
+     "a": 2.6525601964371672
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "g": 1.0967898626744301,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 1.369029558604711,
+     "n": 1.5,
+     "a": 1.0005149616176858
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "g": 1.0798430777657475,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 3,
+     "typ": "act",
+     "K": 1.4275455438905462,
+     "n": 1.5,
+     "a": 2.473626851648011
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "g": 0.8321573412114601,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "rep",
+     "K": 0.9279514724691649,
+     "n": 3.0,
+     "a": 1.490626549018282
+    }
+   ]
+  }
+ ],
+ "node": {
+  "best_val": 0.004901851527392864,
+  "epochs_run": 400,
+  "loss": "gaussian",
+  "adjoint": false
+ },
+ "thresholds_note": "voir configs/synth.json",
+ "node_metrics": {
+  "traj_nrmse_vs_truth": 0.048509088010916794,
+  "cos_vs_truth_support": 0.9233084013339162,
+  "cos_vs_truth_offsupport": 0.8125419448853156,
+  "speed_ratio_median": 1.1326786537778148
+ },
+ "distilled": {
+  "equations": [
+   "dz0/dt = 0.664*H-(z1;K=0.554,n=2.1) + 2.04*H+(z4;K=1.88,n=3.1) + 1.48*H-(z2;K=0.831,n=3.1) - 1.63*z0",
+   "dz1/dt = 2.42*H+(z2;K=1.1,n=2.2) + 8.16*H+(z1;K=2.18,n=1.2) + 0.0351*H+(z0;K=1.13,n=6) - 3.14*z1",
+   "dz2/dt = 6.21*H+(z2;K=5,n=2.2) + 0.0292*H+(z3;K=0.855,n=6) + 0.045*H-(z0;K=0.907,n=6) - 0.904*z2",
+   "dz3/dt = 1.88*H+(z3;K=2.55,n=1.4) + 0.0101*H+(z2;K=1.04,n=5.8) + 0.00276*H-(z1;K=0.144,n=3.4) - 0.561*z3",
+   "dz4/dt = 1.26*H-(z4;K=1.22,n=2.8) + 20.2*H+(z2;K=4.19,n=4.7) + 0.112*H-(z0;K=0.512,n=6) - 0.955*z4"
+  ],
+  "structure": {
+   "precision": 0.3333333333333333,
+   "recall": 0.8333333333333334,
+   "F1": 0.47619047619047616,
+   "edge_recall_ignoring_type": 0.8333333333333334,
+   "exact_equation_rate": 0.0,
+   "n_terms_est": 15,
+   "n_terms_true": 6,
+   "n_matched": 5,
+   "param_relerr_median": {
+    "a": 0.2386863927388343,
+    "K": 0.31356834846445913,
+    "n": 0.0849475707066345
+   },
+   "param_relerr_all_median": 0.3065679652116364
+  },
+  "cos_vs_node_support": 0.9679943841355481,
+  "cos_vs_truth_support": 0.966626707376633,
+  "cos_vs_truth_offsupport": 0.8433017555451147,
+  "nrmse_vs_truth_support": 0.049383731409873684,
+  "speed_ratio_median": 0.9583185697662755,
+  "traj_nrmse_vs_truth": 0.026018838300570484
+ },
+ "prop1": {
+  "n": 20,
+  "holds_fraction": 1.0,
+  "median_B_over_E": 76484.9428454491,
+  "median_E": 0.167533401978177,
+  "median_eps": 0.9125330936273909,
+  "median_L": 2.676233147678464
+ },
+ "direct_fd": {
+  "structure": {
+   "precision": 0.4166666666666667,
+   "recall": 0.8333333333333334,
+   "F1": 0.5555555555555556,
+   "edge_recall_ignoring_type": 0.8333333333333334,
+   "exact_equation_rate": 0.2,
+   "n_terms_est": 12,
+   "n_terms_true": 6,
+   "n_matched": 5,
+   "param_relerr_median": {
+    "a": 0.38812935308224317,
+    "K": 0.4051761719151499,
+    "n": 0.2322892761585016
+   },
+   "param_relerr_all_median": 0.38812935308224317
+  },
+  "cos_vs_truth_support": 0.9670326151714806,
+  "cos_vs_truth_offsupport": 0.8954173451267257
+ },
+ "weak_sindy": {
+  "structure": {
+   "precision": 0.4444444444444444,
+   "recall": 0.6666666666666666,
+   "F1": 0.5333333333333333,
+   "edge_recall_ignoring_type": 0.6666666666666666,
+   "exact_equation_rate": 0.4,
+   "n_terms_est": 9,
+   "n_terms_true": 6,
+   "n_matched": 4,
+   "param_relerr_median": {
+    "a": 0.6373969979794658,
+    "K": 0.49916838782628714,
+    "n": 0.6666666666666666
+   },
+   "param_relerr_all_median": 0.49916838782628714
+  },
+  "cos_vs_truth_support": 0.968258954349992,
+  "cos_vs_truth_offsupport": 0.9546043598709645
+ },
+ "oracle_structure": {
+  "structure": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "F1": 1.0,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 1.0,
+   "n_terms_est": 6,
+   "n_terms_true": 6,
+   "n_matched": 6,
+   "param_relerr_median": {
+    "a": 0.3587504499502753,
+    "K": 0.3056517299048157,
+    "n": 0.2682442839220113
+   },
+   "param_relerr_all_median": 0.3035007554576688
+  },
+  "cos_vs_truth_support": 0.9921628926578461,
+  "cos_vs_node_support": 0.9415520324566313,
+  "cos_vs_truth_offsupport": 0.9685120264339888
+ },
+ "profile": {
+  "n": {
+   "n": 5,
+   "coverage": 1.0,
+   "frac_at_bound": 0.6,
+   "median_width": 4.642857142857142
+  },
+  "K": {
+   "n": 5,
+   "coverage": 1.0,
+   "frac_at_bound": 0.8,
+   "median_width": 0.8564071459542992
+  }
+ },
+ "ko": {
+  "cos_sym": 0.3822851750987379,
+  "cos_node": -0.019300501516029866,
+  "sign_agree_sym": 1.0,
+  "sign_agree_node": 1.0
+ },
+ "seconds": 200.65949058532715,
+ "timings": {
+  "node_train": 89.29871010780334,
+  "distill_sample_select": 33.15997338294983,
+  "baselines_direct_weak": 8.813734292984009,
+  "profile_likelihood": 58.05618500709534,
+  "ko_eval": 2.090301275253296
+ }
+}

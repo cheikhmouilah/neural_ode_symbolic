@@ -1,0 +1,412 @@
+Sorties des analyses et controles de ce lancement
+
+########## analyze_results.py phase1  (code 0)
+== Criteres preenregistres Phase 1 (protocole : trajectoire seule, D_f = etats d'entrainement)
+P2 structure exacte : [True, True, True]
+P1 champ NODE NRMSE<0.05    : 0.012/0.014/0.010 -> True
+P3a err med<0.05            : 0.033/0.032/0.048 -> True
+P3b err max<0.10            : 0.090/0.072/0.110 -> False
+P4 traj symb NRMSE<0.05     : 0.008/0.005/0.017 -> True
+P5 points fixes <5% : [0.016710580875943154, 0.012153745212315768, 0.030788983106480407] -> True
+
+Erreur par parametre (eq1, eq2) par graine :
+  seed 0 eq1: {'a': '9.0%', 'K': '1.9%', 'n': '3.3%', 'g': '6.8%'}
+  seed 0 eq2: {'a': '3.3%', 'K': '0.5%', 'n': '0.2%', 'g': '3.7%'}
+  seed 1 eq1: {'a': '7.2%', 'K': '0.4%', 'n': '2.8%', 'g': '6.5%'}
+  seed 1 eq2: {'a': '3.7%', 'K': '0.8%', 'n': '0.4%', 'g': '4.4%'}
+  seed 2 eq1: {'a': '11.0%', 'K': '6.4%', 'n': '7.0%', 'g': '6.1%'}
+  seed 2 eq2: {'a': '3.4%', 'K': '0.3%', 'n': '1.3%', 'g': '3.2%'}
+
+Reference derivees exactes (erreur max) : [0.0, 0.0, 0.0]
+Fidelite NRMSE champ : NODE->verite 0.012/0.014/0.010 | symbolique->verite 0.006/0.004/0.005 | symbolique->NODE 0.012/0.015/0.011
+
+Ablation vitesse : err med 0.009/0.014/0.022 | err max 0.038/0.035/0.058
+
+STLSQ generique (seed 0) : seuil -> nb termes [eq1,eq2] ; support exact
+   0.05 [96, 95] [False, False]
+   0.1 [94, 94] [False, False]
+   0.2 [94, 92] [False, False]
+   0.5 [88, 91] [False, False]
+   1.0 [80, 79] [False, False]
+   2.0 [65, 61] [False, False]
+
+########## analyze_results.py phase6  (code 0)
+== Phase 6 : R1 structure>=2/3 ; R2 mediane des err med<0.10 ; R3 traj<0.05 dans >=2/3
+ref  s=0.00 N=40 struct 3/3 | err med 0.033/0.032/0.048 | err max 0.090/0.072/0.110 (<0.10 : 2/3, post hoc) | traj 0.008/0.005/0.017 | reussie: True
+s=0.05 N=40      struct 3/3 | err med 0.047/0.040/0.068 | err max 0.103/0.090/0.155 (<0.10 : 1/3, post hoc) | traj 0.006/0.008/0.031 | reussie: True
+                 distillation max 0.103/0.090/0.155 vs differences finies max 0.070/0.073/0.086
+s=0.10 N=40      struct 3/3 | err med 0.059/0.053/0.080 | err max 0.138/0.114/0.232 (<0.10 : 0/3, post hoc) | traj 0.009/0.010/0.051 | reussie: True
+                 distillation max 0.138/0.114/0.232 vs differences finies max 0.223/0.214/0.257
+s=0.00 N=15      struct 3/3 | err med 0.047/0.043/0.043 | err max 0.095/0.075/0.118 (<0.10 : 2/3, post hoc) | traj 0.010/0.022/0.018 | reussie: True
+                 distillation max 0.095/0.075/0.118 vs differences finies max 0.016/0.011/0.014
+
+########## analyze_results.py misspec  (code 0)
+== D1 (sym Hill->NODE > 0.03 ; controle 0/3, leaky>=2/3, gauss>=2/3)
+  hill   [0.0123, 0.0148, 0.0109] 0 /3
+  leaky  [0.0444, 0.032, 0.0296] 2 /3
+  gauss  [0.0199, 0.0212, 0.0198] 0 /3
+== S1 (bonne famille, 2 equations, >=2/3 graines)
+  hill   [['leaky', 'hill'], ['leaky', 'hill'], ['leaky', 'hill']] 0 /3
+  leaky  [['leaky', 'leaky'], ['leaky', 'leaky'], ['leaky', 'leaky']] 3 /3
+  gauss  [['gauss', 'gauss'], ['gauss', 'gauss'], ['gauss', 'gauss']] 3 /3
+== S2 (erreur mediane famille correcte <0.10)
+  hill   [0.033, 0.032, 0.048] mediane 0.033
+  leaky  [0.066, 0.054, 0.076] mediane 0.066
+  gauss  [0.027, 0.025, 0.02] mediane 0.025
+== Hill seul : traj NRMSE / pts fixes err
+  hill   [0.008, 0.005, 0.017] [0.016710700894410953, 0.012153796114821957, 0.030788806168591164]
+  leaky  [0.249, 0.213, 0.252] [1.1572012682865886, 1.3822152594307358, 1.8971985972683514]
+  gauss  [0.031, 0.184, 0.254] [0.008766457456375049, 0.0094800696968291, 0.010023973449647632]
+
+########## analyze_results.py detect  (code 0)
+unites exclues (NODE seul > 0.10) : [('M1', 1), ('M2', 0)]
+regle T: FP 1/9 | detection 3/10
+regle F: FP 0/9 | detection 1/10
+regle G: Hill conserve 15/18 (SG1 >=16) | bonne famille M1/M2 12/12 (SG2 >=9) | BIC: Hill 5/18
+DT1 True | DT2 False | SG1 False | SG2 True -> succes global False
+
+########## analyze_sergio.py  (code 0)
+== Pipeline MLP + symbolique, 14 premieres cibles a regulateur unique (n vrai = 2)
+  clean         type correct 1.00 | n_hat median (act+rep melanges) 1.84 | NRMSE mediane famille 0.100, gp 0.131
+  noisy_mild    type correct 1.00 | n_hat median (act+rep melanges) 1.78 | NRMSE mediane famille 0.231, gp 0.544
+  noisy_severe  type correct 0.93 | n_hat median (act+rep melanges) 0.54 | NRMSE mediane famille 0.284, gp 0.306
+  clean activations: n_hat med 1.21 [0.94-5.23] | K_hat/K med 1.37
+  clean repressions: n_hat med 1.86 [1.84-1.95] | K_hat/K med 0.92
+== Controle negatif : R2 median vrai regulateur 0.892 vs non lie 0.388
+== Test plage d'expression (n_hat median) : {'observe (SERGIO, gene 9)': 2.0, 'plage elargie x0.3-3h': 2.0, 'plage elargie x0.2-6h': 2.0}
+== EIV synthetique (CV -> n_hat q25/med/q75) : {'0.0': [1.98, 2.0, 2.04], '0.15': [1.65, 1.69, 1.72], '0.3': [1.29, 1.32, 1.35], '0.5': [0.89, 0.92, 0.96]}
+== Quasi-stationnaire : {'activation': (0.876, 0.072), 'repression': (0.872, 0.061)} (R2 median, biais max par gene)
+
+== Test EIV sur SERGIO (66 cibles, 7 couples regulateur-type)
+  act (n=32): n_hat median par condition : {'raw': 1.79, 'knn5': 1.76, 'knn15': 1.82, 'knn50': 1.85, 'knn150': 1.92, 'binmean': 1.61}
+  rep (n=34): n_hat median par condition : {'raw': 1.68, 'knn5': 1.71, 'knn15': 1.76, 'knn50': 1.82, 'knn150': 1.87, 'binmean': 1.63}
+  par regulateur (n_hat median raw / knn50 / knn150) :
+    reg   1 rep: 2.14 / 3.29 / 2.50  (CV intra-type 0.13)
+    reg   5 act: 1.44 / 1.92 / 2.03  (CV intra-type 0.29)
+    reg   5 rep: 1.77 / 1.75 / 1.79  (CV intra-type 0.29)
+    reg   9 act: 1.26 / 1.80 / 2.03  (CV intra-type 0.28)
+    reg   9 rep: 1.68 / 1.83 / 1.88  (CV intra-type 0.28)
+    reg  18 act: 2.20 / 1.82 / 1.80  (CV intra-type 0.15)
+    reg  79 rep: 1.58 / 1.70 / 1.71  (CV intra-type 0.47)
+  gain de R2 knn15 : vrai +0.014 vs controle +0.036 ; vrai > controle pour 27% des cibles
+  gain de R2 knn50 : vrai +0.020 vs controle +0.042 ; vrai > controle pour 33% des cibles
+
+########## analyze_real.py  (code 0)
+config a606d8c808d3a02b | genes ['Ghrl', 'Gnas', 'Ins2', 'Nnat', 'Chga', 'Clu', 'Isl1', 'Cpe'] | graines [0, 1, 2, 3, 4]
+
+=== par graine ===
+seed | NODE cos test | lineaire | sym~NODE | sym~V | direct~V | R7 | Omega
+   0 | 0.481 | 0.588 | 0.875 | 0.499 | 0.528 | 1.04 | [10, 10, 7, 7, 7, 7, 10, 10]
+   1 | 0.531 | 0.588 | 0.928 | 0.540 | 0.513 | 1.02 | [1, 10, 10, 7, 10, 4, 10, 10]
+   2 | 0.492 | 0.588 | 0.834 | 0.466 | 0.656 | 0.95 | [10, 10, 7, 7, 10, 10, 10, 10]
+   3 | 0.530 | 0.588 | 0.867 | 0.504 | 0.514 | 0.95 | [10, 10, 10, 7, 10, 10, 10, 10]
+   4 | 0.565 | 0.588 | 0.898 | 0.584 | 0.664 | 1.03 | [10, 10, 7, 7, 7, 10, 10, 10]
+
+R1 NODE cos test moyen=0.520 (>= 0.5) ; controle melange=0.365 (marge exigee 0.3) -> ECHEC
+R2 sym~NODE test moyen=0.880 (>= 0.9) -> ECHEC
+R3 Jaccard de support entre graines moyen=0.510 (>= 0.6) -> ECHEC
+R4 Jaccard vs lam_ref par lam={0.0: 0.76, 0.01: 0.812, 0.1: 0.667, 1.0: 0.587} -> ECHEC
+R7 rapport cos(sym,V)/cos(NODE,V) moyen=0.998 (>= 0.8) -> OK
+
+=== descriptif R5 / R6 (sans seuil) ===
+seed 0: equilibres NODE 0 (stables 0) | symbolique 1 (stables 1) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/8 | arrivees NODE {'Beta': 5, 'Ngn3 low EP': 55} | sym {'Beta': 60}
+seed 1: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Alpha': 29, 'Beta': 5, 'Epsilon': 10, 'Ngn3 low EP': 16} | sym {'Alpha': 3, 'Beta': 30, 'Delta': 27}
+seed 2: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Beta': 1, 'Pre-endocrine': 59} | sym {'Beta': 60}
+seed 3: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Ngn3 low EP': 54, 'Pre-endocrine': 6} | sym {'Beta': 60}
+seed 4: equilibres NODE 0 (stables 0) | symbolique 3 (stables 2) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/8 | arrivees NODE {'Delta': 20, 'Ngn3 high EP': 40} | sym {'Delta': 20, 'Ngn3 high EP': 40}
+distille vs direct : cos vs V = 0.519 vs 0.575 ; Jaccard de structure moyen = 0.560
+lineaire (reference) cos test = 0.588
+
+Equations (graine 0 , distillation) :
+   dGhrl/dt = 0.000512*H-(Ins2;K=0.813,n=6) + 0.000356*H+(Clu;K=0.232,n=6) + 0.000291*H+(Isl1;K=0.173,n=6) - 0.00175*Ghrl
+   dGnas/dt = 0.17*H+(Chga;K=1.98,n=1.1) + 0.0239*H-(Clu;K=0.428,n=1.9) + 0.0202*H+(Nnat;K=0.0604,n=1) - 0.0872*Gnas
+   dIns2/dt = 1.98*H+(Ins2;K=0.652,n=1.2) + 0.428*H+(Nnat;K=1.3,n=3.1) - 1.39*Ins2
+   dNnat/dt = 0.0697*H+(Nnat;K=0.212,n=1.2) + 0.00898*H+(Chga;K=0.589,n=4.7) - 0.0672*Nnat
+   dChga/dt = 0.00435*H-(Clu;K=0.0343,n=2.4) + 0.00114*H-(Isl1;K=0.151,n=6) - 0.0109*Chga
+   dClu/dt = 0.00279*H-(Gnas;K=0.218,n=2.3) + 0.00934*H+(Cpe;K=1.32,n=4.1) - 0.00922*Clu
+   dIsl1/dt = 0.0035*H+(Nnat;K=0.308,n=1.4) + 0.013*H+(Chga;K=1.73,n=2.5) + 0.00162*H+(Clu;K=1.03,n=6) - 0.00327*Isl1
+   dCpe/dt = 0.0584*H+(Chga;K=0.118,n=1.2) + 0.0247*H+(Gnas;K=0.183,n=6) + 0.0384*H+(Cpe;K=0.273,n=4.2) - 0.138*Cpe
+Equations directes (identification sur vitesses mesurees) :
+   dGhrl/dt = 0.00467*H+(Isl1;K=1.1,n=6) + 0.0378*H+(Ghrl;K=2.57,n=1.7) - 0.00819*Ghrl
+   dGnas/dt = 0.0358*H-(Clu;K=0.122,n=1) + 0.028*H+(Nnat;K=0.021,n=1) + 0.0438*H+(Chga;K=0.567,n=2.6) - 0.087*Gnas
+   dIns2/dt = 3.5*H+(Ins2;K=0.882,n=1.1) + 0.518*H+(Nnat;K=1.04,n=6) - 2.12*Ins2
+   dNnat/dt = 0.0628*H+(Nnat;K=0.157,n=1.6) + 0.00661*H+(Chga;K=0.444,n=6) - 0.0676*Nnat
+   dChga/dt = 0.0117*H-(Clu;K=0.02,n=1.8) + 0.000921*H-(Isl1;K=0.115,n=6) - 0.0145*Chga
+   dClu/dt = 0.00698*H-(Gnas;K=0.141,n=6) + 0.0214*H+(Clu;K=1.19,n=6) - 0.0167*Clu
+   dIsl1/dt = 0.00322*H+(Nnat;K=0.02,n=5.5) + 0.0167*H+(Isl1;K=1.1,n=6) - 0.00658*Isl1
+   dCpe/dt = 0.0898*H+(Chga;K=0.067,n=1) + 0.0129*H+(Nnat;K=0.0813,n=6) - 0.0964*Cpe
+
+STLSQ (PySINDy) sur D_f, graine 0 : [(0.01, 259.5, 0.997), (0.05, 78.2, 0.816), (0.1, 40.9, 0.703), (0.2, 19.0, 0.667), (0.5, 2.6, 0.154)]
+
+=== Baselines VII-D (dynamo / CellRank / BoolODE) ===
+méthode                     cos_test   nrmse_test
+--------------------------------------------------
+  node_scvelo                 0.5197             
+  symbolique_distille         0.5186             
+  lineaire                    0.5877             
+  dynamo                     -0.9317       0.0954
+  cellrank                    0.4748       0.0845
+    états terminaux : ['Alpha', 'Beta', 'Delta'] | pureté test = 0.264
+  boolode                     0.0200       0.0487
+    réseau : Ghrl←3, Gnas←3, Ins2←3, Nnat←3, Chga←3, Clu←3, Isl1←3, Cpe←3
+
+VERDICTS {'R1': False, 'R2': False, 'R3': False, 'R4': False, 'R7': True, 'baselines': {'dynamo': -0.9316800442248773, 'cellrank': 0.4747503570508093, 'boolode': 0.02003848764051247}}
+
+########## analyze_real.py C:\neural_ode_symbolic\real_data/results/real real_module real_pancreas_module.json  (code 0)
+config 166ec4ab83624e8e | genes ['mod0[Ins2,Nnat,Dlk1]', 'mod1[2810417H13Rik,Ldha]', 'mod2[Chga,Hmgn3,Rap1b]', 'mod3[Ghrl,Isl1,Maged2]', 'mod4[Btbd17,Hn1,H2afv]', 'mod5[Clu,Krt18,Mt1]', 'mod6[Krt7,Hspa8,Map1b]', 'mod7[Gnas,Cpe,Tmem27]'] | graines [0, 1, 2]
+
+=== par graine ===
+seed | NODE cos test | lineaire | sym~NODE | sym~V | direct~V | R7 | Omega
+   0 | 0.625 | 0.702 | 0.974 | 0.620 | 0.681 | 0.99 | [7, 10, 10, 7, 10, 10, 10, 10]
+   1 | 0.671 | 0.702 | 0.977 | 0.662 | 0.734 | 0.99 | [10, 7, 10, 10, 10, 10, 10, 10]
+   2 | 0.674 | 0.702 | 0.956 | 0.674 | 0.728 | 1.00 | [10, 10, 10, 10, 10, 7, 10, 10]
+
+R1 NODE cos test moyen=0.657 (>= 0.5) ; controle melange=nan (marge exigee 0.3) -> ECHEC
+R2 sym~NODE test moyen=0.969 (>= 0.9) -> OK
+R3 Jaccard de support entre graines moyen=0.667 (>= 0.6) -> OK
+R4 : balayage lam_reg absent
+R7 rapport cos(sym,V)/cos(NODE,V) moyen=0.993 (>= 0.8) -> OK
+
+=== descriptif R5 / R6 (sans seuil) ===
+seed 0: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Epsilon': 3, 'Ngn3 high EP': 57} | sym {'Beta': 60}
+seed 1: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Pre-endocrine': 60} | sym {'Beta': 60}
+seed 2: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Alpha': 2, 'Beta': 11, 'Ductal': 47} | sym {'Beta': 14, 'Delta': 43, 'Ngn3 high EP': 3}
+distille vs direct : cos vs V = 0.652 vs 0.714 ; Jaccard de structure moyen = 0.463
+lineaire (reference) cos test = 0.702
+
+Equations (graine 0 , distillation) :
+   dmod0[Ins2,Nnat,Dlk1]/dt = 0.449*H+(mod0[Ins2,Nnat,Dlk1];K=1.91,n=1.2) + 0.0158*H+(mod2[Chga,Hmgn3,Rap1b];K=0.434,n=2.6) - 0.104*mod0[Ins2,Nnat,Dlk1]
+   dmod1[2810417H13Rik,Ldha]/dt = 0.0331*H+(mod6[Krt7,Hspa8,Map1b];K=1.55,n=6) + 0.000692*H-(mod2[Chga,Hmgn3,Rap1b];K=0.0855,n=6) + 0.0331*H+(mod1[2810417H13Rik,Ldha];K=1.68,n=1.3) - 0.0141*mod1[2810417H13Rik,Ldha]
+   dmod2[Chga,Hmgn3,Rap1b]/dt = 0.212*H+(mod6[Krt7,Hspa8,Map1b];K=5,n=1.1) + 0.011*H-(mod5[Clu,Krt18,Mt1];K=0.0911,n=4.3) + 0.00413*H+(mod1[2810417H13Rik,Ldha];K=0.63,n=6) - 0.0367*mod2[Chga,Hmgn3,Rap1b]
+   dmod3[Ghrl,Isl1,Maged2]/dt = 0.0568*H+(mod3[Ghrl,Isl1,Maged2];K=0.772,n=1.6) + 0.00107*H+(mod0[Ins2,Nnat,Dlk1];K=0.122,n=4.6) - 0.0412*mod3[Ghrl,Isl1,Maged2]
+   dmod4[Btbd17,Hn1,H2afv]/dt = 0.103*H+(mod4[Btbd17,Hn1,H2afv];K=0.797,n=1.8) + 0.00468*H+(mod1[2810417H13Rik,Ldha];K=0.562,n=3.8) + 0.0033*H+(mod7[Gnas,Cpe,Tmem27];K=0.763,n=6) - 0.0764*mod4[Btbd17,Hn1,H2afv]
+   dmod5[Clu,Krt18,Mt1]/dt = 0.0132*H+(mod1[2810417H13Rik,Ldha];K=0.432,n=1.2) + 0.00192*H-(mod1[2810417H13Rik,Ldha];K=0.0825,n=2.5) + 0.00169*H+(mod5[Clu,Krt18,Mt1];K=0.212,n=6) - 0.0235*mod5[Clu,Krt18,Mt1]
+   dmod6[Krt7,Hspa8,Map1b]/dt = 0.0377*H+(mod4[Btbd17,Hn1,H2afv];K=0.831,n=1.9) + 0.0116*H-(mod5[Clu,Krt18,Mt1];K=0.556,n=5) + 0.016*H-(mod2[Chga,Hmgn3,Rap1b];K=0.385,n=3.1) - 0.0515*mod6[Krt7,Hspa8,Map1b]
+   dmod7[Gnas,Cpe,Tmem27]/dt = 0.0147*H-(mod0[Ins2,Nnat,Dlk1];K=0.323,n=3.9) + 0.234*H+(mod7[Gnas,Cpe,Tmem27];K=1.47,n=1.6) + 0.00755*H+(mod1[2810417H13Rik,Ldha];K=0.596,n=6) - 0.0889*mod7[Gnas,Cpe,Tmem27]
+Equations directes (identification sur vitesses mesurees) :
+   dmod0[Ins2,Nnat,Dlk1]/dt = 1.02*H+(mod0[Ins2,Nnat,Dlk1];K=0.833,n=1.4) + 0.0144*H+(mod6[Krt7,Hspa8,Map1b];K=0.0795,n=1) - 0.588*mod0[Ins2,Nnat,Dlk1]
+   dmod1[2810417H13Rik,Ldha]/dt = 0 - 0.00316*mod1[2810417H13Rik,Ldha]
+   dmod2[Chga,Hmgn3,Rap1b]/dt = 0.0215*H-(mod5[Clu,Krt18,Mt1];K=0.136,n=2.1) + 0.0272*H+(mod6[Krt7,Hspa8,Map1b];K=0.752,n=6) - 0.0391*mod2[Chga,Hmgn3,Rap1b]
+   dmod3[Ghrl,Isl1,Maged2]/dt = 0.000577*H-(mod6[Krt7,Hspa8,Map1b];K=0.249,n=6) + 0.0877*H+(mod3[Ghrl,Isl1,Maged2];K=2.64,n=1.6) + 0.00128*H+(mod0[Ins2,Nnat,Dlk1];K=0.0594,n=2.8) - 0.0159*mod3[Ghrl,Isl1,Maged2]
+   dmod4[Btbd17,Hn1,H2afv]/dt = 0.0651*H+(mod1[2810417H13Rik,Ldha];K=5,n=1) + 0.0646*H+(mod4[Btbd17,Hn1,H2afv];K=0.673,n=2.2) + 0.00585*H+(mod6[Krt7,Hspa8,Map1b];K=0.17,n=6) - 0.0616*mod4[Btbd17,Hn1,H2afv]
+   dmod5[Clu,Krt18,Mt1]/dt = 0.00587*H+(mod1[2810417H13Rik,Ldha];K=0.217,n=6) + 0.00846*H-(mod2[Chga,Hmgn3,Rap1b];K=0.0378,n=6) + 0.297*H+(mod5[Clu,Krt18,Mt1];K=1.59,n=6) - 0.0274*mod5[Clu,Krt18,Mt1]
+   dmod6[Krt7,Hspa8,Map1b]/dt = 0.016*H+(mod4[Btbd17,Hn1,H2afv];K=0.551,n=2.4) + 0.0186*H+(mod6[Krt7,Hspa8,Map1b];K=0.216,n=6) + 0.0361*H-(mod2[Chga,Hmgn3,Rap1b];K=0.0653,n=1) - 0.0586*mod6[Krt7,Hspa8,Map1b]
+   dmod7[Gnas,Cpe,Tmem27]/dt = 0.0136*H-(mod0[Ins2,Nnat,Dlk1];K=0.184,n=6) + 0.611*H+(mod7[Gnas,Cpe,Tmem27];K=1.65,n=1.4) - 0.222*mod7[Gnas,Cpe,Tmem27]
+
+STLSQ (PySINDy) sur D_f, graine 0 : [(0.01, 66.1, 1.0), (0.05, 1.2, 0.677), (0.1, 0.0, nan), (0.2, 0.0, nan), (0.5, 0.0, nan)]
+
+[info] Baselines non disponibles (C:\neural_ode_symbolic\real_data/results/real/baselines_real_module.json). Lancer :
+  python scripts/run_real_baselines.py --config real_pancreas_module.json --tag real_module
+
+VERDICTS {'R1': False, 'R2': True, 'R3': True, 'R4': None, 'R7': True}
+
+########## analyze_real.py C:\neural_ode_symbolic\real_data/results/real real_latent real_pancreas_latent.json  (code 0)
+config c9413bc50f4ad6ad | genes ['PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8'] | graines [0, 1, 2]
+
+=== par graine ===
+seed | NODE cos test | lineaire | sym~NODE | sym~V | direct~V | R7 | Omega
+   0 | 0.777 | 0.647 | 0.721 | 0.620 | 0.608 | 0.80 | [4, 4, 4, 4, 4, 4, 4, 4]
+   1 | 0.766 | 0.647 | 0.677 | 0.623 | 0.608 | 0.81 | [4, 4, 4, 4, 4, 4, 4, 4]
+   2 | 0.759 | 0.647 | 0.632 | 0.600 | 0.616 | 0.79 | [4, 4, 4, 4, 4, 4, 4, 4]
+
+R1 NODE cos test moyen=0.767 (>= 0.5) ; controle melange=nan (marge exigee 0.3) -> ECHEC
+R2 sym~NODE test moyen=0.677 (>= 0.9) -> ECHEC
+R3 Jaccard de support entre graines moyen=0.721 (>= 0.6) -> OK
+R4 : balayage lam_reg absent
+R7 rapport cos(sym,V)/cos(NODE,V) moyen=0.801 (>= 0.8) -> OK
+
+=== descriptif R5 / R6 (sans seuil) ===
+seed 0: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Alpha': 10, 'Beta': 5, 'Delta': 28, 'Ductal': 1, 'Epsilon': 5, 'Ngn3 high EP': 2, 'Ngn3 low EP': 7, 'Pre-endocrine': 2} | sym {'Alpha': 36, 'Beta': 5, 'Delta': 7, 'Ductal': 10, 'Epsilon': 1, 'Ngn3 high EP': 1}
+seed 1: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Alpha': 5, 'Delta': 5, 'Epsilon': 27, 'Ngn3 high EP': 12, 'Ngn3 low EP': 6, 'Pre-endocrine': 5} | sym {'Alpha': 57, 'Ductal': 3}
+seed 2: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Alpha': 1, 'Beta': 2, 'Delta': 6, 'Ductal': 9, 'Epsilon': 9, 'Ngn3 high EP': 4, 'Ngn3 low EP': 29} | sym {'Alpha': 1, 'Beta': 26, 'Delta': 3, 'Ngn3 high EP': 30}
+distille vs direct : cos vs V = 0.614 vs 0.611 ; Jaccard de structure moyen = 0.774
+lineaire (reference) cos test = 0.647
+
+Equations (graine 0 , distillation) :
+   dPC1/dt = 0.0267*1 + -0.00936*PC1 + -0.0333*PC3*PC4 - 0*PC1
+   dPC2/dt = -0.0744*PC2*PC4 + -0.0279*PC1*PC4 + 0.0545*PC3*PC7 - 0*PC2
+   dPC3/dt = 0.0122*PC1*PC1 + -0.0177*PC2*PC2 + 0.00811*PC1 - 0*PC3
+   dPC4/dt = 0.0183*PC1 + 0.0414*PC1*PC4 + 0.0475*PC8 - 0*PC4
+   dPC5/dt = 0.0237*PC1*PC2 + -0.00886*1 + 0.0506*PC2*PC7 - 0*PC5
+   dPC6/dt = -0.00373*PC1 + -0.0058*PC2*PC2 + 0.0206*PC2*PC7 - 0*PC6
+   dPC7/dt = -0.0122*PC1 + -0.0148*PC2*PC2 + -0.0256*PC4*PC5 - 0*PC7
+   dPC8/dt = 0.103*PC2*PC7 + -0.0318*PC3*PC3 + 0.0372*PC6*PC6 - 0*PC8
+Equations directes (identification sur vitesses mesurees) :
+   dPC1/dt = 0.0255*1 + -0.00902*PC1 + -0.034*PC3*PC4 - 0*PC1
+   dPC2/dt = -0.0739*PC2*PC4 + -0.0289*PC1*PC4 + 0.0545*PC3*PC7 - 0*PC2
+   dPC3/dt = 0.012*PC1*PC1 + -0.018*PC2*PC2 + 0.00751*PC1 - 0*PC3
+   dPC4/dt = 0.0191*PC1 + 0.0414*PC1*PC4 - 0*PC4
+   dPC5/dt = 0.0239*PC1*PC2 + -0.00867*1 + 0.0509*PC2*PC7 - 0*PC5
+   dPC6/dt = -0.00372*PC1 + -0.0049*PC2*PC2 + 0.0202*PC2*PC7 - 0*PC6
+   dPC7/dt = -0.0115*PC1 + -0.0133*PC2*PC2 + -0.0136*PC1*PC7 - 0*PC7
+   dPC8/dt = 0.104*PC2*PC7 + -0.0352*PC3*PC3 + 0.0341*PC6*PC6 - 0*PC8
+
+STLSQ (PySINDy) sur D_f, graine 0 : []
+
+[info] Baselines non disponibles (C:\neural_ode_symbolic\real_data/results/real/baselines_real_latent.json). Lancer :
+  python scripts/run_real_baselines.py --config real_pancreas_latent.json --tag real_latent
+
+VERDICTS {'R1': False, 'R2': False, 'R3': True, 'R4': None, 'R7': True}
+
+########## analyze_synth.py  (code 0)
+variante                n   node_traj    node_cos     dist_F1      dist_P      dist_R   direct_F1     weak_F1 dist_relerr oracle_relerr    dist_cos dist_cos_off       prop1 speed_ratio
+base                    5       0.017       0.939       0.778       0.652       0.978       0.887       0.864       0.431       0.374       0.965       0.987       1.000       0.988
+noise02                 5       0.017       0.938       0.795       0.681       0.978       0.860       0.794       0.417       0.381       0.964       0.987       1.000       0.983
+noise10                 5       0.017       0.941       0.762       0.645       0.956       0.853       0.786       0.443       0.352       0.962       0.986       1.000       0.988
+noise20                 5       0.018       0.937       0.700       0.578       0.911       0.865       0.710       0.409       0.348       0.955       0.984       1.000       0.977
+drop10                  5       0.053       0.679       0.483       0.386       0.656       0.280       0.147       0.729       0.656       0.706       0.943       1.000       1.529
+drop20                  5       0.082       0.568       0.430       0.344       0.589       0.123       0.111       0.491       0.655       0.580       0.917       1.000       2.471
+N20                     5       0.022       0.942       0.708       0.593       0.900       0.864       0.766       0.417       0.355       0.959       0.984       1.000       0.962
+N120                    5       0.014       0.958       0.782       0.664       0.956       0.863       0.820       0.453       0.399       0.970       0.986       1.000       0.994
+d3                      5       0.019       0.935       0.699       0.568       0.920       0.817       0.744       0.383       0.337       0.914       0.982       1.000       1.014
+d8                      5       0.028       0.944       0.751       0.618       0.966       0.898       0.840       0.412       0.339       0.958       0.987       1.000       0.947
+pseudo2                 5       0.045       0.642       0.625       0.529       0.778       0.782       0.387       0.902       0.738       0.712       0.965         nan       2.535
+manifold                5       0.093       0.739       0.492       0.392       0.678       0.497       0.429       0.528       0.504       0.869       0.854       1.000       1.011
+counts                  5       0.048       0.663       0.481       0.385       0.656       0.185       0.218       0.567       0.657       0.708       0.933       1.000       1.137
+counts_drop10           5       0.065       0.538       0.380       0.302       0.522       0.000       0.124       0.519       0.715       0.564       0.904       1.000       1.820
+adjoint                 5       0.017       0.939       0.778       0.652       0.978       0.887       0.864       0.431       0.373       0.965       0.987       1.000       0.988
+
+S1 F1 de structure (distille, base) = 0.778 (>= 0.7) -> OK  [graines : 5]
+S2 erreur relative mediane des parametres (termes retrouves) = 0.441 (<= 0.25) -> ECHEC
+S3 cosinus NODE/verite = 0.939 (>= 0.9) -> OK
+S4 proposition 1 : borne verifiee sur 1.000 des trajectoires de test, 70 runs (>= 0.95) -> OK
+S5 pseudotemps (gamma=2) : cosinus direction distille/verite = 0.712 (>= 0.9) ; rapport de vitesse median = 2.54 (1 = temps vrai) -> ECHEC
+S6 variete : chute de cosinus hors support = 0.014 (>= 0.1 attendu si l'ambiguite existe) -> ECHEC
+
+forme libre (gplearn) : rappel des variables 0.29, precision 0.34, longueur moyenne 2.8, R2 vs NODE 0.18 (5 runs)
+
+VERDICTS {'S1': True, 'S2': False, 'S3': True, 'S4': True, 'S5': False, 'S6': False}
+C:\neural_ode_symbolic\synthetic\scripts\analyze_synth.py:8: RuntimeWarning: Mean of empty slice
+  m = lambda L, g: float(np.nanmean([g(r) for r in L])) if L else float('nan')
+
+########## analyze_real.py C:\neural_ode_symbolic\real_data/results/real real_dg real_dentategyrus.json  (code 0)
+config cfd09f80c77b07a5 | genes ['Tmsb10', 'Snca', 'Slc1a2', 'Hba-a1', 'Mt1', 'Hexb', 'Ppp3ca', 'Itm2b'] | graines [0, 1, 2]
+
+=== par graine ===
+seed | NODE cos test | lineaire | sym~NODE | sym~V | direct~V | R7 | Omega
+   0 | 0.639 | 0.634 | 0.973 | 0.628 | 0.620 | 0.98 | [10, 10, 7, 10, 7, 10, 10, 10]
+   1 | 0.630 | 0.634 | 0.983 | 0.617 | 0.671 | 0.98 | [10, 10, 10, 10, 10, 10, 10, 10]
+   2 | 0.591 | 0.634 | 0.932 | 0.602 | 0.623 | 1.02 | [10, 10, 10, 4, 10, 4, 10, 10]
+
+R1 NODE cos test moyen=0.620 (>= 0.5) ; controle melange=nan (marge exigee 0.3) -> ECHEC
+R2 sym~NODE test moyen=0.963 (>= 0.9) -> OK
+R3 Jaccard de support entre graines moyen=0.489 (>= 0.6) -> ECHEC
+R4 : balayage lam_reg absent
+R7 rapport cos(sym,V)/cos(NODE,V) moyen=0.993 (>= 0.8) -> OK
+
+=== descriptif R5 / R6 (sans seuil) ===
+seed 0: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'GABA': 5, 'Neuroblast': 46} | sym {'Astrocytes': 47, 'Neuroblast': 4}
+seed 1: equilibres NODE 0 (stables 0) | symbolique 0 (stables 0) | clusters a <1 rayon d'un stable : NODE 0/0, sym 0/0 | arrivees NODE {'Astrocytes': 12, 'Microglia': 39} | sym {'Astrocytes': 51}
+seed 2: equilibres NODE 0 (stables 0) | symbolique 5 (stables 2) | clusters a <1 rayon d'un stable : NODE 0/0, sym 3/14 | arrivees NODE {'Astrocytes': 49, 'Granule mature': 1, 'Radial Glia-like': 1} | sym {'Astrocytes': 49, 'Radial Glia-like': 2}
+distille vs direct : cos vs V = 0.615 vs 0.638 ; Jaccard de structure moyen = 0.380
+lineaire (reference) cos test = 0.634
+
+Equations (graine 0 , distillation) :
+   dTmsb10/dt = 0.0101*H+(Itm2b;K=0.191,n=3.9) + 0.334*H+(Tmsb10;K=2.23,n=1.2) + 0.0254*H+(Hba-a1;K=0.25,n=3.5) - 0.1*Tmsb10
+   dSnca/dt = 0.00255*H+(Snca;K=0.131,n=2.7) + 0.0178*H+(Ppp3ca;K=1.26,n=1.8) + 0.0098*H+(Tmsb10;K=0.791,n=1.1) - 0.0144*Snca
+   dSlc1a2/dt = 0.0209*H+(Slc1a2;K=0.227,n=2.8) + 0.00235*H+(Itm2b;K=0.161,n=6) - 0.0239*Slc1a2
+   dHba-a1/dt = 0.000992*H-(Itm2b;K=0.182,n=6) + 0.000833*H+(Slc1a2;K=0.0409,n=3.3) + 0.00322*H+(Snca;K=1.17,n=6) - 6.15e-36*Hba-a1
+   dMt1/dt = 0.0405*H+(Slc1a2;K=0.362,n=1.6) + 0.00633*H+(Itm2b;K=0.162,n=4.4) - 0.0401*Mt1
+   dHexb/dt = 0.000694*H-(Snca;K=0.53,n=4.1) + 0.00133*H-(Slc1a2;K=0.204,n=4.7) + 0.0139*H+(Mt1;K=1.76,n=6) - 4.16e-33*Hexb
+   dPpp3ca/dt = 0.0694*H-(Itm2b;K=0.22,n=1.4) + 0.16*H+(Snca;K=4.87,n=1) + 0.0278*H+(Ppp3ca;K=0.359,n=4.3) - 0.123*Ppp3ca
+   dItm2b/dt = 0.00372*H-(Itm2b;K=0.711,n=1.1) + 0.118*H+(Hexb;K=2.22,n=1.6) + 0.0574*H+(Slc1a2;K=5,n=1.2) - 0.0264*Itm2b
+Equations directes (identification sur vitesses mesurees) :
+   dTmsb10/dt = 0.0343*H+(Tmsb10;K=0.395,n=5.4) + 0.00744*H+(Itm2b;K=0.125,n=6) + 0.0227*H+(Hba-a1;K=0.129,n=6) - 0.0529*Tmsb10
+   dSnca/dt = 0.0849*H+(Snca;K=0.969,n=1) - 0.0523*Snca
+   dSlc1a2/dt = 0.0494*H+(Slc1a2;K=0.253,n=1.5) - 0.0477*Slc1a2
+   dHba-a1/dt = 0.0196*H+(Hba-a1;K=1.06,n=6) - 0.00934*Hba-a1
+   dMt1/dt = 0.0353*H+(Slc1a2;K=0.136,n=4.5) + 0.00385*H+(Mt1;K=0.0544,n=2.5) - 0.0475*Mt1
+   dHexb/dt = 0.00798*H+(Hexb;K=0.205,n=5) + 0.000536*H-(Slc1a2;K=0.02,n=3.4) - 0.00784*Hexb
+   dPpp3ca/dt = 0.162*H+(Ppp3ca;K=0.248,n=2.6) + 0.039*H-(Tmsb10;K=0.481,n=6) - 0.239*Ppp3ca
+   dItm2b/dt = 0.0727*H+(Hexb;K=1.31,n=6) + 0.00758*H+(Slc1a2;K=0.701,n=4) - 0.017*Itm2b
+
+STLSQ (PySINDy) sur D_f, graine 0 : [(0.01, 96.5, 0.999), (0.05, 9.4, 0.934), (0.1, 0.5, 0.873), (0.2, 0.2, 0.626), (0.5, 0.0, nan)]
+
+[info] Baselines non disponibles (C:\neural_ode_symbolic\real_data/results/real/baselines_real_dg.json). Lancer :
+  python scripts/run_real_baselines.py --config real_dentategyrus.json --tag real_dg
+
+VERDICTS {'R1': False, 'R2': True, 'R3': False, 'R4': None, 'R7': True}
+
+########## make_figures.py  (code 0)
+figure fig_real_cosines
+table tab_real_summary
+figure fig_real_endpoints
+figure fig_real_lambda_sweep
+figure fig_real_spaces
+table tab_real_spaces
+figure fig_synth_structure_F1
+figure fig_synth_robustness
+table tab_synth_summary
+termine : C:\neural_ode_symbolic/figures_article
+
+########## analyze_cost.py  (code 0)
+ configuration            runs               d          n_traj          s_NODE  s_distillation         s_bases        s_profil            s_KO         s_total
+synthetique:N120               5               5             120            99.4            14.7             6.9            36.6             2.0           172.4
+synthetique:N20               5               5              20            84.2            13.3             6.0            43.8             2.2           157.1
+synthetique:adjoint               5               5              60           201.6            11.4             6.3            39.0             2.1           270.2
+synthetique:base               5               5              60            90.7            11.2             6.0            37.7             2.2           189.6
+synthetique:counts               5               5              60            66.2            10.2             8.0            27.9             2.3           124.9
+synthetique:counts_drop10               5               5              60            79.4            10.5            11.4            20.7             2.4           135.5
+synthetique:d3               5               3              60            91.1             9.1             3.8            29.1             1.1           140.2
+synthetique:d8               5               8              60            90.7            17.6             9.6            65.4             4.6           203.9
+synthetique:drop10               5               5              60            60.4            11.0             9.5            31.5             2.3           125.2
+synthetique:drop20               5               5              60            67.8            10.4            11.8            26.9             2.2           129.7
+synthetique:manifold               5               5              60            90.9            28.5            12.5            54.7             2.3           201.6
+synthetique:noise02               5               5              60            91.2            11.2             5.9            36.6             2.1           156.3
+synthetique:noise10               5               5              60            90.9            11.3             6.0            38.8             2.1           158.4
+synthetique:noise20               5               5              60            90.3            12.1             5.7            40.3             2.1           159.7
+synthetique:pseudo2               5               5              60           343.9            16.3             6.5            39.1             0.0           415.7
+     reel:real               5               8               -             3.9               -               -               -               -           179.2
+reel:real_module               3               8               -             1.9               -               -               -               -           164.7
+reel:real_latent               3               8               -             5.8               -               -               -               -           207.5
+  reel:real_dg               3               8               -             1.7               -               -               -               -           134.8
+
+pente log-log du temps d entrainement du NODE en fonction de d x n_traj : 0.08 (75 runs ; indicatif)
+
+########## analyze_pysr.py  (code 0)
+toggle | 0 | NRMSE champ/verite 0.0279 (NODE 0.0124) | R2 vs NODE [0.874, 0.928] | complexites [11, 19] | autre gene utilise : [True, True] | points fixes stables 2/2
+toggle | 1 | NRMSE champ/verite 0.0222 (NODE 0.0141) | R2 vs NODE [0.918, 0.953] | complexites [17, 15] | autre gene utilise : [True, True] | points fixes stables 1/2
+toggle | 2 | NRMSE champ/verite 0.0142 (NODE 0.0102) | R2 vs NODE [0.96, 0.982] | complexites [11, 13] | autre gene utilise : [True, True] | points fixes stables 1/2
+synthetique | 0 | rappel des variables 0.87 | precision 1.00 | longueur moyenne 9.4 | R2 vs NODE 0.87 | 
+synthetique | 1 | rappel des variables 0.87 | precision 1.00 | longueur moyenne 10.2 | R2 vs NODE 0.88 | 
+synthetique | 2 | rappel des variables 1.00 | precision 1.00 | longueur moyenne 11.4 | R2 vs NODE 0.94 | 
+synthetique | 3 | rappel des variables 0.87 | precision 1.00 | longueur moyenne 7.4 | R2 vs NODE 0.87 | 
+synthetique | 4 | rappel des variables 1.00 | precision 1.00 | longueur moyenne 8.2 | R2 vs NODE 0.96 | 
+reel | 0 | cos PySR~NODE 0.779 | cos PySR~vitesse 0.436 | cos NODE~vitesse (memes genes) 0.481 | 8 equations | complexites [5, 7, 7, 11, 7, 5, 9, 7]
+reel | 1 | cos PySR~NODE 0.816 | cos PySR~vitesse 0.417 | cos NODE~vitesse (memes genes) 0.531 | 8 equations | complexites [5, 11, 7, 7, 9, 5, 5, 7]
+reel | 2 | cos PySR~NODE 0.698 | cos PySR~vitesse 0.426 | cos NODE~vitesse (memes genes) 0.492 | 8 equations | complexites [7, 7, 7, 11, 7, 9, 13, 9]
+figure fig_pysr_pareto
+
+########## verify_results.py  (code 0)
+[AVERT] real_data\results\real\real_dg_none_seed0.json : 1 valeur(s) NaN/Inf (ex. /stlsq_baseline[4]/cos_vs_node_test)
+[AVERT] real_data\results\real\real_dg_none_seed1.json : 1 valeur(s) NaN/Inf (ex. /stlsq_baseline[4]/cos_vs_node_test)
+[AVERT] real_data\results\real\real_dg_none_seed2.json : 1 valeur(s) NaN/Inf (ex. /stlsq_baseline[4]/cos_vs_node_test)
+[AVERT] real_data\results\real\real_latent_none_seed0.json : 1 valeur(s) NaN/Inf (ex. /endpoints_symbolic/median_final_speed)
+[AVERT] real_data\results\real\real_latent_none_seed1.json : 1 valeur(s) NaN/Inf (ex. /endpoints_symbolic/median_final_speed)
+[AVERT] real_data\results\real\real_module_none_seed0.json : 3 valeur(s) NaN/Inf (ex. /stlsq_baseline[2]/cos_vs_node_test)
+[AVERT] real_data\results\real\real_module_none_seed1.json : 3 valeur(s) NaN/Inf (ex. /stlsq_baseline[2]/cos_vs_node_test)
+[AVERT] real_data\results\real\real_module_none_seed2.json : 3 valeur(s) NaN/Inf (ex. /stlsq_baseline[2]/cos_vs_node_test)
+[AVERT] real_data\results\real\real_none_seed4.json : 1 valeur(s) NaN/Inf (ex. /stlsq_baseline[4]/cos_vs_node_test)
+166 fichier(s) examines : 157 OK, 9 avertissement(s), 0 echec(s)
+
+########## consistency.py  (code 0)
+[     OK     ] bruit -> cosinus NODE : cosinus NODE/verite : valeurs [0.938, 0.939, 0.941, 0.937] ; amelioration maximale avec la degradation = +0.002 (tolerance 0.03)
+[     OK     ] bruit -> F1 distille : F1 de structure : valeurs [0.795, 0.778, 0.762, 0.7] ; amelioration maximale avec la degradation = -0.016 (tolerance 0.15)
+[     OK     ] dropout -> cosinus NODE : cosinus NODE/verite : valeurs [0.939, 0.679, 0.568] ; amelioration maximale avec la degradation = -0.112 (tolerance 0.03)
+[     OK     ] dropout -> F1 distille : F1 de structure : valeurs [0.778, 0.483, 0.43] ; amelioration maximale avec la degradation = -0.053 (tolerance 0.15)
+[     OK     ] quantite de donnees -> cosinus NODE : N120 - N20 = +0.016 (une quantite de donnees 6 fois plus grande ne doit pas degrader le champ au-dela de 0,03)
+[     OK     ] invariance : cosinus NODE : 75 valeurs, etendue 7.35e-01
+[     OK     ] invariance : traj NODE : 75 valeurs, etendue 1.45e-01
+[     OK     ] invariance : F1 distille : 75 valeurs, etendue 7.26e-01
+[     OK     ] invariance : cosinus distille : 75 valeurs, etendue 6.70e-01
+[     OK     ] invariance : F1 direct : 75 valeurs, etendue 1.00e+00
+[     OK     ] invariance : F1 forme faible : 75 valeurs, etendue 1.00e+00
+[     OK     ] invariance reelle : cosinus NODE entre graines : etendue 8.439e-02 sur 5 graines (une valeur identique signalerait un jeu simule deterministe ou un repli)
+[     OK     ] invariance reelle : balayage lambda_reg : etendue 1.590e-01 sur 5 valeurs
+[     OK     ] controle a vitesses melangees : cosinus principal 0.520 contre controle 0.365 (le controle ne doit pas egaler ou depasser le resultat principal)
+[     OK     ] toggle : bruit -> erreur de champ : NRMSE champ moyen : sigma=0 0.0123 ; 0,05 0.0134 ; 0,10 0.0148 (ne doit pas diminuer de plus de 0,005 quand le bruit augmente)
+
+15 controle(s) : 0 echec(s), 0 non evalue(s)
+
+########## make_report.py  (code 0)
+rapport écrit : C:\neural_ode_symbolic\RAPPORT_RESULTATS.md (46 blocs, aucune contradiction)

@@ -1,0 +1,1 @@
+drop20 seed 4: profilK cov=0.8 KO cos sym=0.25 node=0.21 | NODE traj=0.080 cos=0.323 | distilled F1=0.48 (P 0.33 R 0.83) cos_truth=0.317 | direct F1=0.00 weak F1=0.22 oracle relerr=0.6782505808289795 | prop1=1.0 | 131s

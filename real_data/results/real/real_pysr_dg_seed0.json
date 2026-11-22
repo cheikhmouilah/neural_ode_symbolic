@@ -1,0 +1,333 @@
+{
+ "seed": 0,
+ "tag": "real_pysr_dg",
+ "config_sha": "cfd09f80c77b07a5",
+ "config": "real_dentategyrus.json",
+ "genes": [
+  "Tmsb10",
+  "Snca",
+  "Slc1a2",
+  "Hba-a1",
+  "Mt1",
+  "Hexb",
+  "Ppp3ca",
+  "Itm2b"
+ ],
+ "space": "gene",
+ "equations_fitted": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "iterations": 40,
+ "maxsize": 15,
+ "equations": [
+  {
+   "eq": 0,
+   "gene": "Tmsb10",
+   "expression": "(x7 * ((x7 - 1.3590821) * -0.03982405)) + -0.005103827",
+   "complexity": 9,
+   "loss": 3.0242575e-06,
+   "used_variables": [
+    7
+   ],
+   "used_genes": [
+    "Itm2b"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 1.4311902e-05
+    },
+    {
+     "complexity": 3,
+     "loss": 1.0526185e-05
+    },
+    {
+     "complexity": 5,
+     "loss": 7.805856e-06
+    },
+    {
+     "complexity": 7,
+     "loss": 6.523259e-06
+    },
+    {
+     "complexity": 9,
+     "loss": 3.0242575e-06
+    }
+   ]
+  },
+  {
+   "eq": 1,
+   "gene": "Snca",
+   "expression": "(-0.017426878 * (x1 + -0.5431131)) * x1",
+   "complexity": 7,
+   "loss": 1.825082e-06,
+   "used_variables": [
+    1
+   ],
+   "used_genes": [
+    "Snca"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 5.337771e-06
+    },
+    {
+     "complexity": 3,
+     "loss": 4.827512e-06
+    },
+    {
+     "complexity": 5,
+     "loss": 3.8735e-06
+    },
+    {
+     "complexity": 7,
+     "loss": 1.825082e-06
+    },
+    {
+     "complexity": 11,
+     "loss": 1.7419262e-06
+    }
+   ]
+  },
+  {
+   "eq": 2,
+   "gene": "Slc1a2",
+   "expression": "(x2 * (1.0 - x2)) * 0.021772234",
+   "complexity": 7,
+   "loss": 3.042909e-06,
+   "used_variables": [
+    2
+   ],
+   "used_genes": [
+    "Slc1a2"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 5.428414e-06
+    },
+    {
+     "complexity": 3,
+     "loss": 5.2175324e-06
+    },
+    {
+     "complexity": 5,
+     "loss": 4.301951e-06
+    },
+    {
+     "complexity": 7,
+     "loss": 3.042909e-06
+    },
+    {
+     "complexity": 9,
+     "loss": 2.44406e-06
+    },
+    {
+     "complexity": 11,
+     "loss": 2.3282132e-06
+    }
+   ]
+  },
+  {
+   "eq": 3,
+   "gene": "Hba-a1",
+   "expression": "(((x5 + (x7 * -1.4695246)) + 0.519255) * 0.004096713) / 1.4495316",
+   "complexity": 11,
+   "loss": 3.3389955e-07,
+   "used_variables": [
+    5,
+    7
+   ],
+   "used_genes": [
+    "Hexb",
+    "Itm2b"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 4.4368036e-07
+    },
+    {
+     "complexity": 5,
+     "loss": 3.949327e-07
+    },
+    {
+     "complexity": 7,
+     "loss": 3.8294726e-07
+    },
+    {
+     "complexity": 9,
+     "loss": 3.775042e-07
+    },
+    {
+     "complexity": 11,
+     "loss": 3.3389955e-07
+    }
+   ]
+  },
+  {
+   "eq": 4,
+   "gene": "Mt1",
+   "expression": "(x4 + (x2 * (x4 - 2.0146396))) * -0.017279938",
+   "complexity": 9,
+   "loss": 8.380089e-06,
+   "used_variables": [
+    2,
+    4
+   ],
+   "used_genes": [
+    "Slc1a2",
+    "Mt1"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 1.7105112e-05
+    },
+    {
+     "complexity": 3,
+     "loss": 1.5143024e-05
+    },
+    {
+     "complexity": 5,
+     "loss": 1.2384298e-05
+    },
+    {
+     "complexity": 7,
+     "loss": 1.109762e-05
+    },
+    {
+     "complexity": 9,
+     "loss": 8.380089e-06
+    }
+   ]
+  },
+  {
+   "eq": 5,
+   "gene": "Hexb",
+   "expression": "0.0019089177 - ((x4 * -0.003993747) * (x4 + -1.273484))",
+   "complexity": 9,
+   "loss": 1.1945757e-07,
+   "used_variables": [
+    4
+   ],
+   "used_genes": [
+    "Mt1"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 1.7974476e-07
+    },
+    {
+     "complexity": 5,
+     "loss": 1.6000727e-07
+    },
+    {
+     "complexity": 7,
+     "loss": 1.5865264e-07
+    },
+    {
+     "complexity": 9,
+     "loss": 1.1945757e-07
+    },
+    {
+     "complexity": 13,
+     "loss": 9.731994e-08
+    },
+    {
+     "complexity": 15,
+     "loss": 9.634072e-08
+    }
+   ]
+  },
+  {
+   "eq": 6,
+   "gene": "Ppp3ca",
+   "expression": "(((x1 * -0.6164729) + (x6 * x6)) + -0.38931337) * -0.06233123",
+   "complexity": 11,
+   "loss": 8.252057e-05,
+   "used_variables": [
+    1,
+    6
+   ],
+   "used_genes": [
+    "Snca",
+    "Ppp3ca"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.00027977471
+    },
+    {
+     "complexity": 5,
+     "loss": 0.0001938923
+    },
+    {
+     "complexity": 7,
+     "loss": 0.00014177793
+    },
+    {
+     "complexity": 9,
+     "loss": 0.00011042093
+    },
+    {
+     "complexity": 11,
+     "loss": 8.252057e-05
+    }
+   ]
+  },
+  {
+   "eq": 7,
+   "gene": "Itm2b",
+   "expression": "((0.13718644 - x7) + x5) * 0.02454331",
+   "complexity": 7,
+   "loss": 1.6953632e-06,
+   "used_variables": [
+    5,
+    7
+   ],
+   "used_genes": [
+    "Hexb",
+    "Itm2b"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 6.199123e-06
+    },
+    {
+     "complexity": 3,
+     "loss": 5.4965094e-06
+    },
+    {
+     "complexity": 5,
+     "loss": 5.1018787e-06
+    },
+    {
+     "complexity": 7,
+     "loss": 1.6953632e-06
+    },
+    {
+     "complexity": 9,
+     "loss": 1.6359271e-06
+    }
+   ]
+  }
+ ],
+ "node_cos_test": 0.6394659828483374,
+ "pysr_vs_node_cos_test": 0.9193706978362189,
+ "pysr_vs_measured_cos_test": 0.6289493463099005,
+ "node_vs_measured_cos_same_genes": 0.6394659828483374,
+ "seconds": 85.61346697807312,
+ "seconds_pysr": 82.21874356269836
+}

@@ -1,0 +1,1 @@
+manifold seed 3: profilK cov=1.0 KO cos sym=0.51 node=0.27 | NODE traj=0.080 cos=0.913 | distilled F1=0.73 (P 0.62 R 0.89) cos_truth=0.957 | direct F1=0.58 weak F1=0.38 oracle relerr=0.5238998311563221 | prop1=1.0 | 224s

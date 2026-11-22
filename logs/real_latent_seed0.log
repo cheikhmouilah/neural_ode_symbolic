@@ -1,0 +1,20 @@
+cellules=3696 genes=['PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8'] train/val/test=2270/641/785 config=c9413bc50f4ad6ad
+C:\neural_ode_symbolic\real_data/src\real_node.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')
+  ep=   0 train_vel=13.9790 val_vel=7.1279
+  ep= 100 train_vel=0.3277 val_vel=0.6864
+  ep= 200 train_vel=0.2778 val_vel=0.6243
+  ep= 300 train_vel=0.2578 val_vel=0.5908
+  ep= 400 train_vel=0.2381 val_vel=0.5567
+  ep= 500 train_vel=0.2395 val_vel=0.5682
+C:\neural_ode_symbolic\real_data/src\real_identify.py:30: RuntimeWarning: overflow encountered in multiply
+  if t['kind'] == 'poly': out = out + t['a'] * (np.ones(len(Z)) if t['j'] is None else Z[:, t['j']] * (1.0 if t['k'] is None else Z[:, t['k']]))
+C:\neural_ode_symbolic\real_data/src\real_identify.py:28: RuntimeWarning: invalid value encountered in multiply
+  out = -model['g'] * Z[:, model['i']]
+C:\neural_ode_symbolic\real_data/src\real_identify.py:30: RuntimeWarning: invalid value encountered in add
+  if t['kind'] == 'poly': out = out + t['a'] * (np.ones(len(Z)) if t['j'] is None else Z[:, t['j']] * (1.0 if t['k'] is None else Z[:, t['k']]))
+C:\neural_ode_symbolic\.venv\Lib\site-packages\scipy\integrate\_ivp\lsoda.py:163: UserWarning: lsoda: Repeated convergence failures (perhaps bad Jacobian or tolerances).
+  solver._y, solver.t = integrator.run(
+seed 0 lam=0.001 ctrl=none: node cos test=0.777 (lin 0.647) | sym~node=0.721 | sym~V=0.620 | direct~V=0.608 | omega=[4, 4, 4, 4, 4, 4, 4, 4] | 254s
+FIN

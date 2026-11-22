@@ -1,0 +1,9 @@
+C:\neural_ode_symbolic\.venv\Lib\site-packages\juliacall\__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+=== PySR toggle, graine 1 ===
+C:\neural_ode_symbolic\project/src\node.py:54: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  hist.append((it, float(loss), vl)); log(f"  it={it:4d} stage={si} npts={npts:2d} train={float(loss):.3e} val(full)={vl:.3e} t={time.time()-t0:.0f}s")
+graine 1 : NRMSE champ PySR/verite 0.0222 (NODE/verite 0.0141) ; R2 vs NODE [0.918, 0.953] ; trajectoire 0.1175359007156797 ; points fixes {'n_ref': 2, 'n_model': 1, 'max_rel_err': 1.2308372474389344}
+   eq0 (complexite 17) : ((((x1 * 0.17949091) * ((x0 * x1) - 1.8254955)) - (x0 * x1)) * 0.76227784) + 1.0863893
+   eq1 (complexite 15) : (((x0 - 3.157891) * ((x0 * 0.4022738) + -1.1285005)) + 0.27275082) - (x1 * 0.8686954)

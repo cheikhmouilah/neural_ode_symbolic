@@ -1,0 +1,381 @@
+{
+ "seed": 0,
+ "tag": "real_pysr",
+ "config_sha": "a606d8c808d3a02b",
+ "config": "real_pancreas.json",
+ "genes": [
+  "Ghrl",
+  "Gnas",
+  "Ins2",
+  "Nnat",
+  "Chga",
+  "Clu",
+  "Isl1",
+  "Cpe"
+ ],
+ "space": "gene",
+ "equations_fitted": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7
+ ],
+ "iterations": 40,
+ "maxsize": 15,
+ "equations": [
+  {
+   "eq": 0,
+   "gene": "Ghrl",
+   "expression": "(x0 * -0.0017809029) - -0.0007111302",
+   "complexity": 5,
+   "loss": 2.2039467e-07,
+   "used_variables": [
+    0
+   ],
+   "used_genes": [
+    "Ghrl"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 2.6326865e-07
+    },
+    {
+     "complexity": 5,
+     "loss": 2.2039467e-07
+    },
+    {
+     "complexity": 7,
+     "loss": 2.1197569e-07
+    },
+    {
+     "complexity": 9,
+     "loss": 2.0677932e-07
+    },
+    {
+     "complexity": 11,
+     "loss": 2.0383597e-07
+    },
+    {
+     "complexity": 13,
+     "loss": 2.0032e-07
+    },
+    {
+     "complexity": 15,
+     "loss": 1.930565e-07
+    }
+   ]
+  },
+  {
+   "eq": 1,
+   "gene": "Gnas",
+   "expression": "(x4 - (x7 * x7)) * 0.06436526",
+   "complexity": 7,
+   "loss": 3.8649545e-05,
+   "used_variables": [
+    4,
+    7
+   ],
+   "used_genes": [
+    "Chga",
+    "Cpe"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.00022117027
+    },
+    {
+     "complexity": 3,
+     "loss": 0.0001930868
+    },
+    {
+     "complexity": 5,
+     "loss": 0.000101643695
+    },
+    {
+     "complexity": 7,
+     "loss": 3.8649545e-05
+    },
+    {
+     "complexity": 9,
+     "loss": 3.593883e-05
+    }
+   ]
+  },
+  {
+   "eq": 2,
+   "gene": "Ins2",
+   "expression": "(x2 - (x2 * x2)) * x1",
+   "complexity": 7,
+   "loss": 9.423503e-05,
+   "used_variables": [
+    1,
+    2
+   ],
+   "used_genes": [
+    "Gnas",
+    "Ins2"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.0012844696
+    },
+    {
+     "complexity": 3,
+     "loss": 0.0008862534
+    },
+    {
+     "complexity": 5,
+     "loss": 0.0002992825
+    },
+    {
+     "complexity": 7,
+     "loss": 9.423503e-05
+    },
+    {
+     "complexity": 9,
+     "loss": 8.9390225e-05
+    },
+    {
+     "complexity": 11,
+     "loss": 8.4636566e-05
+    },
+    {
+     "complexity": 13,
+     "loss": 7.235535e-05
+    },
+    {
+     "complexity": 15,
+     "loss": 6.769097e-05
+    }
+   ]
+  },
+  {
+   "eq": 3,
+   "gene": "Nnat",
+   "expression": "(x4 * -0.33565515) * (x2 + (-0.026029032 - (x3 * 0.7865984)))",
+   "complexity": 11,
+   "loss": 6.655068e-06,
+   "used_variables": [
+    2,
+    3,
+    4
+   ],
+   "used_genes": [
+    "Ins2",
+    "Nnat",
+    "Chga"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 5.299574e-05
+    },
+    {
+     "complexity": 3,
+     "loss": 3.7295296e-05
+    },
+    {
+     "complexity": 5,
+     "loss": 1.8595994e-05
+    },
+    {
+     "complexity": 7,
+     "loss": 9.807497e-06
+    },
+    {
+     "complexity": 9,
+     "loss": 8.350967e-06
+    },
+    {
+     "complexity": 11,
+     "loss": 6.655068e-06
+    },
+    {
+     "complexity": 13,
+     "loss": 6.129733e-06
+    }
+   ]
+  },
+  {
+   "eq": 4,
+   "gene": "Chga",
+   "expression": "(x7 + -0.57771665) * (x4 * -0.054204702)",
+   "complexity": 7,
+   "loss": 2.7583972e-06,
+   "used_variables": [
+    4,
+    7
+   ],
+   "used_genes": [
+    "Chga",
+    "Cpe"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 1.0258481e-05
+    },
+    {
+     "complexity": 3,
+     "loss": 8.244369e-06
+    },
+    {
+     "complexity": 5,
+     "loss": 6.8259283e-06
+    },
+    {
+     "complexity": 7,
+     "loss": 2.7583972e-06
+    },
+    {
+     "complexity": 9,
+     "loss": 2.6352982e-06
+    },
+    {
+     "complexity": 11,
+     "loss": 2.6219134e-06
+    },
+    {
+     "complexity": 15,
+     "loss": 2.3498014e-06
+    }
+   ]
+  },
+  {
+   "eq": 5,
+   "gene": "Clu",
+   "expression": "0.00097071845 - (x5 * 0.0071761366)",
+   "complexity": 5,
+   "loss": 4.2161543e-07,
+   "used_variables": [
+    5
+   ],
+   "used_genes": [
+    "Clu"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 5.5511878e-06
+    },
+    {
+     "complexity": 3,
+     "loss": 9.1293214e-07
+    },
+    {
+     "complexity": 5,
+     "loss": 4.2161543e-07
+    },
+    {
+     "complexity": 7,
+     "loss": 4.2149804e-07
+    },
+    {
+     "complexity": 9,
+     "loss": 3.4666846e-07
+    },
+    {
+     "complexity": 11,
+     "loss": 3.4555862e-07
+    }
+   ]
+  },
+  {
+   "eq": 6,
+   "gene": "Isl1",
+   "expression": "((x6 - x3) - (x4 * x4)) * -0.0031554305",
+   "complexity": 9,
+   "loss": 2.4355347e-07,
+   "used_variables": [
+    3,
+    4,
+    6
+   ],
+   "used_genes": [
+    "Nnat",
+    "Chga",
+    "Isl1"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 1.1039389e-06
+    },
+    {
+     "complexity": 3,
+     "loss": 7.5745413e-07
+    },
+    {
+     "complexity": 5,
+     "loss": 4.968451e-07
+    },
+    {
+     "complexity": 7,
+     "loss": 4.1617733e-07
+    },
+    {
+     "complexity": 9,
+     "loss": 2.4355347e-07
+    },
+    {
+     "complexity": 15,
+     "loss": 2.3336348e-07
+    }
+   ]
+  },
+  {
+   "eq": 7,
+   "gene": "Cpe",
+   "expression": "x4 * ((0.79272556 - x7) * 0.31304246)",
+   "complexity": 7,
+   "loss": 8.330439e-05,
+   "used_variables": [
+    4,
+    7
+   ],
+   "used_genes": [
+    "Chga",
+    "Cpe"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.00031527856
+    },
+    {
+     "complexity": 3,
+     "loss": 0.00024402876
+    },
+    {
+     "complexity": 5,
+     "loss": 0.00019194942
+    },
+    {
+     "complexity": 7,
+     "loss": 8.330439e-05
+    },
+    {
+     "complexity": 9,
+     "loss": 7.545312e-05
+    },
+    {
+     "complexity": 13,
+     "loss": 7.520299e-05
+    }
+   ]
+  }
+ ],
+ "node_cos_test": 0.48063689128657583,
+ "pysr_vs_node_cos_test": 0.7790245415824507,
+ "pysr_vs_measured_cos_test": 0.4356661997762648,
+ "node_vs_measured_cos_same_genes": 0.48063689128657583,
+ "seconds": 98.78466129302979,
+ "seconds_pysr": 94.10979747772217
+}

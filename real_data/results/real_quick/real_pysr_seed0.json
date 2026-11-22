@@ -1,0 +1,95 @@
+{
+ "seed": 0,
+ "tag": "real_pysr",
+ "config_sha": "QUICK-a606d8c808d3a02b",
+ "config": "real_pancreas.json",
+ "genes": [
+  "Ghrl",
+  "Gnas",
+  "Ins2",
+  "Nnat",
+  "Chga",
+  "Clu",
+  "Isl1",
+  "Cpe"
+ ],
+ "space": "gene",
+ "equations_fitted": [
+  0,
+  1
+ ],
+ "iterations": 2,
+ "maxsize": 15,
+ "equations": [
+  {
+   "eq": 0,
+   "gene": "Ghrl",
+   "expression": "-0.009125152 / (-1.1918631 / (-0.7383571 + x2))",
+   "complexity": 7,
+   "loss": 3.0049603e-06,
+   "used_variables": [
+    2
+   ],
+   "used_genes": [
+    "Ins2"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 3.7330385e-06
+    },
+    {
+     "complexity": 5,
+     "loss": 3.350936e-06
+    },
+    {
+     "complexity": 7,
+     "loss": 3.0049603e-06
+    }
+   ]
+  },
+  {
+   "eq": 1,
+   "gene": "Gnas",
+   "expression": "(x4 - x7) * 0.015024588",
+   "complexity": 5,
+   "loss": 0.00015178614,
+   "used_variables": [
+    4,
+    7
+   ],
+   "used_genes": [
+    "Chga",
+    "Cpe"
+   ],
+   "pareto": [
+    {
+     "complexity": 1,
+     "loss": 0.00022046265
+    },
+    {
+     "complexity": 3,
+     "loss": 0.0002002994
+    },
+    {
+     "complexity": 5,
+     "loss": 0.00015178614
+    },
+    {
+     "complexity": 9,
+     "loss": 0.00015089405
+    },
+    {
+     "complexity": 13,
+     "loss": 0.000116222924
+    }
+   ]
+  }
+ ],
+ "node_cos_test": 0.38792905730970784,
+ "pysr_vs_node_cos_test": 0.7041860373596044,
+ "pysr_vs_measured_cos_test": 0.24175072487427815,
+ "node_vs_measured_cos_same_genes": 0.6043858580521015,
+ "seconds": 18.221951007843018,
+ "seconds_pysr": 16.56720781326294
+}

@@ -1,0 +1,28 @@
+graph built 0.03713726997375488
+Start simulating new cell type
+binID: 0
+number of initial cells: 28
+Done with current cell type
+Start simulating new cell type
+binID: 1
+number of initial cells: 24
+Done with current cell type
+Start simulating new cell type
+binID: 2
+number of initial cells: 27
+Done with current cell type
+Start simulating new cell type
+binID: 3
+number of initial cells: 24
+Done with current cell type
+Start simulating new cell type
+binID: 4
+number of initial cells: 24
+Done with current cell type
+Start simulating new cell type
+binID: 5
+number of initial cells: 24
+Done with current cell type
+simulated 1014.1135985851288
+clean saved (100, 1800) 1021.0919408798218
+noisy saved 1021.2417943477631

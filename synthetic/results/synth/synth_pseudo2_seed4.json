@@ -1,0 +1,283 @@
+{
+ "variant": "pseudo2",
+ "seed": 4,
+ "config_sha": "d6ea80f87fa1c22a",
+ "cfg": {
+  "d": 5,
+  "n_traj": 60,
+  "n_times": 10,
+  "horizon": 4.0,
+  "sigma_rel": 0.05,
+  "dropout": 0.0,
+  "time_mode": "pseudo",
+  "pseudo_gamma": 2.0,
+  "ic_mode": "full",
+  "n_test": 20,
+  "node": {
+   "hidden": 64,
+   "lr": 0.003,
+   "epochs": 400,
+   "lam_reg": 0.0001,
+   "step_size": 0.1,
+   "val_fraction": 0.2,
+   "adjoint": false
+  },
+  "distillation": {
+   "M": 3000,
+   "n_fine": 40,
+   "jitter_frac": 0.5,
+   "knn": 5,
+   "reject_quantile": 0.95,
+   "val_fraction": 0.2
+  },
+  "library": {
+   "K_grid": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "n_grid": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "K_bounds": [
+    0.02,
+    5.0
+   ],
+   "n_bounds": [
+    1.0,
+    6.0
+   ],
+   "k_max": 3,
+   "n_starts": 4,
+   "selection_tolerance": 0.05
+  },
+  "weak": {
+   "window": 5,
+   "stride": 1
+  },
+  "free_form": {
+   "population": 300,
+   "generations": 15,
+   "pysr_iterations": 40,
+   "pysr_maxsize": 15
+  }
+ },
+ "truth": [
+  {
+   "i": 0,
+   "g": 1.2760686299005024,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "K": 0.7995060655044994,
+     "n": 3.0,
+     "a": 1.4777246957775905
+    },
+    {
+     "kind": "hill",
+     "j": 0,
+     "typ": "rep",
+     "K": 0.7996783495240314,
+     "n": 3.0,
+     "a": 1.9599707281413965
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "g": 0.8628044207561547,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 1.1335271777970475,
+     "n": 2.0,
+     "a": 2.6525601964371672
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "g": 1.0967898626744301,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 1.369029558604711,
+     "n": 1.5,
+     "a": 1.0005149616176858
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "g": 1.0798430777657475,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 3,
+     "typ": "act",
+     "K": 1.4275455438905462,
+     "n": 1.5,
+     "a": 2.473626851648011
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "g": 0.8321573412114601,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "rep",
+     "K": 0.9279514724691649,
+     "n": 3.0,
+     "a": 1.490626549018282
+    }
+   ]
+  }
+ ],
+ "node": {
+  "best_val": 0.08619815856218338,
+  "epochs_run": 400,
+  "loss": "gaussian",
+  "adjoint": false
+ },
+ "thresholds_note": "voir configs/synth.json",
+ "node_metrics": {
+  "traj_nrmse_vs_truth": 0.047980273434380515,
+  "cos_vs_truth_support": 0.47394664244562645,
+  "cos_vs_truth_offsupport": 0.9507063201796879,
+  "speed_ratio_median": 2.894591374215248
+ },
+ "distilled": {
+  "equations": [
+   "dz0/dt = 2.97*H-(z2;K=1.03,n=2.3) + 5.6*H-(z1;K=2.44,n=1) - 6.4*z0",
+   "dz1/dt = 10.5*H+(z2;K=1.63,n=1.8) + 0.246*H-(z2;K=0.711,n=6) + 1.27*H+(z1;K=0.377,n=2.2) - 2.95*z1",
+   "dz2/dt = 0.877*H+(z1;K=0.893,n=2.4) + 1.24*H-(z0;K=0.884,n=6) - 3*z2",
+   "dz3/dt = 0.37*H-(z2;K=0.492,n=2.7) + 30.4*H+(z3;K=4.23,n=1.3) + 0.611*H-(z4;K=1.05,n=6) - 4.96*z3",
+   "dz4/dt = 3.82*H-(z4;K=1.05,n=6) + 0.737*H-(z3;K=1.1,n=2.4) + 1.44*H-(z0;K=0.201,n=1.6) - 3.38*z4"
+  ],
+  "structure": {
+   "precision": 0.3076923076923077,
+   "recall": 0.6666666666666666,
+   "F1": 0.42105263157894735,
+   "edge_recall_ignoring_type": 0.6666666666666666,
+   "exact_equation_rate": 0.0,
+   "n_terms_est": 13,
+   "n_terms_true": 6,
+   "n_matched": 4,
+   "param_relerr_median": {
+    "a": 2.866464129023844,
+    "K": 1.1986368822514912,
+    "n": 0.3989546872500112
+   },
+   "param_relerr_all_median": 1.2819821422107236
+  },
+  "cos_vs_node_support": 0.8965803060603063,
+  "cos_vs_truth_support": 0.5546359632608663,
+  "cos_vs_truth_offsupport": 0.9683804407163509,
+  "nrmse_vs_truth_support": 0.23292370354101918,
+  "speed_ratio_median": 2.5224220735292677,
+  "traj_nrmse_vs_truth": 0.051371388347431025
+ },
+ "prop1": null,
+ "direct_fd": {
+  "structure": {
+   "precision": 0.5,
+   "recall": 1.0,
+   "F1": 0.6666666666666666,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 0.2,
+   "n_terms_est": 12,
+   "n_terms_true": 6,
+   "n_matched": 6,
+   "param_relerr_median": {
+    "a": 6.25749801261583,
+    "K": 0.3772861119876347,
+    "n": 0.3783261654952496
+   },
+   "param_relerr_all_median": 0.6878573250996698
+  },
+  "cos_vs_truth_support": 0.7263104704767888,
+  "cos_vs_truth_offsupport": 0.9915864237995349
+ },
+ "weak_sindy": {
+  "structure": {
+   "precision": 0.4,
+   "recall": 0.6666666666666666,
+   "F1": 0.5,
+   "edge_recall_ignoring_type": 0.8333333333333334,
+   "exact_equation_rate": 0.2,
+   "n_terms_est": 10,
+   "n_terms_true": 6,
+   "n_matched": 4,
+   "param_relerr_median": {
+    "a": 1.7866688283426324,
+    "K": 0.7291686903450969,
+    "n": 0.125
+   },
+   "param_relerr_all_median": 0.6850173431847619
+  },
+  "cos_vs_truth_support": 0.6462191377947896,
+  "cos_vs_truth_offsupport": 0.7744542622145655
+ },
+ "oracle_structure": {
+  "structure": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "F1": 1.0,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 1.0,
+   "n_terms_est": 6,
+   "n_terms_true": 6,
+   "n_matched": 6,
+   "param_relerr_median": {
+    "a": 1.112467511186885,
+    "K": 0.5204100298738198,
+    "n": 0.46253638567786237
+   },
+   "param_relerr_all_median": 0.5367506818156542
+  },
+  "cos_vs_truth_support": 0.6843034769894729,
+  "cos_vs_node_support": 0.8327754748556154,
+  "cos_vs_truth_offsupport": 0.9779211064425242
+ },
+ "profile": {
+  "n": {
+   "n": 4,
+   "coverage": 0.75,
+   "frac_at_bound": 0.75,
+   "median_width": 2.142857142857143
+  },
+  "K": {
+   "n": 4,
+   "coverage": 0.25,
+   "frac_at_bound": 0.75,
+   "median_width": 0.5138442875725796
+  }
+ },
+ "ko": null,
+ "seconds": 431.1282727718353,
+ "timings": {
+  "node_train": 344.790403842926,
+  "distill_sample_select": 26.5540132522583,
+  "baselines_direct_weak": 9.458202838897705,
+  "profile_likelihood": 40.95454120635986,
+  "ko_eval": 7.62939453125e-06
+ }
+}

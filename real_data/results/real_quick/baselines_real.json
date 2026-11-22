@@ -1,0 +1,228 @@
+{
+ "config": "real_pancreas.json",
+ "tag": "real",
+ "n_cells": 3696,
+ "genes": [
+  "Ghrl",
+  "Gnas",
+  "Ins2",
+  "Nnat",
+  "Chga",
+  "Clu",
+  "Isl1",
+  "Cpe"
+ ],
+ "n_test": 785,
+ "baselines": {
+  "dynamo": {
+   "method": "dynamo_analytic",
+   "genes": [
+    "Ghrl",
+    "Gnas",
+    "Ins2",
+    "Nnat",
+    "Chga",
+    "Clu",
+    "Isl1",
+    "Cpe"
+   ],
+   "source": "h5ad_Ms_Mu_OLS",
+   "notes": "OLS direct sur moments (Ms,Mu) sans graphe de voisinage. Divergence avec scVelo attendue quand Mu >> Ms (ex: Ins2 en phase degradation).",
+   "cos_test": -0.9316800442248773,
+   "nrmse_test": 0.09543173887146947,
+   "seconds": 14.62
+  },
+  "cellrank": {
+   "method": "cellrank_markov",
+   "n_neighbors": 30,
+   "temperature": 1.0,
+   "source": "computed_from_Z_V",
+   "cos_test": 0.4747503570508093,
+   "nrmse_test": 0.08450007810424236,
+   "absorption": {
+    "terminal_states": [
+     "Alpha",
+     "Beta",
+     "Delta"
+    ],
+    "terminal_groups": {
+     "Beta": 591,
+     "Alpha": 481,
+     "Delta": 70
+    },
+    "cluster_purity_test": 0.26369426751592356,
+    "mean_abs_prob_top_test": 0.8981908307551173
+   },
+   "seconds": 2.64
+  },
+  "boolode": {
+   "method": "boolode_hill",
+   "K": 0.5,
+   "n": 2.0,
+   "fit_params": true,
+   "genes": [
+    "Ghrl",
+    "Gnas",
+    "Ins2",
+    "Nnat",
+    "Chga",
+    "Clu",
+    "Isl1",
+    "Cpe"
+   ],
+   "network_source": "granger_regression",
+   "network": {
+    "Ghrl": [
+     [
+      "Nnat",
+      "+"
+     ],
+     [
+      "Ins2",
+      "-"
+     ],
+     [
+      "Gnas",
+      "-"
+     ]
+    ],
+    "Gnas": [
+     [
+      "Cpe",
+      "-"
+     ],
+     [
+      "Chga",
+      "+"
+     ],
+     [
+      "Nnat",
+      "+"
+     ]
+    ],
+    "Ins2": [
+     [
+      "Nnat",
+      "+"
+     ],
+     [
+      "Gnas",
+      "+"
+     ],
+     [
+      "Cpe",
+      "-"
+     ]
+    ],
+    "Nnat": [
+     [
+      "Gnas",
+      "+"
+     ],
+     [
+      "Cpe",
+      "-"
+     ],
+     [
+      "Chga",
+      "+"
+     ]
+    ],
+    "Chga": [
+     [
+      "Cpe",
+      "-"
+     ],
+     [
+      "Clu",
+      "-"
+     ],
+     [
+      "Ins2",
+      "+"
+     ]
+    ],
+    "Clu": [
+     [
+      "Gnas",
+      "+"
+     ],
+     [
+      "Chga",
+      "+"
+     ],
+     [
+      "Isl1",
+      "+"
+     ]
+    ],
+    "Isl1": [
+     [
+      "Nnat",
+      "+"
+     ],
+     [
+      "Ins2",
+      "-"
+     ],
+     [
+      "Chga",
+      "+"
+     ]
+    ],
+    "Cpe": [
+     [
+      "Nnat",
+      "+"
+     ],
+     [
+      "Ins2",
+      "-"
+     ],
+     [
+      "Gnas",
+      "-"
+     ]
+    ]
+   },
+   "params": {
+    "Ghrl": {
+     "beta": 6.459744297480638e-05,
+     "gamma": 1e-09
+    },
+    "Gnas": {
+     "beta": 0.059715920801870666,
+     "gamma": 1e-09
+    },
+    "Ins2": {
+     "beta": 0.5714415511827146,
+     "gamma": 1e-09
+    },
+    "Nnat": {
+     "beta": 0.09082924228948404,
+     "gamma": 0.0002425882287729966
+    },
+    "Chga": {
+     "beta": 1e-09,
+     "gamma": 1e-09
+    },
+    "Clu": {
+     "beta": 1e-09,
+     "gamma": 1e-09
+    },
+    "Isl1": {
+     "beta": 0.019275651198613852,
+     "gamma": 1e-09
+    },
+    "Cpe": {
+     "beta": 0.2894138780951857,
+     "gamma": 0.007112138880540156
+    }
+   },
+   "cos_test": 0.02003848764051247,
+   "nrmse_test": 0.04867277296677075,
+   "cos_test_strict": 0.033776914964066915,
+   "seconds": 0.0
+  }
+ }
+}

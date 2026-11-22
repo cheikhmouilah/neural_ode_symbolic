@@ -1,0 +1,20 @@
+=== seed 0 (traj) ===
+C:\neural_ode_symbolic\project/src\node.py:54: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  hist.append((it, float(loss), vl)); log(f"  it={it:4d} stage={si} npts={npts:2d} train={float(loss):.3e} val(full)={vl:.3e} t={time.time()-t0:.0f}s")
+  it=  50 stage=0 npts= 8 train=1.802e-02 val(full)=3.990e-01 t=6s
+  it= 100 stage=0 npts= 8 train=6.388e-03 val(full)=3.518e-01 t=14s
+  it= 150 stage=0 npts= 8 train=2.097e-03 val(full)=1.094e-01 t=22s
+  it= 200 stage=1 npts=16 train=1.652e-03 val(full)=1.774e-02 t=35s
+  it= 250 stage=1 npts=16 train=1.038e-03 val(full)=1.163e-02 t=47s
+  it= 300 stage=1 npts=16 train=8.070e-04 val(full)=8.320e-03 t=60s
+  it= 350 stage=2 npts=28 train=2.029e-03 val(full)=3.562e-03 t=77s
+  it= 400 stage=2 npts=28 train=9.079e-04 val(full)=3.883e-03 t=95s
+  it= 450 stage=2 npts=28 train=8.375e-04 val(full)=3.462e-03 t=114s
+  it= 500 stage=3 npts=41 train=9.660e-04 val(full)=1.967e-03 t=138s
+  it= 550 stage=3 npts=41 train=8.851e-04 val(full)=1.840e-03 t=161s
+  it= 600 stage=3 npts=41 train=8.370e-04 val(full)=1.740e-03 t=185s
+  it= 650 stage=3 npts=41 train=8.035e-04 val(full)=1.669e-03 t=208s
+  it= 700 stage=3 npts=41 train=7.781e-04 val(full)=1.615e-03 t=232s
+seed 0: P1 field NRMSE=0.0124 | structure exacte=True | param rel err med/max=0.033/0.090 | P4 traj=0.0080 | P5 ok=True | BOX err med/max=0.151/0.404 | 240s
+FIN

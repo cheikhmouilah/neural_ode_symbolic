@@ -1,0 +1,6 @@
+=== hill seed 2 ===
+C:\neural_ode_symbolic\project/src\node.py:54: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  hist.append((it, float(loss), vl)); log(f"  it={it:4d} stage={si} npts={npts:2d} train={float(loss):.3e} val(full)={vl:.3e} t={time.time()-t0:.0f}s")
+hill s2: NODE champ=0.0102 | Hill seul: sym->NODE=0.0109 flag=False traj=0.0173 | choix=['leaky', 'hill'] | famille vraie: err med/max=0.048/0.110 | 242s
+FIN

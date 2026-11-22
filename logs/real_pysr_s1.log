@@ -1,0 +1,15 @@
+C:\neural_ode_symbolic\.venv\Lib\site-packages\juliacall\__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+=== PySR reel (real_pancreas.json), graine 1, equations [0, 1, 2, 3, 4, 5, 6, 7] ===
+C:\neural_ode_symbolic\real_data/src\real_node.py:45: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  if ep % 100 == 0: log(f'  ep={ep:4d} train_vel={float(l_vel):.4f} val_vel={lv:.4f}')
+   eq0 Ghrl (complexite 5) : (x2 + x5) * -0.0020812466
+   eq1 Gnas (complexite 11) : (((x4 * -0.9407848) + (x7 * x7)) * -0.061664555) + 0.0049898876
+   eq2 Ins2 (complexite 7) : (x2 * 0.74347436) * (0.97757745 - x2)
+   eq3 Nnat (complexite 7) : x4 * (x6 * (x3 - x2))
+   eq4 Chga (complexite 9) : ((x7 + -0.5518385) * -0.0010656038) / (x5 + 0.0536446)
+   eq5 Clu (complexite 5) : (x5 + 0.0934195) * -0.0070798188
+   eq6 Isl1 (complexite 5) : (x5 + x3) * 0.002887392
+   eq7 Cpe (complexite 7) : x4 * (0.24542867 - (x7 * 0.3165822))
+graine 1 : cosinus PySR~NODE 0.816 ; PySR~vitesse 0.417 ; NODE~vitesse (memes genes) 0.531 ; 96 s

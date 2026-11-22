@@ -1,0 +1,20 @@
+{
+  "phase": "Recherche libre PySR sur le champ du Neural ODE du toggle (distillation libre, IV-B/IV-C)",
+  "toggle": {
+    "iterations": 40,
+    "maxsize": 20,
+    "ops": "basic",
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "preregistered_thresholds": {
+    "PT1_fidelity_r2_vs_node_min": 0.95,
+    "PT2_field_nrmse_vs_truth_max": 0.05,
+    "PT3_stable_fixed_points_required": 2,
+    "PT4_uses_other_gene_fraction_min": 1.0,
+    "note": "Fixes avant l'execution complete (graines 0-2). DIVULGATION : un essai sur la graine 0 a ete vu avant de fixer ces seuils (NRMSE champ 0,0116 ; R2 0,977 ; 2 points fixes) ; les graines 1 et 2 sont inedites. Criteres de decision, pas des predictions."
+  }
+}

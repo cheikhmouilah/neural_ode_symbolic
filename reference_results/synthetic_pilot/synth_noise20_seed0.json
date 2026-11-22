@@ -1,0 +1,287 @@
+{
+ "variant": "noise20",
+ "seed": 0,
+ "config_sha": "711a030b8817bd95",
+ "cfg": {
+  "d": 5,
+  "n_traj": 60,
+  "n_times": 10,
+  "horizon": 4.0,
+  "sigma_rel": 0.2,
+  "dropout": 0.0,
+  "time_mode": "true",
+  "pseudo_gamma": 1.0,
+  "ic_mode": "full",
+  "n_test": 20,
+  "node": {
+   "hidden": 64,
+   "lr": 0.003,
+   "epochs": 400,
+   "lam_reg": 0.0001,
+   "step_size": 0.1,
+   "val_fraction": 0.2
+  },
+  "distillation": {
+   "M": 3000,
+   "n_fine": 40,
+   "jitter_frac": 0.5,
+   "knn": 5,
+   "reject_quantile": 0.95,
+   "val_fraction": 0.2
+  },
+  "library": {
+   "K_grid": [
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.7,
+    1.0,
+    1.5,
+    2.0
+   ],
+   "n_grid": [
+    1.0,
+    1.5,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "K_bounds": [
+    0.02,
+    5.0
+   ],
+   "n_bounds": [
+    1.0,
+    6.0
+   ],
+   "k_max": 3,
+   "n_starts": 4,
+   "selection_tolerance": 0.05
+  },
+  "weak": {
+   "window": 5,
+   "stride": 1
+  },
+  "free_form": {
+   "population": 300,
+   "generations": 15
+  }
+ },
+ "truth": [
+  {
+   "i": 0,
+   "g": 0.9325904975487099,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "K": 0.6375134865290063,
+     "n": 2.0,
+     "a": 2.5726389423009004
+    },
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "rep",
+     "K": 0.8475908339897702,
+     "n": 3.0,
+     "a": 2.5201076602250563
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "g": 0.9744749039937097,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 2,
+     "typ": "act",
+     "K": 0.7217236797136524,
+     "n": 3.0,
+     "a": 1.3872284675401634
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "g": 1.0243289153441273,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 3,
+     "typ": "rep",
+     "K": 1.097465209013782,
+     "n": 1.5,
+     "a": 1.183100522962765
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "K": 1.4777701298868906,
+     "n": 1.5,
+     "a": 1.0987241908220842
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "g": 1.0849199291010927,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "K": 0.5552022722387719,
+     "n": 3.0,
+     "a": 1.727547702952496
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "rep",
+     "K": 0.48113530562296103,
+     "n": 2.0,
+     "a": 2.2946813519531855
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "g": 0.8595263128952575,
+   "terms": [
+    {
+     "kind": "hill",
+     "j": 4,
+     "typ": "act",
+     "K": 1.080944478206907,
+     "n": 2.0,
+     "a": 1.6600362090263436
+    },
+    {
+     "kind": "hill",
+     "j": 1,
+     "typ": "act",
+     "K": 1.3102620776282699,
+     "n": 1.5,
+     "a": 1.4777474978247815
+    }
+   ]
+  }
+ ],
+ "node": {
+  "best_val": 0.06961977481842041,
+  "epochs_run": 400
+ },
+ "thresholds_note": "voir configs/synth.json",
+ "node_metrics": {
+  "traj_nrmse_vs_truth": 0.014861201206827879,
+  "cos_vs_truth_support": 0.9706630145040442,
+  "cos_vs_truth_offsupport": 0.9756662875664334,
+  "speed_ratio_median": 1.0672129896190108
+ },
+ "distilled": {
+  "equations": [
+   "dz0/dt = 2.63*H-(z2;K=1.08,n=1.8) + 2.71*H+(z1;K=1.15,n=1.1) - 0.879*z0",
+   "dz1/dt = 1.29*H+(z2;K=0.796,n=2) + 0.428*H-(z2;K=0.138,n=6) + 0.201*H-(z0;K=3.75,n=6) - 0.932*z1",
+   "dz2/dt = 0.662*H-(z1;K=1.88,n=3.3) + 0.662*H-(z3;K=2.04,n=1.9) + 0.397*H-(z4;K=0.634,n=2.5) - 0.932*z2",
+   "dz3/dt = 1.5*H-(z1;K=3,n=1) + 0.744*H+(z4;K=2.62,n=1) + 0.627*H-(z2;K=5,n=1) - 1.04*z3",
+   "dz4/dt = 1.56*H+(z1;K=1.01,n=3.1) + 0.224*H+(z0;K=1.95,n=6) + 0.772*H-(z1;K=0.96,n=4.4) - 0.593*z4"
+  ],
+  "structure": {
+   "precision": 0.5714285714285714,
+   "recall": 0.8888888888888888,
+   "F1": 0.6956521739130435,
+   "edge_recall_ignoring_type": 0.8888888888888888,
+   "exact_equation_rate": 0.2,
+   "n_terms_est": 14,
+   "n_terms_true": 9,
+   "n_matched": 8,
+   "param_relerr_median": {
+    "a": 0.21092889979359858,
+    "K": 0.5441100714937651,
+    "n": 0.4844803301036157
+   },
+   "param_relerr_all_median": 0.4019237011681561
+  },
+  "cos_vs_node_support": 0.961287955017211,
+  "cos_vs_truth_support": 0.9758578975839218,
+  "cos_vs_truth_offsupport": 0.9860332317393593,
+  "nrmse_vs_truth_support": 0.016063040047761202,
+  "speed_ratio_median": 0.9881356309264023,
+  "traj_nrmse_vs_truth": 0.010636271305479558
+ },
+ "prop1": {
+  "n": 20,
+  "holds_fraction": 1.0,
+  "median_B_over_E": 3153.425249723724,
+  "median_E": 0.174889836984654,
+  "median_eps": 0.46205588378334417,
+  "median_L": 1.9304646880038558
+ },
+ "direct_fd": {
+  "structure": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "F1": 1.0,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 1.0,
+   "n_terms_est": 9,
+   "n_terms_true": 9,
+   "n_matched": 9,
+   "param_relerr_median": {
+    "a": 0.16502806115000607,
+    "K": 0.23035588521074707,
+    "n": 0.3333333332949082
+   },
+   "param_relerr_all_median": 0.23035588521074707
+  },
+  "cos_vs_truth_support": 0.9638454696749694,
+  "cos_vs_truth_offsupport": 0.994934723278269
+ },
+ "weak_sindy": {
+  "structure": {
+   "precision": 0.8888888888888888,
+   "recall": 0.8888888888888888,
+   "F1": 0.8888888888888888,
+   "edge_recall_ignoring_type": 0.8888888888888888,
+   "exact_equation_rate": 0.6,
+   "n_terms_est": 9,
+   "n_terms_true": 9,
+   "n_matched": 8,
+   "param_relerr_median": {
+    "a": 0.3246004193889924,
+    "K": 0.4324924585997926,
+    "n": 0.3333333333333333
+   },
+   "param_relerr_all_median": 0.3333333333333333
+  },
+  "cos_vs_truth_support": 0.96512189854112,
+  "cos_vs_truth_offsupport": 0.9837720568814905
+ },
+ "oracle_structure": {
+  "structure": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "F1": 1.0,
+   "edge_recall_ignoring_type": 1.0,
+   "exact_equation_rate": 1.0,
+   "n_terms_est": 9,
+   "n_terms_true": 9,
+   "n_matched": 9,
+   "param_relerr_median": {
+    "a": 0.20961416638147848,
+    "K": 0.3664886886277345,
+    "n": 0.40655955555736717
+   },
+   "param_relerr_all_median": 0.31683814429939233
+  },
+  "cos_vs_truth_support": 0.9772820257106096,
+  "cos_vs_node_support": 0.9584092182969115,
+  "cos_vs_truth_offsupport": 0.9903220318899273
+ },
+ "seconds": 35.264769315719604
+}
