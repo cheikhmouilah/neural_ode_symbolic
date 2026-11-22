@@ -9,6 +9,12 @@ dirs = a.dirs or [os.path.join(ROOT, v) for v in RESULT_DIRS.values()]
 cfg_sha = {}
 for d in CONFIG_DIRS:
     for f in glob.glob(os.path.join(ROOT, d, '*.json')): cfg_sha[sha256(f)[:16]] = os.path.basename(f)
+prereg_file = os.path.join(ROOT, 'PREREGISTRATION.json')
+if os.path.exists(prereg_file):
+    try:
+        pr = json.load(open(prereg_file))
+        for p, sh in pr.get('configs', {}).items(): cfg_sha[sh[:16]] = os.path.basename(p) + " (prereg)"
+    except Exception: pass
 rows = []; fails = 0; warns = 0
 for d in dirs:
     for f in result_files(d):

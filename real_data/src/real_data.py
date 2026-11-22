@@ -22,18 +22,37 @@ def download(url, path, tries=3):
 def prepare(cfg, data_path):
     import scanpy as sc, scvelo as scv
     from sklearn.cluster import KMeans
+    from sklearn.neighbors import NearestNeighbors
+    from scipy.sparse import csr_matrix
     D, S, SP = cfg['data'], cfg['state'], cfg['split']
     a = sc.read_h5ad(data_path)
     # scVelo >= 0.3 n'a plus l'option n_top_genes : filtrage et normalisation par scVelo, genes variables par scanpy (sur copie log1p)
     scv.pp.filter_and_normalize(a, min_shared_counts=D['min_shared_counts'])
     tmp = a.copy(); sc.pp.log1p(tmp); sc.pp.highly_variable_genes(tmp, n_top_genes=D['n_top_genes'], flavor='seurat')
     a = a[:, tmp.var['highly_variable'].values].copy(); del tmp
-    # Compute PCA explicitly and ensure C-contiguous layout before moments (avoids
-    # numba TypingError "A->C" in UMAP nearest_neighbors on non-contiguous float32 arrays)
-    if 'X_pca' not in a.obsm:
-        sc.tl.pca(a, n_comps=D['n_pcs'], use_highly_variable=False)
-    a.obsm['X_pca'] = np.ascontiguousarray(a.obsm['X_pca'], dtype=np.float32)
-    scv.pp.moments(a, n_pcs=D['n_pcs'], n_neighbors=D['n_neighbors'])
+    # PCA + kNN via sklearn BallTree (avoids numba/UMAP/pynndescent TypingError
+    # "A->C" on non-contiguous float32 knn_dists, incompatible with numba 0.68.1)
+    sc.tl.pca(a, n_comps=D['n_pcs'], use_highly_variable=False)
+    X_pca = np.ascontiguousarray(a.obsm['X_pca'][:, :D['n_pcs']], dtype=np.float64)
+    n_neigh = D['n_neighbors']
+    nn = NearestNeighbors(n_neighbors=n_neigh + 1, algorithm='ball_tree', n_jobs=4)
+    nn.fit(X_pca)
+    dists, inds = nn.kneighbors(X_pca)
+    dists, inds = dists[:, 1:], inds[:, 1:]   # remove self-neighbor
+    n = a.n_obs
+    rows = np.repeat(np.arange(n), n_neigh)
+    cols = inds.ravel()
+    dist_mat = csr_matrix((dists.ravel(), (rows, cols)), shape=(n, n))
+    sigma = float(np.median(dists)) + 1e-9
+    conn_data = np.exp(-(dists.ravel() ** 2) / (sigma ** 2))
+    conn_mat = csr_matrix((conn_data, (rows, cols)), shape=(n, n))
+    a.obsp['distances'] = dist_mat
+    a.obsp['connectivities'] = conn_mat
+    a.uns['neighbors'] = {'connectivities_key': 'connectivities', 'distances_key': 'distances',
+                          'params': {'n_neighbors': n_neigh, 'method': 'sklearn_balltree',
+                                     'n_pcs': D['n_pcs'], 'use_rep': 'X_pca'}}
+    # moments() reuses the pre-built graph (n_pcs=None, n_neighbors=None)
+    scv.pp.moments(a, n_pcs=None, n_neighbors=None)
     scv.tl.velocity(a, mode=D['velocity_mode'])
     
     scv.tl.velocity_graph(a, n_jobs=1, show_progress_bar=False)   # n_jobs=1 + show_progress_bar=False : evite le multiprocessing de scVelo (fragile sous Windows : spawn)

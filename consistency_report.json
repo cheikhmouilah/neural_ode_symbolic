@@ -1,67 +1,77 @@
 [
  {
   "check": "bruit -> cosinus NODE",
-  "status": "ECHEC",
-  "detail": "cosinus NODE/verite : valeurs [0.506, 0.706, 0.806, 0.906] ; amelioration maximale avec la degradation = +0.199 (tolerance 0.03)"
+  "status": "OK",
+  "detail": "cosinus NODE/verite : valeurs [0.938, 0.939, 0.941, 0.937] ; amelioration maximale avec la degradation = +0.002 (tolerance 0.03)"
  },
  {
   "check": "bruit -> F1 distille",
   "status": "OK",
-  "detail": "F1 de structure : valeurs [0.851, 0.833, 0.865, 0.855] ; amelioration maximale avec la degradation = +0.032 (tolerance 0.15)"
+  "detail": "F1 de structure : valeurs [0.795, 0.778, 0.762, 0.7] ; amelioration maximale avec la degradation = -0.016 (tolerance 0.15)"
  },
  {
   "check": "dropout -> cosinus NODE",
-  "status": "NON EVALUE",
-  "detail": "moins de 2 niveaux avec >= 3 graines"
+  "status": "OK",
+  "detail": "cosinus NODE/verite : valeurs [0.939, 0.679, 0.568] ; amelioration maximale avec la degradation = -0.112 (tolerance 0.03)"
  },
  {
   "check": "dropout -> F1 distille",
-  "status": "NON EVALUE",
-  "detail": "moins de 2 niveaux avec >= 3 graines"
+  "status": "OK",
+  "detail": "F1 de structure : valeurs [0.778, 0.483, 0.43] ; amelioration maximale avec la degradation = -0.053 (tolerance 0.15)"
  },
  {
   "check": "quantite de donnees -> cosinus NODE",
-  "status": "NON EVALUE",
-  "detail": "N20 et N120 requis avec >= 3 graines"
+  "status": "OK",
+  "detail": "N120 - N20 = +0.016 (une quantite de donnees 6 fois plus grande ne doit pas degrader le champ au-dela de 0,03)"
  },
  {
   "check": "invariance : cosinus NODE",
   "status": "OK",
-  "detail": "12 valeurs, etendue 4.05e-01"
+  "detail": "85 valeurs, etendue 8.38e-01"
  },
  {
   "check": "invariance : traj NODE",
   "status": "OK",
-  "detail": "12 valeurs, etendue 8.67e-03"
+  "detail": "85 valeurs, etendue 2.82e-01"
  },
  {
   "check": "invariance : F1 distille",
   "status": "OK",
-  "detail": "12 valeurs, etendue 8.55e-02"
+  "detail": "85 valeurs, etendue 8.13e-01"
  },
  {
   "check": "invariance : cosinus distille",
   "status": "OK",
-  "detail": "12 valeurs, etendue 6.20e-03"
+  "detail": "85 valeurs, etendue 8.14e-01"
  },
  {
   "check": "invariance : F1 direct",
   "status": "OK",
-  "detail": "12 valeurs, etendue 9.12e-02"
+  "detail": "85 valeurs, etendue 1.00e+00"
  },
  {
   "check": "invariance : F1 forme faible",
   "status": "OK",
-  "detail": "12 valeurs, etendue 9.69e-02"
+  "detail": "85 valeurs, etendue 1.00e+00"
  },
  {
-  "check": "invariance reelle (graines)",
-  "status": "NON EVALUE",
-  "detail": "0 graine(s) < 3"
+  "check": "invariance reelle : cosinus NODE entre graines",
+  "status": "OK",
+  "detail": "etendue 8.439e-02 sur 5 graines (une valeur identique signalerait un jeu simule deterministe ou un repli)"
+ },
+ {
+  "check": "invariance reelle : balayage lambda_reg",
+  "status": "OK",
+  "detail": "etendue 1.590e-01 sur 5 valeurs"
+ },
+ {
+  "check": "controle a vitesses melangees",
+  "status": "OK",
+  "detail": "cosinus principal 0.520 contre controle 0.365 (le controle ne doit pas egaler ou depasser le resultat principal)"
  },
  {
   "check": "toggle : bruit -> erreur de champ",
-  "status": "NON EVALUE",
-  "detail": "resultats traj, n05, n10 (>= 3 graines) requis"
+  "status": "OK",
+  "detail": "NRMSE champ moyen : sigma=0 0.0123 ; 0,05 0.0134 ; 0,10 0.0148 (ne doit pas diminuer de plus de 0,005 quand le bruit augmente)"
  }
 ]

@@ -1,5 +1,5 @@
 {
- "n": 168,
+ "n": 183,
  "failures": 0,
  "warnings": 0,
  "files": [
@@ -315,6 +315,31 @@
   },
   {
    "file": "real_data\\results\\real\\real_dg_none_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_erythroid_none_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_erythroid_none_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_erythroid_none_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_erythroid_none_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "real_data\\results\\real\\real_erythroid_none_seed4.json",
    "status": "OK",
    "messages": []
   },
@@ -690,6 +715,56 @@
   },
   {
    "file": "synthetic\\results\\synth\\synth_drop20_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop40_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop40_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop40_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop40_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop40_seed4.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop60_seed0.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop60_seed1.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop60_seed2.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop60_seed3.json",
+   "status": "OK",
+   "messages": []
+  },
+  {
+   "file": "synthetic\\results\\synth\\synth_drop60_seed4.json",
    "status": "OK",
    "messages": []
   },

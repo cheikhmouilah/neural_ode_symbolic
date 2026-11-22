@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+*.h5ad
+*.npz
+*.part
+logs/
+*.tmp*
+real_data/results/real_quick/

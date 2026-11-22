@@ -31,7 +31,7 @@ def main():
     if not os.path.exists(PATH): print('aucun gel : lancer  python checks/prereg.py freeze  avant les executions'); return 2
     P = json.load(open(PATH))
     expected = dict(P['configs'])
-    for a in P['amendments']: expected.update(a['new'])
+    for a in P.get('amendments', []): expected.update(a.get('new', {}))
     if cmd == 'amend':
         if len(sys.argv) < 3: sys.exit('motif requis : amend "motif"')
         diff = {k: dict(old=expected.get(k), new=v) for k, v in cur.items() if expected.get(k) != v}

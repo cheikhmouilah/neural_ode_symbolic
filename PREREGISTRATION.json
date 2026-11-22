@@ -1,31 +1,43 @@
 {
-  "frozen_utc": "2026-11-11T20:24:05Z",
-  "git_head": "1fd1a41b7748fc7fcea9c218e935d5bd1d71bb17",
-  "configs": {
-    "project/configs/detect_test.json": "737d58006004a1ff62558be36f85cb531428fbfb9a1ed48f4351a7e07db29c53",
-    "project/configs/misspec.json": "6ec38a0463718864b364ec02013aafa8061962878923c3f046de3528e3d4f608",
-    "project/configs/phase1.json": "7c8f7058a9cbf8307d753050a55a127ecdedd47d72b878cb2f74a576a862aa2a",
-    "project/configs/phase6_grid.json": "d642b2db1d0c5c37237d35aaafe8f919f5ea464022b81234cc847f332d0888f8",
-    "project/configs/pysr.json": "c89afc42372dcfa372a650cd503ebde189bb06641d62eb54834834108d0717c7",
-    "real_data/configs/real_dentategyrus.json": "cfd09f80c77b07a5c3c8bcce967bcd5842ce3e4bf04c1e99975532f4909df8f5",
-    "real_data/configs/real_pancreas.json": "a606d8c808d3a02ba235dbbf491a97f457483cda80d19357b49c9fd13f592b4d",
-    "real_data/configs/real_pancreas_latent.json": "c9413bc50f4ad6adade7a06e3bbadfd435a5b9a079d87ab8d2a7a2039d749f7d",
-    "real_data/configs/real_pancreas_module.json": "166ec4ab83624e8ef73e24459408c2b8eacf01c251bae138953ca5f97236ea4b",
-    "real_data/configs/real_pysr.json": "1747d2cdcc783de489150c9ae20cc32d5384b3dd37409700a53c8e549eb1fac8",
-    "synthetic/configs/synth.json": "d6ea80f87fa1c22a946d3e6cbe07bfe3c697ec940dfc589f4115b3bcfc6b420e"
+ "frozen_utc": "2026-11-11T20:24:05Z",
+ "git_head": "1fd1a41b7748fc7fcea9c218e935d5bd1d71bb17",
+ "configs": {
+  "project/configs/detect_test.json": "737d58006004a1ff62558be36f85cb531428fbfb9a1ed48f4351a7e07db29c53",
+  "project/configs/misspec.json": "6ec38a0463718864b364ec02013aafa8061962878923c3f046de3528e3d4f608",
+  "project/configs/phase1.json": "7c8f7058a9cbf8307d753050a55a127ecdedd47d72b878cb2f74a576a862aa2a",
+  "project/configs/phase6_grid.json": "d642b2db1d0c5c37237d35aaafe8f919f5ea464022b81234cc847f332d0888f8",
+  "project/configs/pysr.json": "c89afc42372dcfa372a650cd503ebde189bb06641d62eb54834834108d0717c7",
+  "real_data/configs/real_dentategyrus.json": "cfd09f80c77b07a5c3c8bcce967bcd5842ce3e4bf04c1e99975532f4909df8f5",
+  "real_data/configs/real_erythroid.json": "3540a2aef7bcf9a46ac2ad54b29edff21be9528c22f17311fdf66ef015c45c2e",
+  "real_data/configs/real_pancreas.json": "a606d8c808d3a02ba235dbbf491a97f457483cda80d19357b49c9fd13f592b4d",
+  "real_data/configs/real_pancreas_latent.json": "c9413bc50f4ad6adade7a06e3bbadfd435a5b9a079d87ab8d2a7a2039d749f7d",
+  "real_data/configs/real_pancreas_module.json": "166ec4ab83624e8ef73e24459408c2b8eacf01c251bae138953ca5f97236ea4b",
+  "real_data/configs/real_pysr.json": "1747d2cdcc783de489150c9ae20cc32d5384b3dd37409700a53c8e549eb1fac8",
+  "synthetic/configs/synth.json": "d6ea80f87fa1c22a946d3e6cbe07bfe3c697ec940dfc589f4115b3bcfc6b420e"
+ },
+ "amendments": [
+  {
+   "date": "2026-11-22",
+   "description": "Phase 1 addition: drop40 variant (dropout=0.4) + hematopoiesis real dataset. Pre-declared before any runs.",
+   "new": {},
+   "new_thresholds": {
+    "drop40_sym_vs_fd_advantage": "sym_F1(drop40) > direct_fd_F1(drop40) + 0.05 constitutes proof of distillation advantage under high dropout",
+    "hema_node_cos_min": 0.5,
+    "hema_distill_fidelity_min": 0.9
+   }
   },
-  "amendments": [
-    {
-      "date": "2026-11-22",
-      "description": "Phase 1 addition: drop40 variant (dropout=0.4) + hematopoiesis real dataset. Pre-declared before any runs.",
-      "new_thresholds": {
-        "drop40_sym_vs_fd_advantage": "sym_F1(drop40) > direct_fd_F1(drop40) + 0.05 constitutes proof of distillation advantage under high dropout",
-        "hema_node_cos_min": 0.5,
-        "hema_distill_fidelity_min": 0.9
-      }
-    }
-  ],
-  "note": "auto-declare ; ancrer dans git ou un horodatage externe",
-  "git_repo": "local \u2014 pending Zenodo upload",
-  "zenodo_doi": "PENDING"
+  {
+   "utc": "2026-11-22T14:58:13Z",
+   "reason": "Ajout des variantes drop40 et drop60 et dataset erythroid",
+   "changes": {
+    "synthetic/configs/synth.json": "d6ea80f87fa1c22a946d3e6cbe07bfe3c697ec940dfc589f4115b3bcfc6b420e"
+   },
+   "new": {
+    "synthetic/configs/synth.json": "150066d1f1b43d60178f65c80fc604e4a21c231d3ded843aa9bb4b52b1dbdd3f"
+   }
+  }
+ ],
+ "note": "auto-declare ; ancrer dans git ou un horodatage externe",
+ "git_repo": "local \u2014 pending Zenodo upload",
+ "zenodo_doi": "PENDING"
 }

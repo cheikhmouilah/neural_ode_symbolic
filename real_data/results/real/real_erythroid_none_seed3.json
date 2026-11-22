@@ -1,0 +1,137 @@
+{
+ "seed": 3,
+ "lam_reg": 0.001,
+ "control": "none",
+ "config_sha": "3540a2aef7bcf9a4",
+ "genes": [
+  "Actb",
+  "Calm2",
+  "Ccnd2",
+  "Tpm4",
+  "Mllt3",
+  "Tagln2",
+  "Gmpr",
+  "Tsen34"
+ ],
+ "space": "gene",
+ "node": {
+  "best_val": 0.7052218914031982,
+  "best_epoch": 188,
+  "seconds": 1.645266056060791,
+  "n_train": 4723,
+  "lam_reg": 0.001,
+  "norm": 0.0006893087421299348
+ },
+ "dataset": "erythroid",
+ "node_cos_test": 0.48790606028384087,
+ "node_cos_val": 0.5303863077962806,
+ "node_cos_train": 0.4421507093097727,
+ "node_nrmse_test": 0.06795307185392162,
+ "linear_baseline_cos_test": 0.5164392884544863,
+ "Df": {
+  "n_obs": 2000,
+  "n_jitter": 2000,
+  "reject_thr": 0.12941395882009546,
+  "rejected": 15
+ },
+ "sym_cos_vs_node_test": 0.9335779313939123,
+ "sym_nrmse_vs_node_test": 0.02844254314431649,
+ "sym_cos_vs_measured_test": 0.48842713527074083,
+ "R7_ratio": 1.0010679821984518,
+ "equations": [
+  "dActb/dt = 0.00258*H-(Actb;K=0.555,n=6) + 0.0136*H+(Calm2;K=0.907,n=2.1) + 0.00526*H+(Gmpr;K=0.669,n=4.3) - 0.00569*Actb",
+  "dCalm2/dt = 0.00947*H-(Mllt3;K=0.989,n=1) + 0.00292*H+(Ccnd2;K=0.585,n=5.4) + 0.000782*H+(Gmpr;K=0.484,n=6) - 0.0203*Calm2",
+  "dCcnd2/dt = 0.00242*H-(Mllt3;K=0.511,n=4.8) + 0.000832*H+(Tsen34;K=0.107,n=6) + 0.0883*H+(Ccnd2;K=1.82,n=1.3) - 0.0381*Ccnd2",
+  "dTpm4/dt = 0.0391*H+(Gmpr;K=5,n=1) + 0.0722*H+(Tsen34;K=5,n=1.4) + 0.00281*H-(Calm2;K=0.204,n=2.4) - 0.00549*Tpm4",
+  "dMllt3/dt = 0.00972*H-(Ccnd2;K=0.545,n=5.4) + 0.06*H+(Mllt3;K=1.01,n=1.2) + 0.00784*H-(Gmpr;K=0.552,n=6) - 0.071*Mllt3",
+  "dTagln2/dt = 0.00199*H-(Mllt3;K=0.119,n=2.1) + 0.0034*H+(Tpm4;K=0.162,n=1.7) + 0.00328*H-(Calm2;K=0.177,n=5.2) - 0.0127*Tagln2",
+  "dGmpr/dt = 0.00327*H-(Tagln2;K=0.181,n=1.8) + 0.139*H+(Actb;K=3.79,n=2.8) + 0.00502*H+(Mllt3;K=0.688,n=3.5) - 0.0171*Gmpr",
+  "dTsen34/dt = 0.0174*H+(Ccnd2;K=0.713,n=2.3) + 0.00144*H-(Actb;K=0.404,n=6) + 0.0117*H+(Calm2;K=0.885,n=4.9) - 0.0323*Tsen34"
+ ],
+ "structure": [
+  [
+   "(0, 'rep')",
+   "(1, 'act')",
+   "(6, 'act')"
+  ],
+  [
+   "(2, 'act')",
+   "(4, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(2, 'act')",
+   "(4, 'rep')",
+   "(7, 'act')"
+  ],
+  [
+   "(1, 'rep')",
+   "(6, 'act')",
+   "(7, 'act')"
+  ],
+  [
+   "(2, 'rep')",
+   "(4, 'act')",
+   "(6, 'rep')"
+  ],
+  [
+   "(1, 'rep')",
+   "(3, 'act')",
+   "(4, 'rep')"
+  ],
+  [
+   "(0, 'act')",
+   "(4, 'act')",
+   "(5, 'rep')"
+  ],
+  [
+   "(0, 'rep')",
+   "(1, 'act')",
+   "(2, 'act')"
+  ]
+ ],
+ "direct_cos_vs_measured_test": 0.5344333814655869,
+ "direct_equations": [
+  "dActb/dt = 0.00206*H-(Actb;K=0.535,n=6) + 0.0042*H+(Calm2;K=0.472,n=5.3) + 0.00612*H+(Gmpr;K=0.775,n=5.1) - 0.00696*Actb",
+  "dCalm2/dt = 0.00894*H-(Mllt3;K=0.7,n=1) + 0.00294*H+(Tsen34;K=0.351,n=6) - 0.0232*Calm2",
+  "dCcnd2/dt = 0.00318*H-(Mllt3;K=0.466,n=2.3) - 0.00951*Ccnd2",
+  "dTpm4/dt = 0.00348*H+(Gmpr;K=0.361,n=6) + 0.405*H-(Actb;K=0.0395,n=2.9) - 9.95e-39*Tpm4",
+  "dMllt3/dt = 0.0132*H-(Gmpr;K=0.318,n=6) - 0.0254*Mllt3",
+  "dTagln2/dt = 0.00541*H+(Tpm4;K=0.167,n=2.1) - 0.0139*Tagln2",
+  "dGmpr/dt = 0.373*H+(Mllt3;K=3.28,n=3.2) - 0.0175*Gmpr",
+  "dTsen34/dt = 0.0112*H-(Mllt3;K=0.0684,n=2.2) + 0.00377*H-(Actb;K=0.605,n=6) - 0.0331*Tsen34"
+ ],
+ "direct_structure": [
+  [
+   "(0, 'rep')",
+   "(1, 'act')",
+   "(6, 'act')"
+  ],
+  [
+   "(4, 'rep')",
+   "(7, 'act')"
+  ],
+  [
+   "(4, 'rep')"
+  ],
+  [
+   "(0, 'rep')",
+   "(6, 'act')"
+  ],
+  [
+   "(6, 'rep')"
+  ],
+  [
+   "(3, 'act')"
+  ],
+  [
+   "(4, 'act')"
+  ],
+  [
+   "(0, 'rep')",
+   "(4, 'rep')"
+  ]
+ ],
+ "distilled_vs_direct_jaccard": 0.38541666666666663,
+ "seconds_total": 34.629305362701416
+}
