@@ -1,9 +1,25 @@
+# Python & bytecode
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Raw large single-cell datasets & caches (downloaded via datasets.json / setup_all.py)
 *.h5ad
 *.npz
 *.part
-logs/
+data/
+real_data/data/
+
+# Temporary files & Word lock files
+~$*.docx
 *.tmp*
+*.lock
+logs/
+scratch/
+.system_generated/
+.gemini/
+
+# Scratch & quick caches
 real_data/results/real_quick/
